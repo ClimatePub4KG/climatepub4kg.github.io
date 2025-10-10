@@ -45,6 +45,11 @@ const Home: React.FC = () => {
                 KG on Frink
               </a>
             </li>
+            <li>
+              <a href="/ontology" target="_blank">
+                Ontology
+              </a>
+            </li>
           </ul>
         </div>
         <h1>ClimatePub4KG</h1>
