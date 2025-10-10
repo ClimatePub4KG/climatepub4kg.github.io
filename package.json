@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ClimatePub4KG.github.io/climatepub4kg",
+  "homepage": "https://ClimatePub4KG.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
