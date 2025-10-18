@@ -5,7 +5,9 @@
   "homepage": "https://climatepub4kg.github.io",
   "type": "module",
   "scripts": {
+    "predev": "cp public/ontology/index-en.html public/ontology/index.html",
     "dev": "vite",
+    "prebuild": "cp public/ontology/index-en.html public/ontology/index.html",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
