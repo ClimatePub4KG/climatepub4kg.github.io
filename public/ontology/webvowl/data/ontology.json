@@ -3,23 +3,26 @@
   "header" : {
     "languages" : [ "undefined" ],
     "baseIris" : [ "https://climatepub4kg.github.io/ontology", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
-    "iri" : "https://climatepub4kg.github.io/ontology",
-    "labels" : {
-      "undefined" : "ClimatePub4KG Ontology (derived from Neo4j APOC meta schema)"
-    },
-    "comments" : {
-      "undefined" : "Classes and properties inferred from labels and relationships in the supplied Neo4j knowledge graph schema. Counts are provided as annotations where helpful."
-    }
+    "iri" : "No IRI set"
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "2",
+    "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "33",
@@ -28,371 +31,1005 @@
     "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "18",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "45",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "46",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "40",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
     "id" : "47",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "48",
+    "id" : "51",
     "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "50",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "17",
-    "type" : "owl:Class"
-  }, {
-    "id" : "52",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "55",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "1",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "23",
-    "type" : "owl:unionOf"
   }, {
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "56",
-    "type" : "owl:unionOf"
+    "id" : "55",
+    "type" : "owl:Class"
   }, {
-    "id" : "12",
-    "type" : "rdfs:Datatype"
+    "id" : "56",
+    "type" : "owl:Class"
   }, {
     "id" : "57",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "58",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "14",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "62",
-    "type" : "owl:Class"
-  }, {
-    "id" : "65",
     "type" : "owl:Class"
   }, {
     "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
     "type" : "owl:Class"
   }, {
     "id" : "53",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
     "type" : "owl:Class"
   }, {
     "id" : "44",
     "type" : "owl:Class"
   }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "193",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "220",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "218",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "197",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "248",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "174",
+    "type" : "owl:Class"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "251",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
     "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "269",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "277",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "184",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "266",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "271",
+    "type" : "owl:Class"
+  }, {
+    "id" : "257",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "264",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "280",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "282",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "229",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "239",
+    "type" : "owl:Class"
+  }, {
+    "id" : "236",
+    "type" : "owl:Class"
+  }, {
+    "id" : "209",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "200",
+    "type" : "owl:Class"
+  }, {
+    "id" : "180",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "183",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://climatepub4kg.github.io/ontology#Country",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "Country"
-    },
-    "id" : "2"
+    "union" : [ "1", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "0"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#No_Country_Region",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "No_Country_Region"
-    },
-    "id" : "29"
+    "union" : [ "4", "5", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "3"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Activity",
+    "iri" : "https://climatepub4kg.github.io/ontology#Innovation",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Activity"
+      "IRI-based" : "Innovation",
+      "undefined" : "Innovation"
     },
-    "id" : "8"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Country_Subdivision",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Country_Subdivision"
-    },
-    "id" : "33"
+    "attributes" : [ "external" ],
+    "id" : "19"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Member",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Member"
+      "IRI-based" : "Member",
+      "undefined" : "Member"
     },
+    "attributes" : [ "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Country_Subdivision",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country_Subdivision",
+      "undefined" : "Country_Subdivision"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "31"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "33"
+  }, {
+    "instances" : 0,
+    "union" : [ "35", "36", "37", "38", "39", "32", "40", "41", "42", "43", "44" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "34"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Task",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task",
+      "undefined" : "Task"
+    },
+    "attributes" : [ "external" ],
+    "id" : "47"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "51"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "54"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Realm",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Realm"
+      "IRI-based" : "Realm",
+      "undefined" : "Realm"
     },
-    "comment" : {
-      "undefined" : "Model realm (atmosphere, ocean, land, etc.)."
-    },
-    "id" : "37"
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "56"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SourceType",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SourceType"
+      "IRI-based" : "SourceType",
+      "undefined" : "SourceType"
     },
-    "id" : "38"
+    "attributes" : [ "external" ],
+    "id" : "57"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Source",
+    "instances" : 0,
+    "union" : [ "62", "29", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Problem",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Source"
+      "IRI-based" : "Problem",
+      "undefined" : "Problem"
     },
-    "comment" : {
-      "undefined" : "Climate modeling source (e.g., GCM/RCM configuration) producing variables and belonging to a MIP era."
-    },
-    "id" : "7"
+    "attributes" : [ "external" ],
+    "id" : "63"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#SubExperiment",
+    "instances" : 0,
+    "union" : [ "68", "62", "52", "29", "53", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "67"
+  }, {
+    "instances" : 0,
+    "union" : [ "38", "5", "70", "29", "71", "53", "50", "72", "19", "37", "21", "52", "73", "74", "27", "26", "75", "35", "47", "76", "4", "55", "39", "57", "63", "41", "40", "62", "1", "77", "78", "44", "79", "36", "68", "22", "80", "32", "42", "81", "49", "82", "43", "83", "2", "84", "85" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "69"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "86"
+  }, {
+    "instances" : 0,
+    "union" : [ "68", "62", "52", "29", "53", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "87"
+  }, {
+    "instances" : 0,
+    "union" : [ "38", "5", "29", "70", "71", "53", "50", "19", "72", "37", "21", "73", "52", "74", "26", "27", "75", "35", "76", "47", "4", "39", "55", "57", "63", "41", "40", "62", "1", "77", "78", "44", "79", "36", "68", "22", "80", "32", "42", "81", "49", "82", "43", "83", "2", "84", "85" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "95"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "96"
+  }, {
+    "instances" : 0,
+    "union" : [ "62", "29", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "97"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_MapDef",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SubExperiment"
+      "IRI-based" : "_MapDef"
     },
-    "id" : "18"
+    "attributes" : [ "external" ],
+    "id" : "59"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Project",
+    "iri" : "https://climatepub4kg.github.io/ontology#City",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Project"
+      "IRI-based" : "City",
+      "undefined" : "City"
     },
-    "comment" : {
-      "undefined" : "Projects (e.g., CMIP phases) in which sources/experiments/activities participate."
+    "attributes" : [ "external" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Forcing",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Forcing",
+      "undefined" : "Forcing"
     },
-    "id" : "24"
+    "attributes" : [ "external" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Frequency",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Frequency",
+      "undefined" : "Frequency"
+    },
+    "attributes" : [ "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#No_Country_Region",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "No_Country_Region",
+      "undefined" : "No_Country_Region"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#SimulationType",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SimulationType",
+      "undefined" : "SimulationType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "44"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SourceComponent",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SourceComponent"
+      "IRI-based" : "SourceComponent",
+      "undefined" : "SourceComponent"
     },
+    "attributes" : [ "external" ],
     "id" : "32"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#ObservationalDataset",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObservationalDataset",
+      "undefined" : "ObservationalDataset"
+    },
+    "attributes" : [ "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Field",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Field",
+      "undefined" : "Field"
+    },
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Natural_Hazard",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Natural_Hazard",
+      "undefined" : "Natural_Hazard"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#ExperimentFamily",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExperimentFamily",
+      "undefined" : "ExperimentFamily"
+    },
+    "attributes" : [ "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Water_Bodies",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Water_Bodies",
+      "undefined" : "Water_Bodies"
+    },
+    "attributes" : [ "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ocean_Circulation",
+      "undefined" : "Ocean_Circulation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PhysicalScheme",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalScheme",
+      "undefined" : "PhysicalScheme"
+    },
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Continent",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Continent",
+      "undefined" : "Continent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Metric",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metric",
+      "undefined" : "Metric"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PhysicalFeature",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalFeature",
+      "undefined" : "PhysicalFeature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "172",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_MapNs",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "_MapNs"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "185",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "186",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "181",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "189",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "190",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "191",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "166",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "161",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "194",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "195",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Weather_Event",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Weather_Event",
+      "undefined" : "Weather_Event"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Ensemble",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Ensemble"
+      "IRI-based" : "Ensemble",
+      "undefined" : "Ensemble"
     },
-    "id" : "28"
-  }, {
-    "instances" : 0,
-    "union" : [ "44", "2" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "43"
+    "attributes" : [ "external" ],
+    "id" : "80"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "5",
+    "id" : "215",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "45",
+    "id" : "216",
     "label" : {
       "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "46",
-    "label" : {
-      "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "40",
+    "id" : "193",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#RCM",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
     "label" : {
-      "IRI-based" : "RCM"
-    },
-    "comment" : {
-      "undefined" : "Regional Climate Model entity; often DRIVEN_BY_SOURCE (a GCM) and COVERS_REGIONs."
-    },
-    "id" : "20"
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "47",
+    "id" : "219",
     "label" : {
       "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "220",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "218",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "188",
+    "label" : {
+      "IRI-based" : "boolean"
     }
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Domain",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Domain"
+      "IRI-based" : "Domain",
+      "undefined" : "Domain"
     },
-    "id" : "15"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Resolution",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Resolution"
-    },
-    "id" : "48"
+    "attributes" : [ "external" ],
+    "id" : "84"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "21",
+    "id" : "131",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Experiment",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Experiment"
-    },
-    "comment" : {
-      "undefined" : "Experiment definitions (e.g., CMIP6 experiments) that USES_FORCING and may INCLUDE ensemble members."
-    },
-    "id" : "17"
-  }, {
-    "instances" : 0,
-    "union" : [ "44", "29", "53", "2", "54", "33" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "52"
-  }, {
-    "instances" : 0,
-    "union" : [ "4", "17", "7" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "55"
-  }, {
-    "instances" : 0,
-    "union" : [ "54", "33" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "1"
-  }, {
-    "instances" : 0,
-    "union" : [ "17", "8", "7", "20" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "23"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#City",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "City"
-    },
-    "id" : "54"
-  }, {
-    "instances" : 0,
-    "union" : [ "7", "20" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "56"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "12",
+    "id" : "89",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "57",
+    "id" : "123",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "58",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "178",
     "label" : {
       "IRI-based" : "string"
     }
@@ -401,732 +1038,2571 @@
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Institute"
+      "IRI-based" : "Institute",
+      "undefined" : "Institute"
     },
-    "comment" : {
-      "undefined" : "Institutions that produce sources and perform experiments."
-    },
-    "id" : "26"
+    "attributes" : [ "external" ],
+    "id" : "21"
   }, {
-    "instances" : 0,
-    "union" : [ "32", "17", "7" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "36"
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "230",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
-    "instances" : 0,
-    "union" : [ "24", "20" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "14"
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Forcing",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "231",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "141",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "203",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "212",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Teleconnection",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Forcing"
+      "IRI-based" : "Teleconnection",
+      "undefined" : "Teleconnection"
     },
-    "id" : "62"
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "175",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "233",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "245",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "210",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "197",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "246",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Model",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Model",
+      "undefined" : "Model"
+    },
+    "attributes" : [ "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "248",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "207",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "174"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "250",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "251",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Country",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Keyword",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Keyword",
+      "undefined" : "Keyword"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#NaturalHazardType",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NaturalHazardType",
+      "undefined" : "NaturalHazardType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Activity",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity",
+      "undefined" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "154",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "133",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "156",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "268",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "269",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "147",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "112",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Platform",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Platform",
+      "undefined" : "Platform"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_NsPrefDef",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "_NsPrefDef"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Source",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Source",
+      "undefined" : "Source"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#SubExperiment",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubExperiment",
+      "undefined" : "SubExperiment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Project",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Project",
+      "undefined" : "Project"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "227",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "244",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "201",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#RCM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RCM",
+      "undefined" : "RCM"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "277",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "237",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Resolution",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resolution",
+      "undefined" : "Resolution"
+    },
+    "attributes" : [ "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "151",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "184",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "5", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "143"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "266"
+  }, {
+    "instances" : 0,
+    "union" : [ "50", "19", "47", "63", "71", "83" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "146"
+  }, {
+    "instances" : 0,
+    "union" : [ "62", "29", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "271"
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "73", "1", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "257"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Experiment",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Experiment",
+      "undefined" : "Experiment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "27", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "264"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "1", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Method",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Method",
+      "undefined" : "Method"
+    },
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "109",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "280",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "107",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "261",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "282",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "136",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "205",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "159",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "38", "5", "29", "53", "37", "21", "73", "52", "27", "26", "76", "35", "4", "39", "55", "57", "40", "41", "62", "1", "44", "79", "36", "22", "68", "32", "42", "43", "85" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "120"
+  }, {
+    "instances" : 0,
+    "union" : [ "76", "4", "55", "57", "5", "1", "77", "79", "22", "80", "21", "73", "81", "74", "26", "2", "84", "85", "75" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "243"
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "129"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#GridLabel",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "GridLabel"
+      "IRI-based" : "GridLabel",
+      "undefined" : "GridLabel"
     },
-    "id" : "65"
+    "attributes" : [ "external" ],
+    "id" : "75"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#ExperimentFamily",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "ExperimentFamily"
-    },
-    "id" : "61"
+    "union" : [ "27", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "125"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "229"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "29", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "100"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Variable",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Variable"
+      "IRI-based" : "Variable",
+      "undefined" : "Variable"
     },
-    "comment" : {
-      "undefined" : "CF variable definitions with units and standard names."
-    },
+    "attributes" : [ "external" ],
     "id" : "4"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Water_Bodies",
+    "instances" : 0,
+    "union" : [ "68", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "239"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "236"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "209"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Result",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Water_Bodies"
+      "IRI-based" : "Result",
+      "undefined" : "Result"
     },
-    "id" : "53"
+    "attributes" : [ "external" ],
+    "id" : "78"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MIPEra",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MIPEra"
+      "IRI-based" : "MIPEra",
+      "undefined" : "MIPEra"
     },
-    "id" : "10"
+    "attributes" : [ "external" ],
+    "id" : "79"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Continent",
+    "iri" : "https://climatepub4kg.github.io/ontology#Instrument",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Continent"
+      "IRI-based" : "Instrument",
+      "undefined" : "Instrument"
     },
-    "id" : "44"
+    "attributes" : [ "external" ],
+    "id" : "42"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Frequency",
+    "iri" : "https://climatepub4kg.github.io/ontology#Paper",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Frequency"
+      "IRI-based" : "Paper",
+      "undefined" : "Paper"
     },
-    "id" : "70"
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "instances" : 0,
+    "union" : [ "62", "29", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "200"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "180"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_GraphConfig",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "_GraphConfig"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "24"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "183"
   } ],
   "property" : [ {
-    "id" : "0",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "3",
+    "id" : "6",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "6",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "9",
-    "type" : "owl:objectProperty"
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "11",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "13",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "16",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "19",
+    "id" : "14",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "22",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "25",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "27",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "30",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "31",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "35",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "39",
+    "id" : "17",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "41",
+    "id" : "20",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "42",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "49",
+    "id" : "23",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "51",
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "59",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "60",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "63",
+    "id" : "58",
     "type" : "owl:objectProperty"
   }, {
     "id" : "64",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "66",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "67",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "68",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "69",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "71",
+    "id" : "88",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "72",
+    "id" : "90",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "73",
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "74",
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "75",
+    "id" : "103",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "76",
+    "id" : "104",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "77",
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "153",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "168",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "169",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "173",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "176",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "177",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "179",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "182",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "192",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "196",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "198",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "199",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "202",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "206",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "208",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "211",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "213",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "214",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "217",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "221",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "222",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "223",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "224",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "225",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "226",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "228",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "232",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "234",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "235",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "238",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "240",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "241",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "242",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "247",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "249",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "252",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "253",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "254",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "255",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "256",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "258",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "259",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "260",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "262",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "263",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "265",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "267",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "270",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "272",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "273",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "274",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "275",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "276",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "278",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "279",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "281",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "283",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "284",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "285",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "286",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "287",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "288",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "289",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "290",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "291",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "292",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "293",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "294",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "295",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "296",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "297",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "298",
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://climatepub4kg.github.io/ontology#IN_COUNTRY",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "2",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "33923",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "IN_COUNTRY"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "0"
-  }, {
     "iri" : "https://climatepub4kg.github.io/ontology#variable_long_name",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "5",
+    "range" : "7",
     "label" : {
-      "IRI-based" : "variable_long_name"
+      "IRI-based" : "variable_long_name",
+      "undefined" : "variable_long_name"
     },
     "domain" : "4",
-    "attributes" : [ "datatype" ],
-    "id" : "3"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "8",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "623",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "GENERATED_BY_ACTIVITY"
-    },
-    "domain" : "7",
-    "attributes" : [ "object" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "6"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA",
+    "iri" : "https://climatepub4kg.github.io/ontology#clmid",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "range" : "10",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "318",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "BELONGS_TO_MIP_ERA"
+      "IRI-based" : "clmid",
+      "undefined" : "clmid"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "9"
+    "domain" : "9",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "8"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#cf_standard_name",
+    "iri" : "https://climatepub4kg.github.io/ontology#_objectPropertyLabel",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "12",
+    "range" : "13",
     "label" : {
-      "IRI-based" : "cf_standard_name"
+      "IRI-based" : "_objectPropertyLabel",
+      "undefined" : "_objectPropertyLabel"
     },
-    "domain" : "4",
-    "attributes" : [ "datatype" ],
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
     "id" : "11"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#COVERS_DOMAIN",
+    "iri" : "https://climatepub4kg.github.io/ontology#feature_class",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "15",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "125",
-        "type" : "label"
-      } ]
-    },
+    "range" : "16",
     "label" : {
-      "IRI-based" : "COVERS_DOMAIN"
+      "IRI-based" : "feature_class",
+      "undefined" : "feature_class"
     },
-    "domain" : "14",
-    "attributes" : [ "object" ],
-    "id" : "13"
+    "domain" : "15",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "14"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT",
+    "iri" : "https://climatepub4kg.github.io/ontology#_domainRel",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "range" : "18",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "72",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "HAS_SUB_EXPERIMENT"
+      "IRI-based" : "_domainRel",
+      "undefined" : "_domainRel"
     },
-    "domain" : "17",
-    "attributes" : [ "object" ],
-    "id" : "16"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#rcm_version",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "rcm_version"
-    },
-    "domain" : "20",
-    "attributes" : [ "datatype" ],
-    "id" : "19"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#PART_OF_PROJECT",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "24",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "1048",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "PART_OF_PROJECT"
-    },
-    "domain" : "23",
-    "attributes" : [ "object" ],
-    "id" : "22"
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "17"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PARTICIPATED_IN",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "24",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "213",
-        "type" : "label"
-      } ]
-    },
+    "range" : "22",
     "label" : {
-      "IRI-based" : "PARTICIPATED_IN"
+      "IRI-based" : "PARTICIPATED_IN",
+      "undefined" : "PARTICIPATED_IN"
     },
-    "domain" : "26",
-    "attributes" : [ "object" ],
-    "id" : "25"
+    "domain" : "21",
+    "attributes" : [ "external", "object" ],
+    "id" : "20"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER",
+    "iri" : "https://climatepub4kg.github.io/ontology#feature_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "28",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "3069",
-        "type" : "label"
-      } ]
-    },
+    "range" : "25",
     "label" : {
-      "IRI-based" : "INCLUDES_ENSEMBLE_MEMBER"
+      "IRI-based" : "feature_code",
+      "undefined" : "feature_code"
     },
-    "domain" : "17",
-    "attributes" : [ "object" ],
-    "id" : "27"
+    "domain" : "24",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#languages",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "languages",
+      "undefined" : "languages"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#continent",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "continent",
+      "undefined" : "continent"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_BELONGS_TO_FIELD",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "PAPER_BELONGS_TO_FIELD",
+      "undefined" : "PAPER_BELONGS_TO_FIELD"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_IN",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "_IN",
+      "undefined" : "_IN"
+    },
+    "domain" : "59",
+    "attributes" : [ "external", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#timezone",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "timezone",
+      "undefined" : "timezone"
+    },
+    "domain" : "65",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_key",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "_key",
+      "undefined" : "_key"
+    },
+    "domain" : "59",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#fips",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "fips",
+      "undefined" : "fips"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_handleVocabUris",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "_handleVocabUris",
+      "undefined" : "_handleVocabUris"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#MODEL_HAS_RESULT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "MODEL_HAS_RESULT",
+      "undefined" : "MODEL_HAS_RESULT"
+    },
+    "domain" : "83",
+    "attributes" : [ "external", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#population",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "population",
+      "undefined" : "population"
+    },
+    "domain" : "100",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_SOLVES_PROBLEM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "PAPER_SOLVES_PROBLEM",
+      "undefined" : "PAPER_SOLVES_PROBLEM"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_WORKS_ON_TASK",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "METHOD_WORKS_ON_TASK",
+      "undefined" : "METHOD_WORKS_ON_TASK"
+    },
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_USES_MODEL",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "METHOD_USES_MODEL",
+      "undefined" : "METHOD_USES_MODEL"
+    },
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#MODEL_SOLVES_PROBLEM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "MODEL_SOLVES_PROBLEM",
+      "undefined" : "MODEL_SOLVES_PROBLEM"
+    },
+    "domain" : "83",
+    "attributes" : [ "external", "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_dataTypePropertyLabel",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "_dataTypePropertyLabel",
+      "undefined" : "_dataTypePropertyLabel"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_classLabel",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "_classLabel",
+      "undefined" : "_classLabel"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_SOLVES_PROBLEM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "METHOD_SOLVES_PROBLEM",
+      "undefined" : "METHOD_SOLVES_PROBLEM"
+    },
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#postal_code_format",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "112",
+    "label" : {
+      "IRI-based" : "postal_code_format",
+      "undefined" : "postal_code_format"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "ASSOCIATED_WITH_MEMBER",
+      "undefined" : "ASSOCIATED_WITH_MEMBER"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_USES_METRIC",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "METHOD_USES_METRIC",
+      "undefined" : "METHOD_USES_METRIC"
+    },
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#TASK_USES_METRIC",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "TASK_USES_METRIC",
+      "undefined" : "TASK_USES_METRIC"
+    },
+    "domain" : "47",
+    "attributes" : [ "external", "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#currencycode",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "currencycode",
+      "undefined" : "currencycode"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "PERFORMED_BY_INSTITUTE",
+      "undefined" : "PERFORMED_BY_INSTITUTE"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_MENTIONS",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "PAPER_MENTIONS",
+      "undefined" : "PAPER_MENTIONS"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "PAPER_APPLIES_METHOD",
+      "undefined" : "PAPER_APPLIES_METHOD"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#iso3",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "123",
+    "label" : {
+      "IRI-based" : "iso3",
+      "undefined" : "iso3"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#IN_COUNTRY",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "IN_COUNTRY",
+      "undefined" : "IN_COUNTRY"
+    },
+    "domain" : "125",
+    "attributes" : [ "external", "object" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#clm",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "127",
+    "label" : {
+      "IRI-based" : "clm",
+      "undefined" : "clm"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#COVERS_DOMAIN",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "COVERS_DOMAIN",
+      "undefined" : "COVERS_DOMAIN"
+    },
+    "domain" : "129",
+    "attributes" : [ "external", "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_local",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "131",
+    "label" : {
+      "IRI-based" : "_local",
+      "undefined" : "_local"
+    },
+    "domain" : "59",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#rcm_version",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "133",
+    "label" : {
+      "IRI-based" : "rcm_version",
+      "undefined" : "rcm_version"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#MODEL_WORKS_FOR_TASK",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "MODEL_WORKS_FOR_TASK",
+      "undefined" : "MODEL_WORKS_FOR_TASK"
+    },
+    "domain" : "83",
+    "attributes" : [ "external", "object" ],
+    "id" : "134"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_keepCustomDataTypes",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "136",
+    "label" : {
+      "IRI-based" : "_keepCustomDataTypes",
+      "undefined" : "_keepCustomDataTypes"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "135"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PRODUCES_VARIABLE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "range" : "4",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "28337",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "PRODUCES_VARIABLE"
+      "IRI-based" : "PRODUCES_VARIABLE",
+      "undefined" : "PRODUCES_VARIABLE"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "30"
+    "domain" : "138",
+    "attributes" : [ "external", "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#RESULT_HAS_METRIC",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "RESULT_HAS_METRIC",
+      "undefined" : "RESULT_HAS_METRIC"
+    },
+    "domain" : "78",
+    "attributes" : [ "external", "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#id",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "141",
+    "label" : {
+      "IRI-based" : "id",
+      "undefined" : "id"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "APPLIES_TO_REALM",
+      "undefined" : "APPLIES_TO_REALM"
+    },
+    "domain" : "143",
+    "attributes" : [ "external", "object" ],
+    "id" : "142"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SIMULATION_TYPE",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "HAS_SIMULATION_TYPE",
+      "undefined" : "HAS_SIMULATION_TYPE"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#paper_id",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "147",
+    "label" : {
+      "IRI-based" : "paper_id",
+      "undefined" : "paper_id"
+    },
+    "domain" : "146",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "145"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_MODEL",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "PAPER_HAS_MODEL",
+      "undefined" : "PAPER_HAS_MODEL"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "METHOD_HAS_RESULT",
+      "undefined" : "METHOD_HAS_RESULT"
+    },
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#name",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "151",
+    "label" : {
+      "IRI-based" : "name",
+      "undefined" : "name"
+    },
+    "domain" : "95",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "PRODUCED_BY_INSTITUTE",
+      "undefined" : "PRODUCED_BY_INSTITUTE"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#tld",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "154",
+    "label" : {
+      "IRI-based" : "tld",
+      "undefined" : "tld"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#postal_code_regex",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "156",
+    "label" : {
+      "IRI-based" : "postal_code_regex",
+      "undefined" : "postal_code_regex"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "PART_OF_ENSEMBLE",
+      "undefined" : "PART_OF_ENSEMBLE"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "157"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_applyNeo4jNaming",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "159",
+    "label" : {
+      "IRI-based" : "_applyNeo4jNaming",
+      "undefined" : "_applyNeo4jNaming"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#added_from_paper_id",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "161",
+    "label" : {
+      "IRI-based" : "added_from_paper_id",
+      "undefined" : "added_from_paper_id"
+    },
+    "domain" : "34",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "160"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "INCLUDES_EXPERIMENT",
+      "undefined" : "INCLUDES_EXPERIMENT"
+    },
+    "domain" : "76",
+    "attributes" : [ "external", "object" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+      "undefined" : "MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
+    },
+    "domain" : "83",
+    "attributes" : [ "external", "object" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_WORKS_ON_TASK",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "PAPER_WORKS_ON_TASK",
+      "undefined" : "PAPER_WORKS_ON_TASK"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#admin1_code",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "166",
+    "label" : {
+      "IRI-based" : "admin1_code",
+      "undefined" : "admin1_code"
+    },
+    "domain" : "54",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "165"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+      "undefined" : "PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "167"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+      "undefined" : "TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
+    },
+    "domain" : "47",
+    "attributes" : [ "external", "object" ],
+    "id" : "168"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#COVERS_REGION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "COVERS_REGION",
+      "undefined" : "COVERS_REGION"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "169"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#title",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "171",
+    "label" : {
+      "IRI-based" : "title",
+      "undefined" : "title"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "170"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#elevation",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "175",
+    "label" : {
+      "IRI-based" : "elevation",
+      "undefined" : "elevation"
+    },
+    "domain" : "174",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "173"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#cf_standard_name",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "172",
+    "label" : {
+      "IRI-based" : "cf_standard_name",
+      "undefined" : "cf_standard_name"
+    },
+    "domain" : "4",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "176"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#isonumeric",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "178",
+    "label" : {
+      "IRI-based" : "isonumeric",
+      "undefined" : "isonumeric"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#alternatenames",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "181",
+    "label" : {
+      "IRI-based" : "alternatenames",
+      "undefined" : "alternatenames"
+    },
+    "domain" : "180",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "179"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#modification_date",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "184",
+    "label" : {
+      "IRI-based" : "modification_date",
+      "undefined" : "modification_date"
+    },
+    "domain" : "183",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "182"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_keepLangTag",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "188",
+    "label" : {
+      "IRI-based" : "_keepLangTag",
+      "undefined" : "_keepLangTag"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "187"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_subPropertyOfRel",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "193",
+    "label" : {
+      "IRI-based" : "_subPropertyOfRel",
+      "undefined" : "_subPropertyOfRel"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "192"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#country",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "197",
+    "label" : {
+      "IRI-based" : "country",
+      "undefined" : "country"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "196"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#capital",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "186",
+    "label" : {
+      "IRI-based" : "capital",
+      "undefined" : "capital"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "198"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#north",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "201",
+    "label" : {
+      "IRI-based" : "north",
+      "undefined" : "north"
+    },
+    "domain" : "200",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#experiment_title",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "203",
+    "label" : {
+      "IRI-based" : "experiment_title",
+      "undefined" : "experiment_title"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Name",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "205",
+    "label" : {
+      "IRI-based" : "Name",
+      "undefined" : "Name"
+    },
+    "domain" : "62",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "204"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#variable_units",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "207",
+    "label" : {
+      "IRI-based" : "variable_units",
+      "undefined" : "variable_units"
+    },
+    "domain" : "4",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "206"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#country_code",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "country_code",
+      "undefined" : "country_code"
+    },
+    "domain" : "209",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "208"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#equivalent_fips_code",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "212",
+    "label" : {
+      "IRI-based" : "equivalent_fips_code",
+      "undefined" : "equivalent_fips_code"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "211"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#area_sqkm",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "191",
+    "label" : {
+      "IRI-based" : "area_sqkm",
+      "undefined" : "area_sqkm"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "213"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "FOCUSES_ON_REALM",
+      "undefined" : "FOCUSES_ON_REALM"
+    },
+    "domain" : "73",
+    "attributes" : [ "external", "object" ],
+    "id" : "214"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_prefix",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "218",
+    "label" : {
+      "IRI-based" : "_prefix",
+      "undefined" : "_prefix"
+    },
+    "domain" : "60",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "217"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#USES_PHYSICAL_SCHEME",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "USES_PHYSICAL_SCHEME",
+      "undefined" : "USES_PHYSICAL_SCHEME"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "221"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#CORRESPONDS_TO",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "CORRESPONDS_TO",
+      "undefined" : "CORRESPONDS_TO"
+    },
+    "domain" : "83",
+    "attributes" : [ "external", "object" ],
+    "id" : "222"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_ns",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "219",
+    "label" : {
+      "IRI-based" : "_ns",
+      "undefined" : "_ns"
+    },
+    "domain" : "60",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "223"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
+      "undefined" : "METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
+    },
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "224"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_USES_METRIC",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "PAPER_USES_METRIC",
+      "undefined" : "PAPER_USES_METRIC"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "225"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#neighbours",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "227",
+    "label" : {
+      "IRI-based" : "neighbours",
+      "undefined" : "neighbours"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "226"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#admin2_code",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "195",
+    "label" : {
+      "IRI-based" : "admin2_code",
+      "undefined" : "admin2_code"
+    },
+    "domain" : "229",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "228"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#IN_CONTINENT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "IN_CONTINENT",
+      "undefined" : "IN_CONTINENT"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "object" ],
+    "id" : "232"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#USES_FORCING",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "USES_FORCING",
+      "undefined" : "USES_FORCING"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "234"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#latitude",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "237",
+    "label" : {
+      "IRI-based" : "latitude",
+      "undefined" : "latitude"
+    },
+    "domain" : "236",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "235"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#iso",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "231",
+    "label" : {
+      "IRI-based" : "iso",
+      "undefined" : "iso"
+    },
+    "domain" : "239",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "238"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "SAMPLED_AT_FREQUENCY",
+      "undefined" : "SAMPLED_AT_FREQUENCY"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "240"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_subClassOfRel",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "215",
+    "label" : {
+      "IRI-based" : "_subClassOfRel",
+      "undefined" : "_subClassOfRel"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "241"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#names",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "244",
+    "label" : {
+      "IRI-based" : "names",
+      "undefined" : "names"
+    },
+    "domain" : "243",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "242"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_relNamePropName",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "216",
+    "label" : {
+      "IRI-based" : "_relNamePropName",
+      "undefined" : "_relNamePropName"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "247"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_PHYSICAL_FEATURE",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "HAS_PHYSICAL_FEATURE",
+      "undefined" : "HAS_PHYSICAL_FEATURE"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "249"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "GENERATED_BY_ACTIVITY",
+      "undefined" : "GENERATED_BY_ACTIVITY"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "252"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "BELONGS_TO_MIP_ERA",
+      "undefined" : "BELONGS_TO_MIP_ERA"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "253"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#currencyname",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "246",
+    "label" : {
+      "IRI-based" : "currencyname",
+      "undefined" : "currencyname"
+    },
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "254"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "HAS_SUB_EXPERIMENT",
+      "undefined" : "HAS_SUB_EXPERIMENT"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "255"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PART_OF_PROJECT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "PART_OF_PROJECT",
+      "undefined" : "PART_OF_PROJECT"
+    },
+    "domain" : "257",
+    "attributes" : [ "external", "object" ],
+    "id" : "256"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#TASK_FACES_PROBLEM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "TASK_FACES_PROBLEM",
+      "undefined" : "TASK_FACES_PROBLEM"
+    },
+    "domain" : "47",
+    "attributes" : [ "external", "object" ],
+    "id" : "258"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "INCLUDES_ENSEMBLE_MEMBER",
+      "undefined" : "INCLUDES_ENSEMBLE_MEMBER"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "259"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_handleMultival",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "261",
+    "label" : {
+      "IRI-based" : "_handleMultival",
+      "undefined" : "_handleMultival"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "260"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_INNOVATION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "PAPER_HAS_INNOVATION",
+      "undefined" : "PAPER_HAS_INNOVATION"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "262"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#asciiname",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "190",
+    "label" : {
+      "IRI-based" : "asciiname",
+      "undefined" : "asciiname"
+    },
+    "domain" : "264",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "263"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "range" : "32",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "413",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "HAS_SOURCE_COMPONENT"
+      "IRI-based" : "HAS_SOURCE_COMPONENT",
+      "undefined" : "HAS_SOURCE_COMPONENT"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "31"
+    "domain" : "266",
+    "attributes" : [ "external", "object" ],
+    "id" : "265"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM",
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_INNOVATION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "37",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "3722",
-        "type" : "label"
-      } ]
-    },
+    "range" : "19",
     "label" : {
-      "IRI-based" : "APPLIES_TO_REALM"
+      "IRI-based" : "METHOD_HAS_INNOVATION",
+      "undefined" : "METHOD_HAS_INNOVATION"
     },
-    "domain" : "36",
-    "attributes" : [ "object" ],
-    "id" : "35"
+    "domain" : "71",
+    "attributes" : [ "external", "object" ],
+    "id" : "267"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#variable_units",
+    "iri" : "https://climatepub4kg.github.io/ontology#south",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "40",
+    "range" : "268",
     "label" : {
-      "IRI-based" : "variable_units"
+      "IRI-based" : "south",
+      "undefined" : "south"
     },
-    "domain" : "4",
-    "attributes" : [ "datatype" ],
-    "id" : "39"
+    "domain" : "271",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "270"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#DRIVEN_BY_SOURCE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "7",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "139",
-        "type" : "label"
-      } ]
-    },
+    "range" : "1",
     "label" : {
-      "IRI-based" : "DRIVEN_BY_SOURCE"
+      "IRI-based" : "DRIVEN_BY_SOURCE",
+      "undefined" : "DRIVEN_BY_SOURCE"
     },
-    "domain" : "20",
-    "attributes" : [ "object" ],
-    "id" : "41"
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "272"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM",
+    "iri" : "https://climatepub4kg.github.io/ontology#phone",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "37",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "170",
-        "type" : "label"
-      } ]
-    },
+    "range" : "269",
     "label" : {
-      "IRI-based" : "FOCUSES_ON_REALM"
+      "IRI-based" : "phone",
+      "undefined" : "phone"
     },
-    "domain" : "8",
-    "attributes" : [ "object" ],
-    "id" : "42"
+    "domain" : "29",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "273"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#name",
+    "iri" : "https://climatepub4kg.github.io/ontology#INHERITED_FROM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "47",
+    "range" : "1",
     "label" : {
-      "IRI-based" : "name"
+      "IRI-based" : "INHERITED_FROM",
+      "undefined" : "INHERITED_FROM"
     },
-    "domain" : "46",
-    "attributes" : [ "datatype" ],
-    "id" : "49"
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "274"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE",
+    "iri" : "https://climatepub4kg.github.io/ontology#MODEL_USES_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "26",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "503",
-        "type" : "label"
-      } ]
-    },
+    "range" : "43",
     "label" : {
-      "IRI-based" : "PRODUCED_BY_INSTITUTE"
+      "IRI-based" : "MODEL_USES_METRIC",
+      "undefined" : "MODEL_USES_METRIC"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "51"
+    "domain" : "83",
+    "attributes" : [ "external", "object" ],
+    "id" : "275"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE",
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_RESULT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "28",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "53",
-        "type" : "label"
-      } ]
-    },
+    "range" : "78",
     "label" : {
-      "IRI-based" : "PART_OF_ENSEMBLE"
+      "IRI-based" : "PAPER_HAS_RESULT",
+      "undefined" : "PAPER_HAS_RESULT"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "59"
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "276"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT",
+    "iri" : "https://climatepub4kg.github.io/ontology#admin3_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "17",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "328",
-        "type" : "label"
-      } ]
-    },
+    "range" : "194",
     "label" : {
-      "IRI-based" : "INCLUDES_EXPERIMENT"
+      "IRI-based" : "admin3_code",
+      "undefined" : "admin3_code"
     },
-    "domain" : "61",
-    "attributes" : [ "object" ],
-    "id" : "60"
+    "domain" : "96",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "278"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_KEYWORD",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "PAPER_HAS_KEYWORD",
+      "undefined" : "PAPER_HAS_KEYWORD"
+    },
+    "domain" : "49",
+    "attributes" : [ "external", "object" ],
+    "id" : "279"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#_handleRDFTypes",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "282",
+    "label" : {
+      "IRI-based" : "_handleRDFTypes",
+      "undefined" : "_handleRDFTypes"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "281"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#east",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "233",
+    "label" : {
+      "IRI-based" : "east",
+      "undefined" : "east"
+    },
+    "domain" : "97",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "283"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#cc2",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "185",
+    "label" : {
+      "IRI-based" : "cc2",
+      "undefined" : "cc2"
+    },
+    "domain" : "98",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "284"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#IS_OF_TYPE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "38",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "295",
-        "type" : "label"
-      } ]
-    },
+    "range" : "57",
     "label" : {
-      "IRI-based" : "IS_OF_TYPE"
+      "IRI-based" : "IS_OF_TYPE",
+      "undefined" : "IS_OF_TYPE"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "63"
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "285"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#IN_CONTINENT",
+    "iri" : "https://climatepub4kg.github.io/ontology#longitude",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "44",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "210",
-        "type" : "label"
-      } ]
-    },
+    "range" : "277",
     "label" : {
-      "IRI-based" : "IN_CONTINENT"
+      "IRI-based" : "longitude",
+      "undefined" : "longitude"
     },
-    "domain" : "2",
-    "attributes" : [ "object" ],
-    "id" : "64"
+    "domain" : "51",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "286"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER",
+    "iri" : "https://climatepub4kg.github.io/ontology#code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "34",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "11903",
-        "type" : "label"
-      } ]
-    },
+    "range" : "248",
     "label" : {
-      "IRI-based" : "ASSOCIATED_WITH_MEMBER"
+      "IRI-based" : "code",
+      "undefined" : "code"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "66"
+    "domain" : "27",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "287"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#USES_FORCING",
+    "iri" : "https://climatepub4kg.github.io/ontology#admin4_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "62",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "986",
-        "type" : "label"
-      } ]
-    },
+    "range" : "189",
     "label" : {
-      "IRI-based" : "USES_FORCING"
+      "IRI-based" : "admin4_code",
+      "undefined" : "admin4_code"
     },
-    "domain" : "17",
-    "attributes" : [ "object" ],
-    "id" : "67"
+    "domain" : "56",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "288"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#iso",
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "58",
+    "range" : "43",
     "label" : {
-      "IRI-based" : "iso"
+      "IRI-based" : "HAS_METRIC",
+      "undefined" : "HAS_METRIC"
     },
-    "domain" : "43",
-    "attributes" : [ "datatype" ],
-    "id" : "68"
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "289"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY",
+    "iri" : "https://climatepub4kg.github.io/ontology#west",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "70",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "828",
-        "type" : "label"
-      } ]
-    },
+    "range" : "250",
     "label" : {
-      "IRI-based" : "SAMPLED_AT_FREQUENCY"
+      "IRI-based" : "west",
+      "undefined" : "west"
     },
-    "domain" : "7",
-    "attributes" : [ "object" ],
-    "id" : "69"
+    "domain" : "61",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "290"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#geonameid",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "57",
+    "range" : "230",
     "label" : {
-      "IRI-based" : "geonameid"
+      "IRI-based" : "geonameid",
+      "undefined" : "geonameid"
     },
-    "domain" : "46",
-    "attributes" : [ "datatype" ],
-    "id" : "71"
+    "domain" : "67",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "291"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#uuid",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "45",
+    "range" : "251",
     "label" : {
-      "IRI-based" : "uuid"
+      "IRI-based" : "uuid",
+      "undefined" : "uuid"
     },
-    "domain" : "46",
-    "attributes" : [ "datatype" ],
-    "id" : "72"
+    "domain" : "69",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "292"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#COVERS_REGION",
+    "iri" : "https://climatepub4kg.github.io/ontology#_rangeRel",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "52",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "397621",
-        "type" : "label"
-      } ]
-    },
+    "range" : "220",
     "label" : {
-      "IRI-based" : "COVERS_REGION"
+      "IRI-based" : "_rangeRel",
+      "undefined" : "_rangeRel"
     },
-    "domain" : "20",
-    "attributes" : [ "object" ],
-    "id" : "73"
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "293"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE",
+    "iri" : "https://climatepub4kg.github.io/ontology#dem",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "26",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "2762",
-        "type" : "label"
-      } ]
-    },
+    "range" : "245",
     "label" : {
-      "IRI-based" : "PERFORMED_BY_INSTITUTE"
+      "IRI-based" : "dem",
+      "undefined" : "dem"
     },
-    "domain" : "17",
-    "attributes" : [ "object" ],
-    "id" : "74"
+    "domain" : "86",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "294"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SUBSEQUENT_VERSION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "HAS_SUBSEQUENT_VERSION",
+      "undefined" : "HAS_SUBSEQUENT_VERSION"
+    },
+    "domain" : "33",
+    "attributes" : [ "external", "object" ],
+    "id" : "295"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#USED_IN_EXPERIMENT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "17",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "2019",
-        "type" : "label"
-      } ]
-    },
+    "range" : "5",
     "label" : {
-      "IRI-based" : "USED_IN_EXPERIMENT"
+      "IRI-based" : "USED_IN_EXPERIMENT",
+      "undefined" : "USED_IN_EXPERIMENT"
     },
-    "domain" : "56",
-    "attributes" : [ "object" ],
-    "id" : "75"
+    "domain" : "0",
+    "attributes" : [ "external", "object" ],
+    "id" : "296"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_SPATIAL_RESOLUTION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "48",
-    "annotations" : {
-      "count" : [ {
-        "identifier" : "count",
-        "language" : "undefined",
-        "value" : "6708",
-        "type" : "label"
-      } ]
-    },
+    "range" : "85",
     "label" : {
-      "IRI-based" : "HAS_SPATIAL_RESOLUTION"
+      "IRI-based" : "HAS_SPATIAL_RESOLUTION",
+      "undefined" : "HAS_SPATIAL_RESOLUTION"
     },
-    "domain" : "55",
-    "attributes" : [ "object" ],
-    "id" : "76"
+    "domain" : "3",
+    "attributes" : [ "external", "object" ],
+    "id" : "297"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#names",
+    "iri" : "https://climatepub4kg.github.io/ontology#_classNamePropName",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "50",
+    "range" : "280",
     "label" : {
-      "IRI-based" : "names"
+      "IRI-based" : "_classNamePropName",
+      "undefined" : "_classNamePropName"
     },
-    "domain" : "46",
-    "attributes" : [ "datatype" ],
-    "id" : "77"
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "298"
   } ]
 }
