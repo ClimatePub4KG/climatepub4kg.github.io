@@ -38,7 +38,7 @@ const Home: React.FC = () => {
             </li>
             <li>
               <a
-                href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffrink.apps.renci.org%2F%3Fquery%3DPREFIX%2Brdf%3A%2B%253Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%2523%253E%250APREFIX%2Brdfs%3A%2B%253Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%2523%253E%250ASELECT%2B*%2BWHERE%2B%257b%250A%2B%2B%3Fsub%2B%3Fpred%2B%3Fobj%2B.%250A%257d%2BLIMIT%2B10%26sources%3Dclimatepub4kg&data=05%7C02%7Ccaleb.hageman%40temple.edu%7Cde51bfa2d9234bb62eb208dd33f99f8f%7C716e81efb52244738e3110bd02ccf6e5%7C0%7C0%7C638723869405502070%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=SFBfRLqlaBZ5RasGSN0oXv1FcI5rPy6A5OESOUU6Ly8%3D&reserved=0"
+                href="https://frink.apps.renci.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
