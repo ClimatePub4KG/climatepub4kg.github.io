@@ -12,18 +12,18 @@ const Home: React.FC = () => {
             <li>
               <a href="#introduction">Introduction</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#types">Entity & Relations</a>
-            </li>
+            </li> */}
             <li>
               <a href="#ClimatePub4KG">ClimatePub4KG</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#overview">Overview</a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#ontology-graph">Ontology Graph</a>
-            </li>
+            </li> */}
             <li>
               <a href="#team">Team</a>
             </li>
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
         </section>
 
         {/* Types and Definitions Section */}
-        <section id="types" className="section">
+        {/* <section id="types" className="section">
           <h2>Entity Types and Definitions</h2>
           <p>The definitions of the entity types are given below:</p>
 
@@ -249,9 +249,9 @@ const Home: React.FC = () => {
             natural hazard, teleconnection, or ocean circulation (source_entity)
             is designed to study, simulate, or focus on a specific geographic
             location (target_entity).
-          </p> */}
+          </p> *
           <hr />
-        </section>
+        </section> */}
 
         {/* GCMD+ Taxonomy Section */}
         <section id="ClimatePub4KG" className="section">
@@ -298,7 +298,8 @@ const Home: React.FC = () => {
           </p>
           <div style={{ textAlign: "center", marginTop: "1rem" }}>
             <img
-              src="/images/paper_combined_ontology.png"
+              // src="/images/paper_combined_ontology.png"
+              src="/images/climatepub4kg_ontology.svg"
               alt="Ontology Graph"
               style={{
                 maxWidth: "100%",
