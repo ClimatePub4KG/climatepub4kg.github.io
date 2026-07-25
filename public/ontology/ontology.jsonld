@@ -1,9 +1,121 @@
 [ {
-  "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG project"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG connects two bodies of climate-science knowledge that are normally kept apart: the structured metadata that describes climate-model simulations, and the scientific literature that analyses them.\n\nThe ontology is organised around four groups of terms.\n\nESGF and CMIP model metadata. Classes such as Source (a climate model), SourceComponent, Experiment, SubExperiment, ExperimentFamily, Activity, Project, MIPEra, Institute, Variable, Realm, Frequency, Resolution, GridLabel, Member, Ensemble, Forcing and Domain follow the CMIP6 controlled vocabularies and the facets used by ESGF search. Model-description classes (SourceType, SimulationType, PhysicalScheme, PhysicalFeature, Metric) capture how a model is built and how it behaves.\n\nScientific publications. A Paper is an OpenAlex-identified work, connected to its Author, Venue and Keyword records, and to the research content extracted from its full text: Field, Problem, Task, Method, Innovation, Result, EvaluationMetric and ObservationalDataset. The same content classes attach to models and methods as well as papers, so a finding can be traced from the claim to the model that produced it.\n\nGeography. Continent, Country, Country_Subdivision, City and No_Country_Region are grounded in the GeoNames gazetteer and keep their GeoNames identifiers, bounding boxes and administrative codes. ClimateZone gives a coarse Koppen-Geiger style classification.\n\nObservations and phenomena. Instrument and Platform align with the NASA GCMD keyword vocabularies; Teleconnection, Ocean_Circulation, Weather_Event, Natural_Hazard and NaturalHazardType name the large-scale patterns and events discussed in the corpus.\n\nInstance IRIs live in a separate namespace, https://climatepub4kg.github.io/id/, and follow the pattern {id-namespace}{ClassName}/{identifier}. For ESGF classes the identifier is the URL-encoded entity name, so a model IRI reads .../id/Source/CESM2; a short disambiguating suffix is appended in the rare case where one name is used by more than one entity of the same class. Everything else is minted from the node's internal uuid.\n\nProvenance is carried on the terms themselves: paper_id and added_from_paper_id record which publication an extracted entity or relationship came from, supporting_paragraphs keeps the sentences that justified it, and dataset_count records how many ESGF datasets support a metadata relationship. PAPER_MENTIONS is the general-purpose bridge from a publication to any entity mentioned in its text.\n\nThe graph is built by an LLM extraction pipeline over open-access climate papers followed by entity linking against the ESGF, GeoNames and GCMD vocabularies, so instance data should be treated as machine-generated and evidence-linked rather than hand-curated."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2026-07-25"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2026-07-25"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG project"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://esgf.llnl.gov/"
+  }, {
+    "@id" : "https://gcmd.earthdata.nasa.gov/KeywordViewer/"
+  }, {
+    "@id" : "https://github.com/WCRP-CMIP/CMIP6_CVs"
+  }, {
+    "@id" : "https://openalex.org/"
+  }, {
+    "@id" : "https://www.geonames.org/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG Ontology"
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@id" : "http://purl.org/ontology/bibo/status/published"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "clm"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://climatepub4kg.github.io/ontology#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ClimatePub4KG Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology/2026-07-25"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "2026-07-25"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology/"
+  } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, model component or experiment to an Earth system realm it addresses."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
   }, {
@@ -11,73 +123,159 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "APPLIES_TO_REALM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Realm"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, model component or experiment to an Earth system realm it addresses."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a variant label (member) under which its output was produced."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ASSOCIATED_WITH_MEMBER"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Member"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a variant label (member) under which its output was produced."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Model Intercomparison Project (MIP) activity within a MIP era, such as CMIP, ScenarioMIP or DAMIP, that defines and coordinates a related set of climate model experiments. Corresponds to the ESGF activity_id facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Activity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Model Intercomparison Project (MIP) activity within a MIP era, such as CMIP, ScenarioMIP or DAMIP, that defines and coordinates a related set of climate model experiments. Corresponds to the ESGF activity_id facet."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#Author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person credited as an author of a publication."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Author"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A person credited as an author of a publication."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or experiment family to the MIP generation it belongs to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "BELONGS_TO_MIP_ERA"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#MIPEra"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or experiment family to the MIP generation it belongs to."
   } ]
 }, {
-  "@id" : "https://climatepub4kg.github.io/ontology#CORRESPONDS_TO",
+  "@id" : "https://climatepub4kg.github.io/ontology#CITED_BY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to another publication that cites it, as recorded in the bibliographic reference data."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "CORRESPONDS_TO"
+    "@value" : "CITED_BY"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Source"
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to another publication that cites it, as recorded in the bibliographic reference data."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#COVERS_DOMAIN",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a project or regional climate model to the spatial domain it is run over."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Project"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "COVERS_DOMAIN"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Domain"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a project or regional climate model to the spatial domain it is run over."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#COVERS_REGION",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a regional climate model to a geographic region that falls within its domain."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "COVERS_REGION"
@@ -92,170 +290,419 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a regional climate model to a geographic region that falls within its domain."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#City",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A populated place, such as a city, town or village, as identified in the GeoNames gazetteer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "City"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A populated place, such as a city, town or village, as identified in the GeoNames gazetteer."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#ClimateZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ClimateZone"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Continent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A continent, as identified in the GeoNames gazetteer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Continent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A continent, as identified in the GeoNames gazetteer."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A country or dependent territory, as identified in the GeoNames gazetteer, together with its ISO codes and country-level attributes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Country"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A country or dependent territory, as identified in the GeoNames gazetteer, together with its ISO codes and country-level attributes."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A first-level administrative subdivision of a country, such as a state, province, region or canton, as identified in the GeoNames gazetteer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Country_Subdivision"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A first-level administrative subdivision of a country, such as a state, province, region or canton, as identified in the GeoNames gazetteer."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#DRIVEN_BY_SOURCE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a regional climate model to the global model that supplies its lateral boundary conditions."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "DRIVEN_BY_SOURCE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a regional climate model to the global model that supplies its lateral boundary conditions."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Domain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A named spatial domain over which a project or regional climate model is run, such as the CORDEX domains EUR-11 or AFR-44."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Domain"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A named spatial domain over which a project or regional climate model is run, such as the CORDEX domains EUR-11 or AFR-44."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Ensemble",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of simulations of the same experiment that differ only in their realisation, initialisation, physics or forcing settings, used to sample uncertainty."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Ensemble"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A set of simulations of the same experiment that differ only in their realisation, initialisation, physics or forcing settings, used to sample uncertainty."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A measure used to evaluate a model, method, task or result, such as root-mean-square error, bias, correlation or skill score."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EvaluationMetric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A measure used to evaluate a model, method, task or result, such as root-mean-square error, bias, correlation or skill score."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Experiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A prescribed simulation protocol that models are run under, such as historical, piControl or ssp585. Corresponds to the ESGF experiment_id facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Experiment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A prescribed simulation protocol that models are run under, such as historical, piControl or ssp585. Corresponds to the ESGF experiment_id facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#ExperimentFamily",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A grouping of experiments that share a common protocol or scientific purpose, such as the DECK, historical or ScenarioMIP families."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ExperimentFamily"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A grouping of experiments that share a common protocol or scientific purpose, such as the DECK, historical or ScenarioMIP families."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a MIP activity to the Earth system realm its experiments focus on."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "FOCUSES_ON_REALM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Realm"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a MIP activity to the Earth system realm its experiments focus on."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Field",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The research field or discipline a publication belongs to, such as regional climate modelling or detection and attribution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Field"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The research field or discipline a publication belongs to, such as regional climate modelling or detection and attribution."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Forcing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An external forcing agent or forcing dataset prescribed by an experiment, such as greenhouse gas concentrations, aerosol emissions, land use or solar variability."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Forcing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An external forcing agent or forcing dataset prescribed by an experiment, such as greenhouse gas concentrations, aerosol emissions, land use or solar variability."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Frequency",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The temporal sampling frequency at which model output is reported, such as mon, day, 6hr or fx (time-invariant). Corresponds to the ESGF frequency facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Frequency"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The temporal sampling frequency at which model output is reported, such as mon, day, 6hr or fx (time-invariant). Corresponds to the ESGF frequency facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to the MIP activity whose experiments produced its output."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "GENERATED_BY_ACTIVITY"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Activity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to the MIP activity whose experiments produced its output."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#GridLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The label identifying the grid a dataset is reported on, such as gn (the model's native grid) or gr (a regridded product). Corresponds to the ESGF grid_label facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "GridLabel"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The label identifying the grid a dataset is reported on, such as gn (the model's native grid) or gr (a regridded product). Corresponds to the ESGF grid_label facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a characteristic quantity reported for it, such as its climate sensitivity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_METRIC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a characteristic quantity reported for it, such as its climate sensitivity."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_PHYSICAL_FEATURE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a physical process or property it represents."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_PHYSICAL_FEATURE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#PhysicalFeature"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a physical process or property it represents."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_SIMULATION_TYPE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a style of simulation it is run in."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_SIMULATION_TYPE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#SimulationType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a style of simulation it is run in."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, or one of its components, to a constituent submodel."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_SOURCE_COMPONENT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, or one of its components, to a constituent submodel."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_SPATIAL_RESOLUTION",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, regional model, experiment or variable to its nominal spatial resolution."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
   }, {
@@ -263,19 +710,33 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_SPATIAL_RESOLUTION"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Resolution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, regional model, experiment or variable to its nominal spatial resolution."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_SUBSEQUENT_VERSION",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or model component to a later version of itself."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_SUBSEQUENT_VERSION"
@@ -284,422 +745,842 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or model component to a later version of itself."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to one of its sub-experiments."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "HAS_SUB_EXPERIMENT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#SubExperiment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to one of its sub-experiments."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to an ensemble of simulations carried out for it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "INCLUDES_ENSEMBLE_MEMBER"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Ensemble"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to an ensemble of simulations carried out for it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment family to one of its member experiments."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#ExperimentFamily"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "INCLUDES_EXPERIMENT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment family to one of its member experiments."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#INHERITED_FROM",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to an earlier model it was derived from."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "INHERITED_FROM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to an earlier model it was derived from."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#IN_CONTINENT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a country to the continent it lies in."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "IN_CONTINENT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Continent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a country to the continent it lies in."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#IN_COUNTRY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a city or administrative subdivision to the country that contains it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "IN_COUNTRY"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a city or administrative subdivision to the country that contains it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#IS_OF_TYPE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an entity to its category: a climate model to its source type, or a natural hazard to its hazard type."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Natural_Hazard"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "IS_OF_TYPE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#NaturalHazardType"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an entity to its category: a climate model to its source type, or a natural hazard to its hazard type."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Innovation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A novel contribution claimed by a publication or method, such as a new scheme, dataset or analysis approach."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Innovation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A novel contribution claimed by a publication or method, such as a new scheme, dataset or analysis approach."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Institute",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The institution that develops a climate model or carries out an experiment. Corresponds to the ESGF institution_id facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Institute"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The institution that develops a climate model or carries out an experiment. Corresponds to the ESGF institution_id facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Instrument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A measuring instrument or sensor that observes geophysical variables, such as a satellite radiometer, radar or radiosonde. Aligned with the NASA GCMD instruments vocabulary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Instrument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A measuring instrument or sensor that observes geophysical variables, such as a satellite radiometer, radar or radiosonde. Aligned with the NASA GCMD instruments vocabulary."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Keyword",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A subject keyword or concept assigned to a publication, taken from the publication's bibliographic record."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Keyword"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A subject keyword or concept assigned to a publication, taken from the publication's bibliographic record."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#MEASURES_VARIABLE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an observing instrument to a geophysical variable it measures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Instrument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MEASURES_VARIABLE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Variable"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an observing instrument to a geophysical variable it measures."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to an observational or reanalysis dataset it is applied to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#ObservationalDataset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to an observational or reanalysis dataset it is applied to."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_INNOVATION",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a novel contribution it introduces."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "METHOD_HAS_INNOVATION"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Innovation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a novel contribution it introduces."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a finding obtained with it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "METHOD_HAS_RESULT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Result"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a finding obtained with it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#METHOD_SOLVES_PROBLEM",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a research problem it addresses."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "METHOD_SOLVES_PROBLEM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Problem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a research problem it addresses."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#METHOD_USES_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to an evaluation metric used to assess it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "METHOD_USES_METRIC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Metric"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#METHOD_USES_MODEL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Method"
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "METHOD_USES_MODEL"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to an evaluation metric used to assess it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#METHOD_WORKS_ON_TASK",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a research task it is used for."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "METHOD_WORKS_ON_TASK"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Task"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a method to a research task it is used for."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#MIPEra",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generation of the Model Intercomparison Project, such as CMIP5, CMIP6 or CMIP6Plus."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "MIPEra"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A generation of the Model Intercomparison Project, such as CMIP5, CMIP6 or CMIP6Plus."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to an observational or reanalysis dataset it is compared against."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+    "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#ObservationalDataset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to an observational or reanalysis dataset it is compared against."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#MODEL_HAS_RESULT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a finding reported about it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+    "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "MODEL_HAS_RESULT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Result"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#MODEL_SOLVES_PROBLEM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MODEL_SOLVES_PROBLEM"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Problem"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a finding reported about it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#MODEL_USES_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to an evaluation metric used to assess it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+    "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "MODEL_USES_METRIC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Metric"
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to an evaluation metric used to assess it."
   } ]
 }, {
-  "@id" : "https://climatepub4kg.github.io/ontology#MODEL_WORKS_FOR_TASK",
+  "@id" : "https://climatepub4kg.github.io/ontology#MOUNTED_ON",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an observing instrument to the platform that carries it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+    "@id" : "https://climatepub4kg.github.io/ontology#Instrument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MODEL_WORKS_FOR_TASK"
+    "@value" : "MOUNTED_ON"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Task"
+    "@id" : "https://climatepub4kg.github.io/ontology#Platform"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an observing instrument to the platform that carries it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Member",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Member"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Method",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A method, technique, model configuration or analysis procedure that a publication applies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Method"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A method, technique, model configuration or analysis procedure that a publication applies."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Metric",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A characteristic quantity reported for a model, such as its equilibrium climate sensitivity, transient climate response or effective radiative forcing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A characteristic quantity reported for a model, such as its equilibrium climate sensitivity, transient climate response or effective radiative forcing."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Model",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Legacy class for a climate model. Superseded by Source and retained only so that older IRIs continue to resolve; new data should use Source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Model"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#Name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Legacy class for a climate model. Superseded by Source and retained only so that older IRIs continue to resolve; new data should use Source."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#NaturalHazardType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The category a natural hazard belongs to, such as flood, drought, heatwave, wildfire or tropical cyclone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "NaturalHazardType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The category a natural hazard belongs to, such as flood, drought, heatwave, wildfire or tropical cyclone."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Natural_Hazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A natural hazard studied in the corpus, such as a named flood, drought, wildfire or tropical cyclone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Natural_Hazard"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A natural hazard studied in the corpus, such as a named flood, drought, wildfire or tropical cyclone."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A named geographic region that is neither a country nor an administrative subdivision, such as a river basin, mountain range, sea, gulf or ocean sector, as identified in the GeoNames gazetteer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "No_Country_Region"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A named geographic region that is neither a country nor an administrative subdivision, such as a river basin, mountain range, sea, gulf or ocean sector, as identified in the GeoNames gazetteer."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#ObservationalDataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An observational, reanalysis or reference dataset used to evaluate or drive a model, such as ERA5, GPCP or HadCRUT."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ObservationalDataset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An observational, reanalysis or reference dataset used to evaluate or drive a model, such as ERA5, GPCP or HadCRUT."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An ocean current or circulation feature, such as the Atlantic Meridional Overturning Circulation, the Gulf Stream or the Antarctic Circumpolar Current. Aligned with the NASA GCMD science keywords."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Ocean_Circulation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An ocean current or circulation feature, such as the Atlantic Meridional Overturning Circulation, the Gulf Stream or the Antarctic Circumpolar Current. Aligned with the NASA GCMD science keywords."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a method it applies."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_APPLIES_METHOD"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a method it applies."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#PAPER_AUTHORED_BY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to one of its authors."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PAPER_AUTHORED_BY"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Author"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to one of its authors."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_BELONGS_TO_FIELD",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to the research field it belongs to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_BELONGS_TO_FIELD"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Field"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to the research field it belongs to."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to an observational or reanalysis dataset it experiments on."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#ObservationalDataset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to an observational or reanalysis dataset it experiments on."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_INNOVATION",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a novel contribution it claims."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_HAS_INNOVATION"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Innovation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a novel contribution it claims."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_KEYWORD",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a subject keyword assigned to it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_HAS_KEYWORD"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Keyword"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_MODEL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "PAPER_HAS_MODEL"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a subject keyword assigned to it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_RESULT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a finding it reports."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_HAS_RESULT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Result"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a finding it reports."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_MENTIONS",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to any entity mentioned in its text. This is the general-purpose provenance bridge between the literature and the rest of the graph, and is asserted whenever entity linking matched a mention to a node."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_MENTIONS"
@@ -709,15 +1590,21 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#ClimateZone"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Continent"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Domain"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#ExperimentFamily"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Frequency"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Institute"
   }, {
@@ -728,6 +1615,8 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Member"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Metric"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#NaturalHazardType"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Natural_Hazard"
   }, {
@@ -743,6 +1632,8 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Project"
   }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#RCM"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Realm"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Resolution"
@@ -755,77 +1646,186 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceType"
   }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#SubExperiment"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Teleconnection"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
-  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Weather_Event"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to any entity mentioned in its text. This is the general-purpose provenance bridge between the literature and the rest of the graph, and is asserted whenever entity linking matched a mention to a node."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#PAPER_PUBLISHED_IN_VENUE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to the venue it appeared in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PAPER_PUBLISHED_IN_VENUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Venue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to the venue it appeared in."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_SOLVES_PROBLEM",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a research problem it addresses."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_SOLVES_PROBLEM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Problem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a research problem it addresses."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_USES_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to an evaluation metric it uses."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_USES_METRIC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Metric"
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to an evaluation metric it uses."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#PAPER_USES_MODEL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a climate model it uses or evaluates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PAPER_USES_MODEL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a climate model it uses or evaluates."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PAPER_WORKS_ON_TASK",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a research task it works on."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PAPER_WORKS_ON_TASK"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Task"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a publication to a research task it works on."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PARTICIPATED_IN",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an institution to a project it took part in."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Institute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PARTICIPATED_IN"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Project"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an institution to a project it took part in."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or sub-experiment to an ensemble it contributes to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PART_OF_ENSEMBLE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Ensemble"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or sub-experiment to an ensemble it contributes to."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PART_OF_PROJECT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, regional model, experiment or activity to a project it belongs to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Activity"
   }, {
@@ -834,534 +1834,672 @@
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PART_OF_PROJECT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Project"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model, regional model, experiment or activity to a project it belongs to."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to the institution that performed it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PERFORMED_BY_INSTITUTE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Institute"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to the institution that performed it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to the institution that developed it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PRODUCED_BY_INSTITUTE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Institute"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to the institution that developed it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PRODUCES_VARIABLE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or model component to a geophysical variable it outputs."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PRODUCES_VARIABLE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or model component to a geophysical variable it outputs."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Paper",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A scientific publication about climate science, identified by its OpenAlex work identifier and, where available, its DOI. Papers are the provenance anchor for the extracted content in the graph."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Paper"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A scientific publication about climate science, identified by its OpenAlex work identifier and, where available, its DOI. Papers are the provenance anchor for the extracted content in the graph."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PhysicalFeature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical process or property represented in a model, such as interactive aerosols, dynamic vegetation, an interactive carbon cycle or a prognostic ice sheet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PhysicalFeature"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A physical process or property represented in a model, such as interactive aerosols, dynamic vegetation, an interactive carbon cycle or a prognostic ice sheet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#PhysicalScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A parameterisation or numerical scheme implemented in a model, such as a convection, radiation, cloud microphysics or boundary-layer scheme."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "PhysicalScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A parameterisation or numerical scheme implemented in a model, such as a convection, radiation, cloud microphysics or boundary-layer scheme."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Platform",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A platform that carries observing instruments, such as a satellite, aircraft, ship, buoy or ground station. Aligned with the NASA GCMD platforms vocabulary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Platform"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A platform that carries observing instruments, such as a satellite, aircraft, ship, buoy or ground station. Aligned with the NASA GCMD platforms vocabulary."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Problem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A research problem, limitation or open question that a publication, method or task addresses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Problem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A research problem, limitation or open question that a publication, method or task addresses."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Project",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A research project or coordinated programme that models, experiments and datasets belong to, such as CMIP6, CORDEX or input4MIPs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Project"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A research project or coordinated programme that models, experiments and datasets belong to, such as CMIP6, CORDEX or input4MIPs."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#RCM",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A regional climate model: a limited-area model run at higher resolution over a specific domain, driven at its boundaries by a global model or a reanalysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "RCM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A regional climate model: a limited-area model run at higher resolution over a specific domain, driven at its boundaries by a global model or a reanalysis."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#RESULT_HAS_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a reported finding to the evaluation metric it is expressed in."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "RESULT_HAS_METRIC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Metric"
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a reported finding to the evaluation metric it is expressed in."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Realm",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A component of the Earth system that a model, model component, experiment or activity addresses, such as atmos, ocean, land, seaIce, landIce, aerosol or atmosChem."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Realm"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A component of the Earth system that a model, model component, experiment or activity addresses, such as atmos, ocean, land, seaIce, landIce, aerosol or atmosChem."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Resolution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The nominal spatial resolution of a model, experiment or variable, expressed as a distance such as 100 km. Corresponds to the ESGF nominal_resolution facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Resolution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The nominal spatial resolution of a model, experiment or variable, expressed as a distance such as 100 km. Corresponds to the ESGF nominal_resolution facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Result",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A reported finding or quantitative outcome of a publication, model or method."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Result"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A reported finding or quantitative outcome of a publication, model or method."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a temporal frequency at which its output is reported."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SAMPLED_AT_FREQUENCY"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Frequency"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a temporal frequency at which its output is reported."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#SimulationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A characteristic style of simulation a model is run in, such as fully coupled, AMIP-style (prescribed sea surface temperatures), nudged or time-slice."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SimulationType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A characteristic style of simulation a model is run in, such as fully coupled, AMIP-style (prescribed sea surface temperatures), nudged or time-slice."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Source",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A climate or Earth system model: a named, versioned model configuration that produces simulation output. Corresponds to the ESGF source_id facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A climate or Earth system model: a named, versioned model configuration that produces simulation output. Corresponds to the ESGF source_id facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A submodel of a climate model, such as its atmosphere, ocean, sea-ice, land-surface or aerosol component, usually together with the component's own version label."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SourceComponent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A submodel of a climate model, such as its atmosphere, ocean, sea-ice, land-surface or aerosol component, usually together with the component's own version label."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#SourceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The category of a climate model, such as AOGCM, AGCM, BGC or CHEM, describing which Earth system components the model couples. Corresponds to the ESGF source_type facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SourceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The category of a climate model, such as AOGCM, AGCM, BGC or CHEM, describing which Earth system components the model couples. Corresponds to the ESGF source_type facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#SubExperiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A refinement of an experiment that fixes additional initialisation conditions, for example a particular start year of a decadal prediction. Corresponds to the ESGF sub_experiment_id facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SubExperiment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A refinement of an experiment that fixes additional initialisation conditions, for example a particular start year of a decadal prediction. Corresponds to the ESGF sub_experiment_id facet."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a research task to an observational or reanalysis dataset it is carried out on."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#ObservationalDataset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a research task to an observational or reanalysis dataset it is carried out on."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#TASK_FACES_PROBLEM",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a research task to a problem that makes it difficult."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "TASK_FACES_PROBLEM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Problem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a research task to a problem that makes it difficult."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#TASK_USES_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a research task to an evaluation metric used to score it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "TASK_USES_METRIC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Metric"
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a research task to an evaluation metric used to score it."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Task",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A concrete research task that a publication or method carries out, such as bias correction, downscaling or extreme-event detection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Task"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A concrete research task that a publication or method carries out, such as bias correction, downscaling or extreme-event detection."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Teleconnection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A large-scale mode of climate variability that links distant regions, such as ENSO, the North Atlantic Oscillation or the Pacific Decadal Oscillation. Aligned with the NASA GCMD science keywords."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Teleconnection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A large-scale mode of climate variability that links distant regions, such as ENSO, the North Atlantic Oscillation or the Pacific Decadal Oscillation. Aligned with the NASA GCMD science keywords."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#USED_IN_EXPERIMENT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or regional climate model to an experiment it was run for."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "USED_IN_EXPERIMENT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model or regional climate model to an experiment it was run for."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#USES_FORCING",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to an external forcing it prescribes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "USES_FORCING"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Forcing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an experiment to an external forcing it prescribes."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#USES_PHYSICAL_SCHEME",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a parameterisation or numerical scheme it implements."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "USES_PHYSICAL_SCHEME"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#PhysicalScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a climate model to a parameterisation or numerical scheme it implements."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Variable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A geophysical output quantity reported by a model, such as tas (near-surface air temperature) or pr (precipitation), described by its CF standard name, long name and units. Corresponds to the ESGF variable_id facet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Variable"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A geophysical output quantity reported by a model, such as tas (near-surface air temperature) or pr (precipitation), described by its CF standard name, long name and units. Corresponds to the ESGF variable_id facet."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#Venue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The journal, conference, book series or repository in which a publication appeared."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Venue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The journal, conference, book series or repository in which a publication appeared."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A named body of water, such as a sea, lake or gulf. Retained for backwards compatibility; water bodies are currently represented as No_Country_Region instances."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Water_Bodies"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A named body of water, such as a sea, lake or gulf. Retained for backwards compatibility; water bodies are currently represented as No_Country_Region instances."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#Weather_Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A weather or climate event discussed in the literature, such as a particular heatwave, storm, cold spell or extreme rainfall episode."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Weather_Event"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A weather or climate event discussed in the literature, such as a particular heatwave, storm, cold spell or extreme rainfall episode."
   } ]
 }, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_IN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_MapDef"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_IN"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_MapNs"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_MapDef",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_MapNs",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_NsPrefDef",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_applyNeo4jNaming",
+  "@id" : "https://climatepub4kg.github.io/ontology#abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Abstract of a publication."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_applyNeo4jNaming"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_classLabel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_classLabel"
+    "@value" : "abstract"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_classNamePropName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_classNamePropName"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_dataTypePropertyLabel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_dataTypePropertyLabel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_domainRel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_domainRel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_handleMultival",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_handleMultival"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_handleRDFTypes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_handleRDFTypes"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_handleVocabUris",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_handleVocabUris"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_keepCustomDataTypes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_keepCustomDataTypes"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_keepLangTag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_keepLangTag"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_key",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_MapDef"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_key"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_local",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_MapDef"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_local"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_ns",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_MapNs"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_ns"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_objectPropertyLabel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_objectPropertyLabel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_prefix",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_MapNs"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_prefix"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_rangeRel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_rangeRel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_relNamePropName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_relNamePropName"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_subClassOfRel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_subClassOfRel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#_subPropertyOfRel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_GraphConfig"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "_subPropertyOfRel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Abstract of a publication."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#added_from_paper_id",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "OpenAlex identifiers of the publications from which this entity or relationship was extracted."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Instrument"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Metric"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Natural_Hazard"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#PhysicalFeature"
   }, {
@@ -1373,361 +2511,691 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#SourceComponent"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Teleconnection"
-  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Weather_Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "added_from_paper_id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OpenAlex identifiers of the publications from which this entity or relationship was extracted."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#admin1_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code of the first-level administrative division containing the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "admin1_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Code of the first-level administrative division containing the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#admin2_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code of the second-level administrative division containing the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "admin2_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Code of the second-level administrative division containing the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#admin3_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code of the third-level administrative division containing the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "admin3_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Code of the third-level administrative division containing the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#admin4_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code of the fourth-level administrative division containing the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "admin4_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Code of the fourth-level administrative division containing the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#alternatenames",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Alternative and localised names of a place, as recorded by GeoNames."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "alternatenames"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Alternative and localised names of a place, as recorded by GeoNames."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#area_sqkm",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Area of a country in square kilometres."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "area_sqkm"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Area of a country in square kilometres."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#asciiname",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ASCII transliteration of a geographic name, as recorded by GeoNames."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "asciiname"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ASCII transliteration of a geographic name, as recorded by GeoNames."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#capital",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Capital city of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "capital"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Capital city of a country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#cc2",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Additional country codes for a place that spans more than one country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "cc2"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Additional country codes for a place that spans more than one country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#cf_standard_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "CF standard name of a variable."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "cf_standard_name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#clm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_NsPrefDef"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "clm"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#clmid",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#_NsPrefDef"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "clmid"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "CF standard name of a variable."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Administrative code of a country subdivision, in GeoNames country.admin1 form."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Administrative code of a country subdivision, in GeoNames country.admin1 form."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#continent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Two-letter GeoNames continent code of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "continent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Two-letter GeoNames continent code of a country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#country",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Country name as recorded in the GeoNames country table."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "country"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Country name as recorded in the GeoNames country table."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#country_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 alpha-2 code of the country containing the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "country_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 alpha-2 code of the country containing the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#currencycode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ISO 4217 code of a country's currency."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "currencycode"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ISO 4217 code of a country's currency."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#currencyname",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Name of a country's currency."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "currencyname"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Name of a country's currency."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#dem",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Digital elevation model value in metres at the place's coordinates (SRTM3 or GTOPO30)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "dem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Digital elevation model value in metres at the place's coordinates (SRTM3 or GTOPO30)."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Digital Object Identifier of a publication."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "doi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Digital Object Identifier of a publication."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#east",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Eastern edge of the entity's bounding box, in decimal degrees."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "east"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Eastern edge of the entity's bounding box, in decimal degrees."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#elevation",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Elevation of the place in metres, where recorded."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "elevation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Elevation of the place in metres, where recorded."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#equivalent_fips_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Equivalent FIPS code recorded for a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "equivalent_fips_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Equivalent FIPS code recorded for a country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#experiment_title",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Full descriptive title of a CMIP experiment."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "experiment_title"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Full descriptive title of a CMIP experiment."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#feature_class",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "GeoNames feature class: a single letter giving the broad kind of place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "feature_class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "GeoNames feature class: a single letter giving the broad kind of place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#feature_code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "GeoNames feature code: a fine-grained classification of the kind of place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "feature_code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "GeoNames feature code: a fine-grained classification of the kind of place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#fips",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "FIPS 10-4 code of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "fips"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "FIPS 10-4 code of a country."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#gcmd_uri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "IRI of the matching concept in the NASA GCMD keyword vocabularies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Instrument"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Platform"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Teleconnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "gcmd_uri"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "IRI of the matching concept in the NASA GCMD keyword vocabularies."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#gcmd_uuid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "UUID of the matching concept in the NASA GCMD keyword vocabularies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Instrument"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Platform"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Teleconnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "gcmd_uuid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "UUID of the matching concept in the NASA GCMD keyword vocabularies."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#geonameid",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "GeoNames identifier of a geographic entity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
@@ -1738,126 +3206,227 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "geonameid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "GeoNames identifier of a geographic entity."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#id",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "OpenAlex work identifier of a publication."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OpenAlex work identifier of a publication."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#iso",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 alpha-2 code of a country, or the two-letter GeoNames continent code."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Continent"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "iso"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 alpha-2 code of a country, or the two-letter GeoNames continent code."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#iso3",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 alpha-3 code of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "iso3"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 alpha-3 code of a country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#isonumeric",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 numeric code of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "isonumeric"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ISO 3166-1 numeric code of a country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#languages",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Languages spoken in a country, as language tags."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "languages"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Languages spoken in a country, as language tags."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#latitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Latitude of a place in decimal degrees (WGS 84)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "latitude"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Latitude of a place in decimal degrees (WGS 84)."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Longitude of a place in decimal degrees (WGS 84)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "longitude"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Longitude of a place in decimal degrees (WGS 84)."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#modification_date",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date on which the GeoNames record was last modified."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "modification_date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Date on which the GeoNames record was last modified."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The primary human-readable name of an entity. For ESGF classes the name is also the identifier used to mint the entity's IRI."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Activity"
   }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Author"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#ClimateZone"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Continent"
   }, {
@@ -1868,6 +3437,8 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Domain"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Ensemble"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
   }, {
@@ -1896,8 +3467,6 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Metric"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#NaturalHazardType"
   }, {
@@ -1945,95 +3514,80 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+    "@id" : "https://climatepub4kg.github.io/ontology#Venue"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Weather_Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://climatepub4kg.github.io/ontology#names",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology#Activity"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Domain"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Ensemble"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#ExperimentFamily"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Forcing"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Frequency"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#GridLabel"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Institute"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#MIPEra"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Member"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Project"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#RCM"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Realm"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Resolution"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Source"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#SourceType"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#SubExperiment"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Variable"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "names"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The primary human-readable name of an entity. For ESGF classes the name is also the identifier used to mint the entity's IRI."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#neighbours",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ISO country codes of a country's land neighbours."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "neighbours"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ISO country codes of a country's land neighbours."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#north",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Northern edge of the entity's bounding box, in decimal degrees."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "north"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Northern edge of the entity's bounding box, in decimal degrees."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#paper_id",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "OpenAlex identifier of the publication this entity was extracted from (single-valued)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Field"
   }, {
@@ -2041,143 +3595,301 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
-  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Problem"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "paper_id"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OpenAlex identifier of the publication this entity was extracted from (single-valued)."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#phone",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "International dialling prefix of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "phone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "International dialling prefix of a country."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#population",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Population recorded for the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "population"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Population recorded for the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#postal_code_format",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Template describing the format of a country's postal codes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "postal_code_format"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Template describing the format of a country's postal codes."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#postal_code_regex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Regular expression validating a country's postal codes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "postal_code_regex"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Regular expression validating a country's postal codes."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#publication_year",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Year in which a publication appeared."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "publication_year"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Year in which a publication appeared."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#rcm_version",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Version label of a regional climate model."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#RCM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "rcm_version"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Version label of a regional climate model."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#south",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Southern edge of the entity's bounding box, in decimal degrees."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "south"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Southern edge of the entity's bounding box, in decimal degrees."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#timezone",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "IANA time zone identifier of the place."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "timezone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "IANA time zone identifier of the place."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#title",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Title of a publication."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "title"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Title of a publication."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#tld",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Country-code top-level Internet domain of a country."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "tld"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Country-code top-level Internet domain of a country."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Kind of publication venue, such as journal, conference, book series or repository."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Venue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Kind of publication venue, such as journal, conference, book series or repository."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#uuid",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Stable internal identifier of the entity within the knowledge graph."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Activity"
   }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Author"
+  }, {
     "@id" : "https://climatepub4kg.github.io/ontology#City"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#ClimateZone"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Continent"
   }, {
@@ -2188,6 +3900,8 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Domain"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Ensemble"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#EvaluationMetric"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Experiment"
   }, {
@@ -2216,8 +3930,6 @@
     "@id" : "https://climatepub4kg.github.io/ontology#Method"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Metric"
-  }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Model"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#NaturalHazardType"
   }, {
@@ -2265,54 +3977,94 @@
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+    "@id" : "https://climatepub4kg.github.io/ontology#Venue"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Weather_Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "uuid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Stable internal identifier of the entity within the knowledge graph."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#variable_long_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Long, descriptive name of a variable."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "variable_long_name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Long, descriptive name of a variable."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#variable_units",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical units in which a variable is reported."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "variable_units"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Physical units in which a variable is reported."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#west",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Western edge of the entity's bounding box, in decimal degrees."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology#Country"
   }, {
     "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
   }, {
-    "@id" : "https://climatepub4kg.github.io/ontology#Water_Bodies"
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "west"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Western edge of the entity's bounding box, in decimal degrees."
   } ]
 } ]
