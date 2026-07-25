@@ -1,12 +1,165 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
+<rdf:RDF xmlns="https://climatepub4kg.github.io/ontology#"
+     xml:base="https://climatepub4kg.github.io/ontology"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <Ontology/>
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://climatepub4kg.github.io/ontology">
+        <owl:versionIRI rdf:resource="https://climatepub4kg.github.io/ontology/2026-07-25"/>
+        <terms:abstract xml:lang="en">ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms.</terms:abstract>
+        <terms:creator xml:lang="en">ClimatePub4KG project</terms:creator>
+        <terms:description xml:lang="en">ClimatePub4KG connects two bodies of climate-science knowledge that are normally kept apart: the structured metadata that describes climate-model simulations, and the scientific literature that analyses them.
+
+The ontology is organised around four groups of terms.
+
+ESGF and CMIP model metadata. Classes such as Source (a climate model), SourceComponent, Experiment, SubExperiment, ExperimentFamily, Activity, Project, MIPEra, Institute, Variable, Realm, Frequency, Resolution, GridLabel, Member, Ensemble, Forcing and Domain follow the CMIP6 controlled vocabularies and the facets used by ESGF search. Model-description classes (SourceType, SimulationType, PhysicalScheme, PhysicalFeature, Metric) capture how a model is built and how it behaves.
+
+Scientific publications. A Paper is an OpenAlex-identified work, connected to its Author, Venue and Keyword records, and to the research content extracted from its full text: Field, Problem, Task, Method, Innovation, Result, EvaluationMetric and ObservationalDataset. The same content classes attach to models and methods as well as papers, so a finding can be traced from the claim to the model that produced it.
+
+Geography. Continent, Country, Country_Subdivision, City and No_Country_Region are grounded in the GeoNames gazetteer and keep their GeoNames identifiers, bounding boxes and administrative codes. ClimateZone gives a coarse Koppen-Geiger style classification.
+
+Observations and phenomena. Instrument and Platform align with the NASA GCMD keyword vocabularies; Teleconnection, Ocean_Circulation, Weather_Event, Natural_Hazard and NaturalHazardType name the large-scale patterns and events discussed in the corpus.
+
+Instance IRIs live in a separate namespace, https://climatepub4kg.github.io/id/, and follow the pattern {id-namespace}{ClassName}/{identifier}. For ESGF classes the identifier is the URL-encoded entity name, so a model IRI reads .../id/Source/CESM2; a short disambiguating suffix is appended in the rare case where one name is used by more than one entity of the same class. Everything else is minted from the node&apos;s internal uuid.
+
+Provenance is carried on the terms themselves: paper_id and added_from_paper_id record which publication an extracted entity or relationship came from, supporting_paragraphs keeps the sentences that justified it, and dataset_count records how many ESGF datasets support a metadata relationship. PAPER_MENTIONS is the general-purpose bridge from a publication to any entity mentioned in its text.
+
+The graph is built by an LLM extraction pipeline over open-access climate papers followed by entity linking against the ESGF, GeoNames and GCMD vocabularies, so instance data should be treated as machine-generated and evidence-linked rather than hand-curated.</terms:description>
+        <terms:issued>2026-07-25</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified>2026-07-25</terms:modified>
+        <terms:publisher xml:lang="en">ClimatePub4KG project</terms:publisher>
+        <terms:source rdf:resource="https://esgf.llnl.gov/"/>
+        <terms:source rdf:resource="https://gcmd.earthdata.nasa.gov/KeywordViewer/"/>
+        <terms:source rdf:resource="https://github.com/WCRP-CMIP/CMIP6_CVs"/>
+        <terms:source rdf:resource="https://openalex.org/"/>
+        <terms:source rdf:resource="https://www.geonames.org/"/>
+        <terms:title xml:lang="en">ClimatePub4KG Ontology</terms:title>
+        <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
+        <vann:preferredNamespacePrefix>clm</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://climatepub4kg.github.io/ontology#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms.</rdfs:comment>
+        <rdfs:label xml:lang="en">ClimatePub4KG Ontology</rdfs:label>
+        <owl:versionInfo>2026-07-25</owl:versionInfo>
+        <foaf:homepage rdf:resource="https://climatepub4kg.github.io/ontology/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
     
 
 
@@ -25,485 +178,599 @@
     <!-- https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Realm"/>
+        <rdfs:comment xml:lang="en">Relates a climate model, model component or experiment to an Earth system realm it addresses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>APPLIES_TO_REALM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model, model component or experiment to an Earth system realm it addresses.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Member"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a variant label (member) under which its output was produced.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>ASSOCIATED_WITH_MEMBER</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a variant label (member) under which its output was produced.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#MIPEra"/>
+        <rdfs:comment xml:lang="en">Relates a climate model or experiment family to the MIP generation it belongs to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>BELONGS_TO_MIP_ERA</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model or experiment family to the MIP generation it belongs to.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://climatepub4kg.github.io/ontology#CORRESPONDS_TO -->
+    <!-- https://climatepub4kg.github.io/ontology#CITED_BY -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#CORRESPONDS_TO">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
-        <rdfs:label>CORRESPONDS_TO</rdfs:label>
-    </ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#CITED_BY">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:comment xml:lang="en">Relates a publication to another publication that cites it, as recorded in the bibliographic reference data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>CITED_BY</rdfs:label>
+        <skos:definition xml:lang="en">Relates a publication to another publication that cites it, as recorded in the bibliographic reference data.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#COVERS_DOMAIN -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#COVERS_DOMAIN">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#COVERS_DOMAIN">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Project"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Domain"/>
+        <rdfs:comment xml:lang="en">Relates a project or regional climate model to the spatial domain it is run over.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>COVERS_DOMAIN</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a project or regional climate model to the spatial domain it is run over.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#COVERS_REGION -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#COVERS_REGION">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#COVERS_REGION">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:comment xml:lang="en">Relates a regional climate model to a geographic region that falls within its domain.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>COVERS_REGION</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a regional climate model to a geographic region that falls within its domain.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#DRIVEN_BY_SOURCE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#DRIVEN_BY_SOURCE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#DRIVEN_BY_SOURCE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
+        <rdfs:comment xml:lang="en">Relates a regional climate model to the global model that supplies its lateral boundary conditions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>DRIVEN_BY_SOURCE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a regional climate model to the global model that supplies its lateral boundary conditions.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Realm"/>
+        <rdfs:comment xml:lang="en">Relates a MIP activity to the Earth system realm its experiments focus on.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>FOCUSES_ON_REALM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a MIP activity to the Earth system realm its experiments focus on.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to the MIP activity whose experiments produced its output.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>GENERATED_BY_ACTIVITY</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to the MIP activity whose experiments produced its output.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_METRIC -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_METRIC">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_METRIC">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a characteristic quantity reported for it, such as its climate sensitivity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_METRIC</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a characteristic quantity reported for it, such as its climate sensitivity.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_PHYSICAL_FEATURE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_PHYSICAL_FEATURE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_PHYSICAL_FEATURE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#PhysicalFeature"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a physical process or property it represents.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_PHYSICAL_FEATURE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a physical process or property it represents.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_SIMULATION_TYPE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SIMULATION_TYPE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SIMULATION_TYPE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SimulationType"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a style of simulation it is run in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_SIMULATION_TYPE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a style of simulation it is run in.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
+        <rdfs:comment xml:lang="en">Relates a climate model, or one of its components, to a constituent submodel.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_SOURCE_COMPONENT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model, or one of its components, to a constituent submodel.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_SPATIAL_RESOLUTION -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SPATIAL_RESOLUTION">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SPATIAL_RESOLUTION">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Resolution"/>
+        <rdfs:comment xml:lang="en">Relates a climate model, regional model, experiment or variable to its nominal spatial resolution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_SPATIAL_RESOLUTION</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model, regional model, experiment or variable to its nominal spatial resolution.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_SUBSEQUENT_VERSION -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SUBSEQUENT_VERSION">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SUBSEQUENT_VERSION">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
+        <rdfs:comment xml:lang="en">Relates a climate model or model component to a later version of itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_SUBSEQUENT_VERSION</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model or model component to a later version of itself.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SubExperiment"/>
+        <rdfs:comment xml:lang="en">Relates an experiment to one of its sub-experiments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>HAS_SUB_EXPERIMENT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an experiment to one of its sub-experiments.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Ensemble"/>
+        <rdfs:comment xml:lang="en">Relates an experiment to an ensemble of simulations carried out for it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>INCLUDES_ENSEMBLE_MEMBER</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an experiment to an ensemble of simulations carried out for it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#ExperimentFamily"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
+        <rdfs:comment xml:lang="en">Relates an experiment family to one of its member experiments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>INCLUDES_EXPERIMENT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an experiment family to one of its member experiments.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#INHERITED_FROM -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#INHERITED_FROM">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#INHERITED_FROM">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to an earlier model it was derived from.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>INHERITED_FROM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to an earlier model it was derived from.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#IN_CONTINENT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#IN_CONTINENT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#IN_CONTINENT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
+        <rdfs:comment xml:lang="en">Relates a country to the continent it lies in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>IN_CONTINENT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a country to the continent it lies in.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#IN_COUNTRY -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#IN_COUNTRY">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#IN_COUNTRY">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Relates a city or administrative subdivision to the country that contains it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>IN_COUNTRY</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a city or administrative subdivision to the country that contains it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#IS_OF_TYPE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#IS_OF_TYPE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#IS_OF_TYPE">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Natural_Hazard"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#NaturalHazardType"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SourceType"/>
+        <rdfs:comment xml:lang="en">Relates an entity to its category: a climate model to its source type, or a natural hazard to its hazard type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>IS_OF_TYPE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an entity to its category: a climate model to its source type, or a natural hazard to its hazard type.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#MEASURES_VARIABLE -->
+
+
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MEASURES_VARIABLE">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Instrument"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
+        <rdfs:comment xml:lang="en">Relates an observing instrument to a geophysical variable it measures.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>MEASURES_VARIABLE</rdfs:label>
+        <skos:definition xml:lang="en">Relates an observing instrument to a geophysical variable it measures.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#ObservationalDataset"/>
+        <rdfs:comment xml:lang="en">Relates a method to an observational or reanalysis dataset it is applied to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a method to an observational or reanalysis dataset it is applied to.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#METHOD_HAS_INNOVATION -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_HAS_INNOVATION">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_HAS_INNOVATION">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Innovation"/>
+        <rdfs:comment xml:lang="en">Relates a method to a novel contribution it introduces.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>METHOD_HAS_INNOVATION</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a method to a novel contribution it introduces.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Result"/>
+        <rdfs:comment xml:lang="en">Relates a method to a finding obtained with it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>METHOD_HAS_RESULT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a method to a finding obtained with it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#METHOD_SOLVES_PROBLEM -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_SOLVES_PROBLEM">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_SOLVES_PROBLEM">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Problem"/>
+        <rdfs:comment xml:lang="en">Relates a method to a research problem it addresses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>METHOD_SOLVES_PROBLEM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a method to a research problem it addresses.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#METHOD_USES_METRIC -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_USES_METRIC">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_USES_METRIC">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
+        <rdfs:comment xml:lang="en">Relates a method to an evaluation metric used to assess it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>METHOD_USES_METRIC</rdfs:label>
-    </ObjectProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#METHOD_USES_MODEL -->
-
-
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_USES_MODEL">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
-        <rdfs:label>METHOD_USES_MODEL</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a method to an evaluation metric used to assess it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#METHOD_WORKS_ON_TASK -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_WORKS_ON_TASK">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#METHOD_WORKS_ON_TASK">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
+        <rdfs:comment xml:lang="en">Relates a method to a research task it is used for.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>METHOD_WORKS_ON_TASK</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a method to a research task it is used for.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#ObservationalDataset"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to an observational or reanalysis dataset it is compared against.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to an observational or reanalysis dataset it is compared against.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#MODEL_HAS_RESULT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_HAS_RESULT">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_HAS_RESULT">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Result"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a finding reported about it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>MODEL_HAS_RESULT</rdfs:label>
-    </ObjectProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#MODEL_SOLVES_PROBLEM -->
-
-
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_SOLVES_PROBLEM">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Problem"/>
-        <rdfs:label>MODEL_SOLVES_PROBLEM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a finding reported about it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#MODEL_USES_METRIC -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_USES_METRIC">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_USES_METRIC">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to an evaluation metric used to assess it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>MODEL_USES_METRIC</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to an evaluation metric used to assess it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://climatepub4kg.github.io/ontology#MODEL_WORKS_FOR_TASK -->
+    <!-- https://climatepub4kg.github.io/ontology#MOUNTED_ON -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MODEL_WORKS_FOR_TASK">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
-        <rdfs:label>MODEL_WORKS_FOR_TASK</rdfs:label>
-    </ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#MOUNTED_ON">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Instrument"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Platform"/>
+        <rdfs:comment xml:lang="en">Relates an observing instrument to the platform that carries it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>MOUNTED_ON</rdfs:label>
+        <skos:definition xml:lang="en">Relates an observing instrument to the platform that carries it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a method it applies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_APPLIES_METHOD</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to a method it applies.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#PAPER_AUTHORED_BY -->
+
+
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_AUTHORED_BY">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Author"/>
+        <rdfs:comment xml:lang="en">Relates a publication to one of its authors.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>PAPER_AUTHORED_BY</rdfs:label>
+        <skos:definition xml:lang="en">Relates a publication to one of its authors.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_BELONGS_TO_FIELD -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_BELONGS_TO_FIELD">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_BELONGS_TO_FIELD">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Field"/>
+        <rdfs:comment xml:lang="en">Relates a publication to the research field it belongs to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_BELONGS_TO_FIELD</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to the research field it belongs to.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#ObservationalDataset"/>
+        <rdfs:comment xml:lang="en">Relates a publication to an observational or reanalysis dataset it experiments on.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to an observational or reanalysis dataset it experiments on.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_HAS_INNOVATION -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_INNOVATION">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_INNOVATION">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Innovation"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a novel contribution it claims.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_HAS_INNOVATION</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to a novel contribution it claims.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_HAS_KEYWORD -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_KEYWORD">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_KEYWORD">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Keyword"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a subject keyword assigned to it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_HAS_KEYWORD</rdfs:label>
-    </ObjectProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#PAPER_HAS_MODEL -->
-
-
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_MODEL">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
-        <rdfs:label>PAPER_HAS_MODEL</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to a subject keyword assigned to it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_HAS_RESULT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_RESULT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_HAS_RESULT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Result"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a finding it reports.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_HAS_RESULT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to a finding it reports.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_MENTIONS -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_MENTIONS">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_MENTIONS">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#ClimateZone"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Domain"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#ExperimentFamily"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Frequency"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Institute"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Instrument"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#MIPEra"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Member"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#NaturalHazardType"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Natural_Hazard"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Ocean_Circulation"/>
@@ -511,222 +778,294 @@
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#PhysicalScheme"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Platform"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Project"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Realm"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Resolution"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SimulationType"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SourceType"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#SubExperiment"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Teleconnection"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Weather_Event"/>
+        <rdfs:comment xml:lang="en">Relates a publication to any entity mentioned in its text. This is the general-purpose provenance bridge between the literature and the rest of the graph, and is asserted whenever entity linking matched a mention to a node.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_MENTIONS</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to any entity mentioned in its text. This is the general-purpose provenance bridge between the literature and the rest of the graph, and is asserted whenever entity linking matched a mention to a node.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#PAPER_PUBLISHED_IN_VENUE -->
+
+
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_PUBLISHED_IN_VENUE">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Venue"/>
+        <rdfs:comment xml:lang="en">Relates a publication to the venue it appeared in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>PAPER_PUBLISHED_IN_VENUE</rdfs:label>
+        <skos:definition xml:lang="en">Relates a publication to the venue it appeared in.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_SOLVES_PROBLEM -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_SOLVES_PROBLEM">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_SOLVES_PROBLEM">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Problem"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a research problem it addresses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_SOLVES_PROBLEM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to a research problem it addresses.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_USES_METRIC -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_USES_METRIC">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_USES_METRIC">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
+        <rdfs:comment xml:lang="en">Relates a publication to an evaluation metric it uses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_USES_METRIC</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to an evaluation metric it uses.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#PAPER_USES_MODEL -->
+
+
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_USES_MODEL">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a climate model it uses or evaluates.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>PAPER_USES_MODEL</rdfs:label>
+        <skos:definition xml:lang="en">Relates a publication to a climate model it uses or evaluates.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PAPER_WORKS_ON_TASK -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_WORKS_ON_TASK">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PAPER_WORKS_ON_TASK">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
+        <rdfs:comment xml:lang="en">Relates a publication to a research task it works on.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PAPER_WORKS_ON_TASK</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a publication to a research task it works on.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PARTICIPATED_IN -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PARTICIPATED_IN">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PARTICIPATED_IN">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Institute"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Project"/>
+        <rdfs:comment xml:lang="en">Relates an institution to a project it took part in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PARTICIPATED_IN</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an institution to a project it took part in.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Ensemble"/>
+        <rdfs:comment xml:lang="en">Relates a climate model or sub-experiment to an ensemble it contributes to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PART_OF_ENSEMBLE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model or sub-experiment to an ensemble it contributes to.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PART_OF_PROJECT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PART_OF_PROJECT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PART_OF_PROJECT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Project"/>
+        <rdfs:comment xml:lang="en">Relates a climate model, regional model, experiment or activity to a project it belongs to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PART_OF_PROJECT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model, regional model, experiment or activity to a project it belongs to.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Institute"/>
+        <rdfs:comment xml:lang="en">Relates an experiment to the institution that performed it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PERFORMED_BY_INSTITUTE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an experiment to the institution that performed it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Institute"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to the institution that developed it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PRODUCED_BY_INSTITUTE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to the institution that developed it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PRODUCES_VARIABLE -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PRODUCES_VARIABLE">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#PRODUCES_VARIABLE">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
+        <rdfs:comment xml:lang="en">Relates a climate model or model component to a geophysical variable it outputs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PRODUCES_VARIABLE</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model or model component to a geophysical variable it outputs.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#RESULT_HAS_METRIC -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#RESULT_HAS_METRIC">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#RESULT_HAS_METRIC">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Result"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
+        <rdfs:comment xml:lang="en">Relates a reported finding to the evaluation metric it is expressed in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>RESULT_HAS_METRIC</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a reported finding to the evaluation metric it is expressed in.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Frequency"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a temporal frequency at which its output is reported.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>SAMPLED_AT_FREQUENCY</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a temporal frequency at which its output is reported.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#ObservationalDataset"/>
+        <rdfs:comment xml:lang="en">Relates a research task to an observational or reanalysis dataset it is carried out on.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a research task to an observational or reanalysis dataset it is carried out on.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#TASK_FACES_PROBLEM -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#TASK_FACES_PROBLEM">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#TASK_FACES_PROBLEM">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Problem"/>
+        <rdfs:comment xml:lang="en">Relates a research task to a problem that makes it difficult.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>TASK_FACES_PROBLEM</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a research task to a problem that makes it difficult.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#TASK_USES_METRIC -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#TASK_USES_METRIC">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#TASK_USES_METRIC">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
+        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
+        <rdfs:comment xml:lang="en">Relates a research task to an evaluation metric used to score it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>TASK_USES_METRIC</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a research task to an evaluation metric used to score it.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#USED_IN_EXPERIMENT -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#USED_IN_EXPERIMENT">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#USED_IN_EXPERIMENT">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
+        <rdfs:comment xml:lang="en">Relates a climate model or regional climate model to an experiment it was run for.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>USED_IN_EXPERIMENT</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model or regional climate model to an experiment it was run for.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#USES_FORCING -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#USES_FORCING">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#USES_FORCING">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#Forcing"/>
+        <rdfs:comment xml:lang="en">Relates an experiment to an external forcing it prescribes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>USES_FORCING</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates an experiment to an external forcing it prescribes.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#USES_PHYSICAL_SCHEME -->
 
 
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#USES_PHYSICAL_SCHEME">
+    <owl:ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#USES_PHYSICAL_SCHEME">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
         <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#PhysicalScheme"/>
+        <rdfs:comment xml:lang="en">Relates a climate model to a parameterisation or numerical scheme it implements.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>USES_PHYSICAL_SCHEME</rdfs:label>
-    </ObjectProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_IN -->
-
-
-    <ObjectProperty rdf:about="https://climatepub4kg.github.io/ontology#_IN">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_MapDef"/>
-        <rdfs:range rdf:resource="https://climatepub4kg.github.io/ontology#_MapNs"/>
-        <rdfs:label>_IN</rdfs:label>
-    </ObjectProperty>
+        <skos:definition xml:lang="en">Relates a climate model to a parameterisation or numerical scheme it implements.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
@@ -742,667 +1081,589 @@
     
 
 
-    <!-- https://climatepub4kg.github.io/ontology#Name -->
+    <!-- https://climatepub4kg.github.io/ontology#abstract -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#Name">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#abstract">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>Name</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_applyNeo4jNaming -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_applyNeo4jNaming">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label>_applyNeo4jNaming</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_classLabel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_classLabel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_classLabel</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_classNamePropName -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_classNamePropName">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_classNamePropName</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_dataTypePropertyLabel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_dataTypePropertyLabel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_dataTypePropertyLabel</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_domainRel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_domainRel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_domainRel</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_handleMultival -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_handleMultival">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_handleMultival</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_handleRDFTypes -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_handleRDFTypes">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_handleRDFTypes</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_handleVocabUris -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_handleVocabUris">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_handleVocabUris</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_keepCustomDataTypes -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_keepCustomDataTypes">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label>_keepCustomDataTypes</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_keepLangTag -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_keepLangTag">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label>_keepLangTag</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_key -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_key">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_MapDef"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_key</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_local -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_local">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_MapDef"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_local</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_ns -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_ns">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_MapNs"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_ns</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_objectPropertyLabel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_objectPropertyLabel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_objectPropertyLabel</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_prefix -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_prefix">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_MapNs"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_prefix</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_rangeRel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_rangeRel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_rangeRel</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_relNamePropName -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_relNamePropName">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_relNamePropName</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_subClassOfRel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_subClassOfRel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_subClassOfRel</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_subPropertyOfRel -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#_subPropertyOfRel">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>_subPropertyOfRel</rdfs:label>
-    </DatatypeProperty>
+        <rdfs:comment xml:lang="en">Abstract of a publication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>abstract</rdfs:label>
+        <skos:definition xml:lang="en">Abstract of a publication.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#added_from_paper_id -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#added_from_paper_id">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#added_from_paper_id">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Instrument"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Natural_Hazard"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Ocean_Circulation"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#PhysicalFeature"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#PhysicalScheme"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Platform"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SimulationType"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SourceComponent"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Teleconnection"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Weather_Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">OpenAlex identifiers of the publications from which this entity or relationship was extracted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>added_from_paper_id</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">OpenAlex identifiers of the publications from which this entity or relationship was extracted.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#admin1_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin1_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin1_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Code of the first-level administrative division containing the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>admin1_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Code of the first-level administrative division containing the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#admin2_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin2_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin2_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Code of the second-level administrative division containing the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>admin2_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Code of the second-level administrative division containing the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#admin3_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin3_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin3_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Code of the third-level administrative division containing the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>admin3_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Code of the third-level administrative division containing the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#admin4_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin4_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#admin4_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Code of the fourth-level administrative division containing the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>admin4_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Code of the fourth-level administrative division containing the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#alternatenames -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#alternatenames">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#alternatenames">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Alternative and localised names of a place, as recorded by GeoNames.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>alternatenames</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Alternative and localised names of a place, as recorded by GeoNames.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#area_sqkm -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#area_sqkm">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#area_sqkm">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Area of a country in square kilometres.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>area_sqkm</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Area of a country in square kilometres.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#asciiname -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#asciiname">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#asciiname">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ASCII transliteration of a geographic name, as recorded by GeoNames.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>asciiname</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ASCII transliteration of a geographic name, as recorded by GeoNames.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#capital -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#capital">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#capital">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Capital city of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>capital</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Capital city of a country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#cc2 -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#cc2">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#cc2">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Additional country codes for a place that spans more than one country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>cc2</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Additional country codes for a place that spans more than one country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#cf_standard_name -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#cf_standard_name">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#cf_standard_name">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">CF standard name of a variable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>cf_standard_name</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#clm -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#clm">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_NsPrefDef"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>clm</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#clmid -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#clmid">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#_NsPrefDef"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>clmid</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">CF standard name of a variable.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Administrative code of a country subdivision, in GeoNames country.admin1 form.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Administrative code of a country subdivision, in GeoNames country.admin1 form.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#continent -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#continent">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#continent">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Two-letter GeoNames continent code of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>continent</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Two-letter GeoNames continent code of a country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#country -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#country">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#country">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Country name as recorded in the GeoNames country table.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>country</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Country name as recorded in the GeoNames country table.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#country_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#country_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#country_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISO 3166-1 alpha-2 code of the country containing the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>country_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ISO 3166-1 alpha-2 code of the country containing the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#currencycode -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#currencycode">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#currencycode">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISO 4217 code of a country&apos;s currency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>currencycode</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ISO 4217 code of a country&apos;s currency.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#currencyname -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#currencyname">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#currencyname">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of a country&apos;s currency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>currencyname</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Name of a country&apos;s currency.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#dem -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#dem">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#dem">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Digital elevation model value in metres at the place&apos;s coordinates (SRTM3 or GTOPO30).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>dem</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Digital elevation model value in metres at the place&apos;s coordinates (SRTM3 or GTOPO30).</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#doi -->
+
+
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#doi">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Digital Object Identifier of a publication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>doi</rdfs:label>
+        <skos:definition xml:lang="en">Digital Object Identifier of a publication.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#east -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#east">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#east">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Eastern edge of the entity&apos;s bounding box, in decimal degrees.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>east</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Eastern edge of the entity&apos;s bounding box, in decimal degrees.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#elevation -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#elevation">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#elevation">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Elevation of the place in metres, where recorded.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>elevation</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Elevation of the place in metres, where recorded.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#equivalent_fips_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#equivalent_fips_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#equivalent_fips_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Equivalent FIPS code recorded for a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>equivalent_fips_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Equivalent FIPS code recorded for a country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#experiment_title -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#experiment_title">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#experiment_title">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Full descriptive title of a CMIP experiment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>experiment_title</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Full descriptive title of a CMIP experiment.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#feature_class -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#feature_class">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#feature_class">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">GeoNames feature class: a single letter giving the broad kind of place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>feature_class</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">GeoNames feature class: a single letter giving the broad kind of place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#feature_code -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#feature_code">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#feature_code">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">GeoNames feature code: a fine-grained classification of the kind of place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>feature_code</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">GeoNames feature code: a fine-grained classification of the kind of place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#fips -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#fips">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#fips">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">FIPS 10-4 code of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>fips</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">FIPS 10-4 code of a country.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#gcmd_uri -->
+
+
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#gcmd_uri">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Instrument"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Ocean_Circulation"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Platform"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Teleconnection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IRI of the matching concept in the NASA GCMD keyword vocabularies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>gcmd_uri</rdfs:label>
+        <skos:definition xml:lang="en">IRI of the matching concept in the NASA GCMD keyword vocabularies.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#gcmd_uuid -->
+
+
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#gcmd_uuid">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Instrument"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Ocean_Circulation"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Platform"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Teleconnection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">UUID of the matching concept in the NASA GCMD keyword vocabularies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>gcmd_uuid</rdfs:label>
+        <skos:definition xml:lang="en">UUID of the matching concept in the NASA GCMD keyword vocabularies.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#geonameid -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#geonameid">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#geonameid">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">GeoNames identifier of a geographic entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>geonameid</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">GeoNames identifier of a geographic entity.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#id -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#id">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#id">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">OpenAlex work identifier of a publication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>id</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">OpenAlex work identifier of a publication.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#iso -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#iso">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#iso">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISO 3166-1 alpha-2 code of a country, or the two-letter GeoNames continent code.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>iso</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ISO 3166-1 alpha-2 code of a country, or the two-letter GeoNames continent code.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#iso3 -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#iso3">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#iso3">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISO 3166-1 alpha-3 code of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>iso3</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ISO 3166-1 alpha-3 code of a country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#isonumeric -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#isonumeric">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#isonumeric">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISO 3166-1 numeric code of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>isonumeric</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ISO 3166-1 numeric code of a country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#languages -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#languages">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#languages">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Languages spoken in a country, as language tags.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>languages</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Languages spoken in a country, as language tags.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#latitude -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#latitude">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#latitude">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Latitude of a place in decimal degrees (WGS 84).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>latitude</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Latitude of a place in decimal degrees (WGS 84).</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#longitude -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#longitude">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#longitude">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Longitude of a place in decimal degrees (WGS 84).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>longitude</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Longitude of a place in decimal degrees (WGS 84).</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#modification_date -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#modification_date">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#modification_date">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Date on which the GeoNames record was last modified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>modification_date</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Date on which the GeoNames record was last modified.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#name -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#name">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#name">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Author"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#ClimateZone"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Domain"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Ensemble"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#ExperimentFamily"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Field"/>
@@ -1417,7 +1678,6 @@
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Member"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#NaturalHazardType"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Natural_Hazard"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
@@ -1441,198 +1701,238 @@
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Teleconnection"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Venue"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Weather_Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The primary human-readable name of an entity. For ESGF classes the name is also the identifier used to mint the entity&apos;s IRI.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>name</rdfs:label>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#names -->
-
-
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#names">
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Domain"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Ensemble"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#ExperimentFamily"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Forcing"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Frequency"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#GridLabel"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Institute"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#MIPEra"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Member"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Project"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Realm"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Resolution"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Source"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SourceType"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#SubExperiment"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>names</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">The primary human-readable name of an entity. For ESGF classes the name is also the identifier used to mint the entity&apos;s IRI.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#neighbours -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#neighbours">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#neighbours">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ISO country codes of a country&apos;s land neighbours.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>neighbours</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">ISO country codes of a country&apos;s land neighbours.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#north -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#north">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#north">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Northern edge of the entity&apos;s bounding box, in decimal degrees.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>north</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Northern edge of the entity&apos;s bounding box, in decimal degrees.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#paper_id -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#paper_id">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#paper_id">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Field"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Innovation"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Problem"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">OpenAlex identifier of the publication this entity was extracted from (single-valued).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>paper_id</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">OpenAlex identifier of the publication this entity was extracted from (single-valued).</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#phone -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#phone">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#phone">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">International dialling prefix of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>phone</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">International dialling prefix of a country.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#population -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#population">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#population">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Population recorded for the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>population</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Population recorded for the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#postal_code_format -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#postal_code_format">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#postal_code_format">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Template describing the format of a country&apos;s postal codes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>postal_code_format</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Template describing the format of a country&apos;s postal codes.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#postal_code_regex -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#postal_code_regex">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#postal_code_regex">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Regular expression validating a country&apos;s postal codes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>postal_code_regex</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Regular expression validating a country&apos;s postal codes.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#publication_year -->
+
+
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#publication_year">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Year in which a publication appeared.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>publication_year</rdfs:label>
+        <skos:definition xml:lang="en">Year in which a publication appeared.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#rcm_version -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#rcm_version">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#rcm_version">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#RCM"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Version label of a regional climate model.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>rcm_version</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Version label of a regional climate model.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#south -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#south">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#south">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Southern edge of the entity&apos;s bounding box, in decimal degrees.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>south</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Southern edge of the entity&apos;s bounding box, in decimal degrees.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#timezone -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#timezone">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#timezone">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IANA time zone identifier of the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>timezone</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">IANA time zone identifier of the place.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#title -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#title">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#title">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Paper"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Title of a publication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>title</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Title of a publication.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#tld -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#tld">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#tld">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Country-code top-level Internet domain of a country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>tld</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Country-code top-level Internet domain of a country.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#type -->
+
+
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#type">
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Kind of publication venue, such as journal, conference, book series or repository.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>type</rdfs:label>
+        <skos:definition xml:lang="en">Kind of publication venue, such as journal, conference, book series or repository.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#uuid -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#uuid">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#uuid">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Activity"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Author"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#City"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#ClimateZone"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Continent"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Domain"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Ensemble"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#EvaluationMetric"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Experiment"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#ExperimentFamily"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Field"/>
@@ -1647,7 +1947,6 @@
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Member"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Method"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Metric"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Model"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#NaturalHazardType"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Natural_Hazard"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
@@ -1671,46 +1970,58 @@
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Task"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Teleconnection"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Venue"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Weather_Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stable internal identifier of the entity within the knowledge graph.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>uuid</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Stable internal identifier of the entity within the knowledge graph.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#variable_long_name -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#variable_long_name">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#variable_long_name">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Long, descriptive name of a variable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>variable_long_name</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Long, descriptive name of a variable.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#variable_units -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#variable_units">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#variable_units">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Physical units in which a variable is reported.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>variable_units</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Physical units in which a variable is reported.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#west -->
 
 
-    <DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#west">
+    <owl:DatatypeProperty rdf:about="https://climatepub4kg.github.io/ontology#west">
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country"/>
         <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Country_Subdivision"/>
-        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#Water_Bodies"/>
+        <rdfs:domain rdf:resource="https://climatepub4kg.github.io/ontology#No_Country_Region"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Western edge of the entity&apos;s bounding box, in decimal degrees.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>west</rdfs:label>
-    </DatatypeProperty>
+        <skos:definition xml:lang="en">Western edge of the entity&apos;s bounding box, in decimal degrees.</skos:definition>
+    </owl:DatatypeProperty>
     
 
 
@@ -1729,451 +2040,612 @@
     <!-- https://climatepub4kg.github.io/ontology#Activity -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Activity">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Activity">
+        <rdfs:comment xml:lang="en">A Model Intercomparison Project (MIP) activity within a MIP era, such as CMIP, ScenarioMIP or DAMIP, that defines and coordinates a related set of climate model experiments. Corresponds to the ESGF activity_id facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Activity</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A Model Intercomparison Project (MIP) activity within a MIP era, such as CMIP, ScenarioMIP or DAMIP, that defines and coordinates a related set of climate model experiments. Corresponds to the ESGF activity_id facet.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#Author -->
+
+
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Author">
+        <rdfs:comment xml:lang="en">A person credited as an author of a publication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>Author</rdfs:label>
+        <skos:definition xml:lang="en">A person credited as an author of a publication.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#City -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#City">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#City">
+        <rdfs:comment xml:lang="en">A populated place, such as a city, town or village, as identified in the GeoNames gazetteer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>City</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A populated place, such as a city, town or village, as identified in the GeoNames gazetteer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#ClimateZone -->
+
+
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#ClimateZone">
+        <rdfs:comment xml:lang="en">A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>ClimateZone</rdfs:label>
+        <skos:definition xml:lang="en">A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Continent -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Continent">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Continent">
+        <rdfs:comment xml:lang="en">A continent, as identified in the GeoNames gazetteer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Continent</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A continent, as identified in the GeoNames gazetteer.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Country -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Country">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Country">
+        <rdfs:comment xml:lang="en">A country or dependent territory, as identified in the GeoNames gazetteer, together with its ISO codes and country-level attributes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Country</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A country or dependent territory, as identified in the GeoNames gazetteer, together with its ISO codes and country-level attributes.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Country_Subdivision -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Country_Subdivision">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Country_Subdivision">
+        <rdfs:comment xml:lang="en">A first-level administrative subdivision of a country, such as a state, province, region or canton, as identified in the GeoNames gazetteer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Country_Subdivision</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A first-level administrative subdivision of a country, such as a state, province, region or canton, as identified in the GeoNames gazetteer.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Domain -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Domain">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Domain">
+        <rdfs:comment xml:lang="en">A named spatial domain over which a project or regional climate model is run, such as the CORDEX domains EUR-11 or AFR-44.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Domain</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A named spatial domain over which a project or regional climate model is run, such as the CORDEX domains EUR-11 or AFR-44.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Ensemble -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Ensemble">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Ensemble">
+        <rdfs:comment xml:lang="en">A set of simulations of the same experiment that differ only in their realisation, initialisation, physics or forcing settings, used to sample uncertainty.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Ensemble</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A set of simulations of the same experiment that differ only in their realisation, initialisation, physics or forcing settings, used to sample uncertainty.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#EvaluationMetric -->
+
+
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#EvaluationMetric">
+        <rdfs:comment xml:lang="en">A measure used to evaluate a model, method, task or result, such as root-mean-square error, bias, correlation or skill score.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>EvaluationMetric</rdfs:label>
+        <skos:definition xml:lang="en">A measure used to evaluate a model, method, task or result, such as root-mean-square error, bias, correlation or skill score.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Experiment -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Experiment">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Experiment">
+        <rdfs:comment xml:lang="en">A prescribed simulation protocol that models are run under, such as historical, piControl or ssp585. Corresponds to the ESGF experiment_id facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Experiment</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A prescribed simulation protocol that models are run under, such as historical, piControl or ssp585. Corresponds to the ESGF experiment_id facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#ExperimentFamily -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#ExperimentFamily">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#ExperimentFamily">
+        <rdfs:comment xml:lang="en">A grouping of experiments that share a common protocol or scientific purpose, such as the DECK, historical or ScenarioMIP families.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>ExperimentFamily</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A grouping of experiments that share a common protocol or scientific purpose, such as the DECK, historical or ScenarioMIP families.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Field -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Field">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Field">
+        <rdfs:comment xml:lang="en">The research field or discipline a publication belongs to, such as regional climate modelling or detection and attribution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Field</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The research field or discipline a publication belongs to, such as regional climate modelling or detection and attribution.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Forcing -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Forcing">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Forcing">
+        <rdfs:comment xml:lang="en">An external forcing agent or forcing dataset prescribed by an experiment, such as greenhouse gas concentrations, aerosol emissions, land use or solar variability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Forcing</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">An external forcing agent or forcing dataset prescribed by an experiment, such as greenhouse gas concentrations, aerosol emissions, land use or solar variability.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Frequency -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Frequency">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Frequency">
+        <rdfs:comment xml:lang="en">The temporal sampling frequency at which model output is reported, such as mon, day, 6hr or fx (time-invariant). Corresponds to the ESGF frequency facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Frequency</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The temporal sampling frequency at which model output is reported, such as mon, day, 6hr or fx (time-invariant). Corresponds to the ESGF frequency facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#GridLabel -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#GridLabel">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#GridLabel">
+        <rdfs:comment xml:lang="en">The label identifying the grid a dataset is reported on, such as gn (the model&apos;s native grid) or gr (a regridded product). Corresponds to the ESGF grid_label facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>GridLabel</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The label identifying the grid a dataset is reported on, such as gn (the model&apos;s native grid) or gr (a regridded product). Corresponds to the ESGF grid_label facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Innovation -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Innovation">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Innovation">
+        <rdfs:comment xml:lang="en">A novel contribution claimed by a publication or method, such as a new scheme, dataset or analysis approach.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Innovation</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A novel contribution claimed by a publication or method, such as a new scheme, dataset or analysis approach.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Institute -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Institute">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Institute">
+        <rdfs:comment xml:lang="en">The institution that develops a climate model or carries out an experiment. Corresponds to the ESGF institution_id facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Institute</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The institution that develops a climate model or carries out an experiment. Corresponds to the ESGF institution_id facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Instrument -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Instrument">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Instrument">
+        <rdfs:comment xml:lang="en">A measuring instrument or sensor that observes geophysical variables, such as a satellite radiometer, radar or radiosonde. Aligned with the NASA GCMD instruments vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Instrument</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A measuring instrument or sensor that observes geophysical variables, such as a satellite radiometer, radar or radiosonde. Aligned with the NASA GCMD instruments vocabulary.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Keyword -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Keyword">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Keyword">
+        <rdfs:comment xml:lang="en">A subject keyword or concept assigned to a publication, taken from the publication&apos;s bibliographic record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Keyword</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A subject keyword or concept assigned to a publication, taken from the publication&apos;s bibliographic record.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#MIPEra -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#MIPEra">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#MIPEra">
+        <rdfs:comment xml:lang="en">A generation of the Model Intercomparison Project, such as CMIP5, CMIP6 or CMIP6Plus.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>MIPEra</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A generation of the Model Intercomparison Project, such as CMIP5, CMIP6 or CMIP6Plus.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Member -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Member">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Member">
+        <rdfs:comment xml:lang="en">A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Member</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Method -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Method">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Method">
+        <rdfs:comment xml:lang="en">A method, technique, model configuration or analysis procedure that a publication applies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Method</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A method, technique, model configuration or analysis procedure that a publication applies.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Metric -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Metric">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Metric">
+        <rdfs:comment xml:lang="en">A characteristic quantity reported for a model, such as its equilibrium climate sensitivity, transient climate response or effective radiative forcing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Metric</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A characteristic quantity reported for a model, such as its equilibrium climate sensitivity, transient climate response or effective radiative forcing.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Model -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Model">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Model">
+        <rdfs:comment xml:lang="en">Legacy class for a climate model. Superseded by Source and retained only so that older IRIs continue to resolve; new data should use Source.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Model</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">Legacy class for a climate model. Superseded by Source and retained only so that older IRIs continue to resolve; new data should use Source.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#NaturalHazardType -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#NaturalHazardType">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#NaturalHazardType">
+        <rdfs:comment xml:lang="en">The category a natural hazard belongs to, such as flood, drought, heatwave, wildfire or tropical cyclone.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>NaturalHazardType</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The category a natural hazard belongs to, such as flood, drought, heatwave, wildfire or tropical cyclone.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Natural_Hazard -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Natural_Hazard">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Natural_Hazard">
+        <rdfs:comment xml:lang="en">A natural hazard studied in the corpus, such as a named flood, drought, wildfire or tropical cyclone.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Natural_Hazard</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A natural hazard studied in the corpus, such as a named flood, drought, wildfire or tropical cyclone.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#No_Country_Region -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#No_Country_Region">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#No_Country_Region">
+        <rdfs:comment xml:lang="en">A named geographic region that is neither a country nor an administrative subdivision, such as a river basin, mountain range, sea, gulf or ocean sector, as identified in the GeoNames gazetteer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>No_Country_Region</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A named geographic region that is neither a country nor an administrative subdivision, such as a river basin, mountain range, sea, gulf or ocean sector, as identified in the GeoNames gazetteer.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#ObservationalDataset -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#ObservationalDataset">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#ObservationalDataset">
+        <rdfs:comment xml:lang="en">An observational, reanalysis or reference dataset used to evaluate or drive a model, such as ERA5, GPCP or HadCRUT.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>ObservationalDataset</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">An observational, reanalysis or reference dataset used to evaluate or drive a model, such as ERA5, GPCP or HadCRUT.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Ocean_Circulation -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Ocean_Circulation">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Ocean_Circulation">
+        <rdfs:comment xml:lang="en">An ocean current or circulation feature, such as the Atlantic Meridional Overturning Circulation, the Gulf Stream or the Antarctic Circumpolar Current. Aligned with the NASA GCMD science keywords.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Ocean_Circulation</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">An ocean current or circulation feature, such as the Atlantic Meridional Overturning Circulation, the Gulf Stream or the Antarctic Circumpolar Current. Aligned with the NASA GCMD science keywords.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Paper -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Paper">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Paper">
+        <rdfs:comment xml:lang="en">A scientific publication about climate science, identified by its OpenAlex work identifier and, where available, its DOI. Papers are the provenance anchor for the extracted content in the graph.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Paper</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A scientific publication about climate science, identified by its OpenAlex work identifier and, where available, its DOI. Papers are the provenance anchor for the extracted content in the graph.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PhysicalFeature -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#PhysicalFeature">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#PhysicalFeature">
+        <rdfs:comment xml:lang="en">A physical process or property represented in a model, such as interactive aerosols, dynamic vegetation, an interactive carbon cycle or a prognostic ice sheet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PhysicalFeature</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A physical process or property represented in a model, such as interactive aerosols, dynamic vegetation, an interactive carbon cycle or a prognostic ice sheet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#PhysicalScheme -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#PhysicalScheme">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#PhysicalScheme">
+        <rdfs:comment xml:lang="en">A parameterisation or numerical scheme implemented in a model, such as a convection, radiation, cloud microphysics or boundary-layer scheme.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>PhysicalScheme</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A parameterisation or numerical scheme implemented in a model, such as a convection, radiation, cloud microphysics or boundary-layer scheme.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Platform -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Platform">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Platform">
+        <rdfs:comment xml:lang="en">A platform that carries observing instruments, such as a satellite, aircraft, ship, buoy or ground station. Aligned with the NASA GCMD platforms vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Platform</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A platform that carries observing instruments, such as a satellite, aircraft, ship, buoy or ground station. Aligned with the NASA GCMD platforms vocabulary.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Problem -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Problem">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Problem">
+        <rdfs:comment xml:lang="en">A research problem, limitation or open question that a publication, method or task addresses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Problem</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A research problem, limitation or open question that a publication, method or task addresses.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Project -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Project">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Project">
+        <rdfs:comment xml:lang="en">A research project or coordinated programme that models, experiments and datasets belong to, such as CMIP6, CORDEX or input4MIPs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Project</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A research project or coordinated programme that models, experiments and datasets belong to, such as CMIP6, CORDEX or input4MIPs.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#RCM -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#RCM">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#RCM">
+        <rdfs:comment xml:lang="en">A regional climate model: a limited-area model run at higher resolution over a specific domain, driven at its boundaries by a global model or a reanalysis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>RCM</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A regional climate model: a limited-area model run at higher resolution over a specific domain, driven at its boundaries by a global model or a reanalysis.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Realm -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Realm">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Realm">
+        <rdfs:comment xml:lang="en">A component of the Earth system that a model, model component, experiment or activity addresses, such as atmos, ocean, land, seaIce, landIce, aerosol or atmosChem.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Realm</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A component of the Earth system that a model, model component, experiment or activity addresses, such as atmos, ocean, land, seaIce, landIce, aerosol or atmosChem.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Resolution -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Resolution">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Resolution">
+        <rdfs:comment xml:lang="en">The nominal spatial resolution of a model, experiment or variable, expressed as a distance such as 100 km. Corresponds to the ESGF nominal_resolution facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Resolution</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The nominal spatial resolution of a model, experiment or variable, expressed as a distance such as 100 km. Corresponds to the ESGF nominal_resolution facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Result -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Result">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Result">
+        <rdfs:comment xml:lang="en">A reported finding or quantitative outcome of a publication, model or method.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Result</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A reported finding or quantitative outcome of a publication, model or method.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#SimulationType -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#SimulationType">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#SimulationType">
+        <rdfs:comment xml:lang="en">A characteristic style of simulation a model is run in, such as fully coupled, AMIP-style (prescribed sea surface temperatures), nudged or time-slice.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>SimulationType</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A characteristic style of simulation a model is run in, such as fully coupled, AMIP-style (prescribed sea surface temperatures), nudged or time-slice.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Source -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Source">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Source">
+        <rdfs:comment xml:lang="en">A climate or Earth system model: a named, versioned model configuration that produces simulation output. Corresponds to the ESGF source_id facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Source</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A climate or Earth system model: a named, versioned model configuration that produces simulation output. Corresponds to the ESGF source_id facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#SourceComponent -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#SourceComponent">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#SourceComponent">
+        <rdfs:comment xml:lang="en">A submodel of a climate model, such as its atmosphere, ocean, sea-ice, land-surface or aerosol component, usually together with the component&apos;s own version label.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>SourceComponent</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A submodel of a climate model, such as its atmosphere, ocean, sea-ice, land-surface or aerosol component, usually together with the component&apos;s own version label.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#SourceType -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#SourceType">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#SourceType">
+        <rdfs:comment xml:lang="en">The category of a climate model, such as AOGCM, AGCM, BGC or CHEM, describing which Earth system components the model couples. Corresponds to the ESGF source_type facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>SourceType</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">The category of a climate model, such as AOGCM, AGCM, BGC or CHEM, describing which Earth system components the model couples. Corresponds to the ESGF source_type facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#SubExperiment -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#SubExperiment">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#SubExperiment">
+        <rdfs:comment xml:lang="en">A refinement of an experiment that fixes additional initialisation conditions, for example a particular start year of a decadal prediction. Corresponds to the ESGF sub_experiment_id facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>SubExperiment</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A refinement of an experiment that fixes additional initialisation conditions, for example a particular start year of a decadal prediction. Corresponds to the ESGF sub_experiment_id facet.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Task -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Task">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Task">
+        <rdfs:comment xml:lang="en">A concrete research task that a publication or method carries out, such as bias correction, downscaling or extreme-event detection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Task</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A concrete research task that a publication or method carries out, such as bias correction, downscaling or extreme-event detection.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Teleconnection -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Teleconnection">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Teleconnection">
+        <rdfs:comment xml:lang="en">A large-scale mode of climate variability that links distant regions, such as ENSO, the North Atlantic Oscillation or the Pacific Decadal Oscillation. Aligned with the NASA GCMD science keywords.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Teleconnection</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A large-scale mode of climate variability that links distant regions, such as ENSO, the North Atlantic Oscillation or the Pacific Decadal Oscillation. Aligned with the NASA GCMD science keywords.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Variable -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Variable">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Variable">
+        <rdfs:comment xml:lang="en">A geophysical output quantity reported by a model, such as tas (near-surface air temperature) or pr (precipitation), described by its CF standard name, long name and units. Corresponds to the ESGF variable_id facet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Variable</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A geophysical output quantity reported by a model, such as tas (near-surface air temperature) or pr (precipitation), described by its CF standard name, long name and units. Corresponds to the ESGF variable_id facet.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://climatepub4kg.github.io/ontology#Venue -->
+
+
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Venue">
+        <rdfs:comment xml:lang="en">The journal, conference, book series or repository in which a publication appeared.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
+        <rdfs:label>Venue</rdfs:label>
+        <skos:definition xml:lang="en">The journal, conference, book series or repository in which a publication appeared.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Water_Bodies -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Water_Bodies">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Water_Bodies">
+        <rdfs:comment xml:lang="en">A named body of water, such as a sea, lake or gulf. Retained for backwards compatibility; water bodies are currently represented as No_Country_Region instances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Water_Bodies</rdfs:label>
-    </Class>
+        <skos:definition xml:lang="en">A named body of water, such as a sea, lake or gulf. Retained for backwards compatibility; water bodies are currently represented as No_Country_Region instances.</skos:definition>
+    </owl:Class>
     
 
 
     <!-- https://climatepub4kg.github.io/ontology#Weather_Event -->
 
 
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#Weather_Event">
+    <owl:Class rdf:about="https://climatepub4kg.github.io/ontology#Weather_Event">
+        <rdfs:comment xml:lang="en">A weather or climate event discussed in the literature, such as a particular heatwave, storm, cold spell or extreme rainfall episode.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://climatepub4kg.github.io/ontology"/>
         <rdfs:label>Weather_Event</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_GraphConfig -->
-
-
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#_GraphConfig"/>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_MapDef -->
-
-
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#_MapDef"/>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_MapNs -->
-
-
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#_MapNs"/>
-    
-
-
-    <!-- https://climatepub4kg.github.io/ontology#_NsPrefDef -->
-
-
-    <Class rdf:about="https://climatepub4kg.github.io/ontology#_NsPrefDef"/>
+        <skos:definition xml:lang="en">A weather or climate event discussed in the literature, such as a particular heatwave, storm, cold spell or extreme rainfall episode.</skos:definition>
+    </owl:Class>
 </rdf:RDF>
 
 
