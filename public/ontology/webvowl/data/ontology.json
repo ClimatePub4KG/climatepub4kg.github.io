@@ -7,7 +7,7 @@
       "en" : "ClimatePub4KG Ontology"
     },
     "iri" : "https://climatepub4kg.github.io/ontology",
-    "version" : "2026-07-25",
+    "version" : "2026-07-26",
     "author" : [ "ClimatePub4KG project" ],
     "description" : {
       "en" : "ClimatePub4KG connects two bodies of climate-science knowledge that are normally kept apart: the structured metadata that describes climate-model simulations, and the scientific literature that analyses them.\n\nThe ontology is organised around four groups of terms.\n\nESGF and CMIP model metadata. Classes such as Source (a climate model), SourceComponent, Experiment, SubExperiment, ExperimentFamily, Activity, Project, MIPEra, Institute, Variable, Realm, Frequency, Resolution, GridLabel, Member, Ensemble, Forcing and Domain follow the CMIP6 controlled vocabularies and the facets used by ESGF search. Model-description classes (SourceType, SimulationType, PhysicalScheme, PhysicalFeature, Metric) capture how a model is built and how it behaves.\n\nScientific publications. A Paper is an OpenAlex-identified work, connected to its Author, Venue and Keyword records, and to the research content extracted from its full text: Field, Problem, Task, Method, Innovation, Result, EvaluationMetric and ObservationalDataset. The same content classes attach to models and methods as well as papers, so a finding can be traced from the claim to the model that produced it.\n\nGeography. Continent, Country, Country_Subdivision, City and No_Country_Region are grounded in the GeoNames gazetteer and keep their GeoNames identifiers, bounding boxes and administrative codes. ClimateZone gives a coarse Koppen-Geiger style classification.\n\nObservations and phenomena. Instrument and Platform align with the NASA GCMD keyword vocabularies; Teleconnection, Ocean_Circulation, Weather_Event, Natural_Hazard and NaturalHazardType name the large-scale patterns and events discussed in the corpus.\n\nInstance IRIs live in a separate namespace, https://climatepub4kg.github.io/id/, and follow the pattern {id-namespace}{ClassName}/{identifier}. For ESGF classes the identifier is the URL-encoded entity name, so a model IRI reads .../id/Source/CESM2; a short disambiguating suffix is appended in the rare case where one name is used by more than one entity of the same class. Everything else is minted from the node's internal uuid.\n\nProvenance is carried on the terms themselves: paper_id and added_from_paper_id record which publication an extracted entity or relationship came from, supporting_paragraphs keeps the sentences that justified it, and dataset_count records how many ESGF datasets support a metadata relationship. PAPER_MENTIONS is the general-purpose bridge from a publication to any entity mentioned in its text.\n\nThe graph is built by an LLM extraction pipeline over open-access climate papers followed by entity linking against the ESGF, GeoNames and GCMD vocabularies, so instance data should be treated as machine-generated and evidence-linked rather than hand-curated."
@@ -28,12 +28,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://esgf.llnl.gov/",
+        "value" : "https://github.com/WCRP-CMIP/CMIP6_CVs",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://openalex.org/",
+        "value" : "https://esgf.llnl.gov/",
         "type" : "iri"
       }, {
         "identifier" : "source",
@@ -43,12 +43,12 @@
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://github.com/WCRP-CMIP/CMIP6_CVs",
+        "value" : "https://gcmd.earthdata.nasa.gov/KeywordViewer/",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://gcmd.earthdata.nasa.gov/KeywordViewer/",
+        "value" : "https://openalex.org/",
         "type" : "iri"
       } ],
       "abstract" : [ {
@@ -60,7 +60,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2026-07-25",
+        "value" : "2026-07-26",
         "type" : "label"
       } ],
       "title" : [ {
@@ -75,6 +75,32 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Longin Jan Latecki",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Huitong Pan",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Aayush Acharya",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Adamu Mustapha",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Eduard Dragut",
+        "type" : "label"
+      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
@@ -84,7 +110,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-07-25",
+        "value" : "2026-07-26",
         "type" : "label"
       } ],
       "publisher" : [ {
@@ -102,7 +128,7 @@
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
-        "value" : "2026-07-25",
+        "value" : "2026-07-26",
         "type" : "label"
       } ],
       "status" : [ {
@@ -124,454 +150,472 @@
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
     "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "81",
-    "type" : "owl:Class"
-  }, {
-    "id" : "90",
-    "type" : "owl:Class"
-  }, {
-    "id" : "97",
-    "type" : "owl:Class"
-  }, {
-    "id" : "98",
-    "type" : "owl:Class"
-  }, {
-    "id" : "99",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "113",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
-    "type" : "owl:Class"
-  }, {
-    "id" : "118",
-    "type" : "owl:Class"
-  }, {
-    "id" : "41",
-    "type" : "owl:Class"
-  }, {
-    "id" : "125",
-    "type" : "owl:Class"
-  }, {
-    "id" : "131",
-    "type" : "owl:Class"
-  }, {
-    "id" : "134",
-    "type" : "owl:Class"
-  }, {
-    "id" : "135",
-    "type" : "owl:Class"
-  }, {
-    "id" : "136",
-    "type" : "owl:Class"
-  }, {
-    "id" : "137",
-    "type" : "owl:Class"
-  }, {
-    "id" : "86",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "151",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "96",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "14",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "5",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "133",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "140",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "152",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "153",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "154",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "163",
-    "type" : "owl:Class"
-  }, {
-    "id" : "112",
-    "type" : "owl:Class"
-  }, {
-    "id" : "174",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "175",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "102",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "156",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "23",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "64",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "168",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "176",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "76",
-    "type" : "owl:Class"
-  }, {
-    "id" : "178",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "142",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "130",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "179",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "108",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "31",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "29",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "189",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "50",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "190",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "110",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "59",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "39",
-    "type" : "owl:Class"
-  }, {
-    "id" : "93",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "161",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "185",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "203",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "197",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "105",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "204",
-    "type" : "owl:Class"
-  }, {
-    "id" : "150",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "71",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "200",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "17",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "144",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "205",
-    "type" : "owl:Class"
-  }, {
-    "id" : "75",
-    "type" : "owl:Class"
-  }, {
-    "id" : "207",
-    "type" : "owl:Class"
-  }, {
-    "id" : "83",
-    "type" : "owl:Class"
-  }, {
-    "id" : "73",
-    "type" : "owl:Class"
-  }, {
-    "id" : "208",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "217",
-    "type" : "owl:Class"
-  }, {
-    "id" : "171",
-    "type" : "owl:Class"
-  }, {
-    "id" : "67",
-    "type" : "owl:Class"
-  }, {
-    "id" : "199",
-    "type" : "owl:Class"
-  }, {
-    "id" : "49",
-    "type" : "owl:Class"
-  }, {
-    "id" : "167",
-    "type" : "owl:Class"
-  }, {
-    "id" : "196",
-    "type" : "owl:Class"
-  }, {
-    "id" : "187",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "149",
     "type" : "owl:Class"
   }, {
     "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "160",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "213",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "139",
-    "type" : "owl:Class"
-  }, {
-    "id" : "146",
-    "type" : "owl:Class"
-  }, {
-    "id" : "44",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "237",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "220",
-    "type" : "owl:Class"
-  }, {
-    "id" : "238",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "165",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "128",
-    "type" : "owl:Class"
-  }, {
-    "id" : "239",
-    "type" : "owl:Class"
-  }, {
-    "id" : "240",
-    "type" : "owl:Class"
-  }, {
-    "id" : "241",
-    "type" : "owl:Class"
-  }, {
-    "id" : "242",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "244",
-    "type" : "owl:Class"
-  }, {
-    "id" : "246",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:Class"
-  }, {
-    "id" : "123",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "188",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "236",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "247",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "147",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "173",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "225",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "158",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "183",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "116",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "122",
-    "type" : "owl:Class"
-  }, {
-    "id" : "253",
-    "type" : "owl:Class"
-  }, {
-    "id" : "255",
-    "type" : "owl:Class"
-  }, {
-    "id" : "245",
-    "type" : "owl:Class"
-  }, {
-    "id" : "256",
-    "type" : "owl:Class"
-  }, {
-    "id" : "251",
-    "type" : "owl:Class"
-  }, {
-    "id" : "249",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "254",
-    "type" : "owl:Class"
-  }, {
-    "id" : "115",
-    "type" : "owl:Class"
-  }, {
-    "id" : "104",
-    "type" : "owl:Class"
-  }, {
-    "id" : "235",
-    "type" : "owl:Class"
-  }, {
     "id" : "37",
     "type" : "owl:Class"
   }, {
-    "id" : "211",
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
     "type" : "owl:Class"
   }, {
     "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "103",
     "type" : "owl:Class"
   }, {
-    "id" : "95",
+    "id" : "60",
     "type" : "owl:Class"
   }, {
-    "id" : "88",
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "owl:Class"
+  }, {
+    "id" : "149",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "216",
+    "type" : "owl:Class"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
     "type" : "owl:Class"
   }, {
     "id" : "222",
     "type" : "owl:Class"
   }, {
-    "id" : "92",
+    "id" : "89",
     "type" : "owl:Class"
   }, {
-    "id" : "227",
+    "id" : "210",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "218",
+    "type" : "owl:Class"
+  }, {
+    "id" : "185",
+    "type" : "owl:Class"
+  }, {
+    "id" : "207",
+    "type" : "owl:Class"
+  }, {
+    "id" : "198",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "161",
+    "type" : "owl:Class"
+  }, {
+    "id" : "158",
+    "type" : "owl:Class"
+  }, {
+    "id" : "172",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "219",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "151",
+    "type" : "owl:Class"
+  }, {
+    "id" : "247",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "249",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "221",
+    "type" : "owl:Class"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "253",
+    "type" : "owl:Class"
+  }, {
+    "id" : "254",
+    "type" : "owl:Class"
+  }, {
+    "id" : "255",
+    "type" : "owl:Class"
+  }, {
+    "id" : "257",
+    "type" : "owl:Class"
+  }, {
+    "id" : "258",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "owl:Class"
+  }, {
+    "id" : "260",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "265",
+    "type" : "owl:Class"
+  }, {
+    "id" : "263",
+    "type" : "owl:Class"
+  }, {
+    "id" : "267",
+    "type" : "owl:Class"
+  }, {
+    "id" : "256",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "251",
+    "type" : "owl:Class"
+  }, {
+    "id" : "241",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "220",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "232",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "238",
+    "type" : "owl:Class"
+  }, {
+    "id" : "236",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -601,32 +645,6 @@
     },
     "id" : "6"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Member",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Member",
-      "undefined" : "Member"
-    },
-    "comment" : {
-      "en" : "A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet."
-    },
-    "id" : "10"
-  }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Country_Subdivision",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
     "instances" : 0,
@@ -651,7 +669,38 @@
     "comment" : {
       "en" : "A first-level administrative subdivision of a country, such as a state, province, region or canton, as identified in the GeoNames gazetteer."
     },
-    "id" : "11"
+    "id" : "16"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Member",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Member",
+      "undefined" : "Member"
+    },
+    "comment" : {
+      "en" : "A variant label identifying one simulation of an experiment as a combination of realisation, initialisation, physics and forcing indices, such as r1i1p1f1. Corresponds to the ESGF member_id / variant_label facet."
+    },
+    "id" : "17"
+  }, {
+    "instances" : 0,
+    "union" : [ "19", "20", "21", "22" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "18"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Task",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -677,7 +726,17 @@
     "comment" : {
       "en" : "A concrete research task that a publication or method carries out, such as bias correction, downscaling or extreme-event detection."
     },
-    "id" : "18"
+    "id" : "25"
+  }, {
+    "instances" : 0,
+    "union" : [ "29", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "28"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "33", "34", "35" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "31"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Realm",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -703,7 +762,12 @@
     "comment" : {
       "en" : "A component of the Earth system that a model, model component, experiment or activity addresses, such as atmos, ocean, land, seaIce, landIce, aerosol or atmosChem."
     },
-    "id" : "24"
+    "id" : "36"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "38", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "37"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SourceType",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -729,7 +793,12 @@
     "comment" : {
       "en" : "The category of a climate model, such as AOGCM, AGCM, BGC or CHEM, describing which Earth system components the model couples. Corresponds to the ESGF source_type facet."
     },
-    "id" : "25"
+    "id" : "39"
+  }, {
+    "instances" : 0,
+    "union" : [ "41", "42", "14", "16", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "40"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Problem",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -755,7 +824,7 @@
     "comment" : {
       "en" : "A research problem, limitation or open question that a publication, method or task addresses."
     },
-    "id" : "26"
+    "id" : "47"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Venue",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -781,22 +850,27 @@
     "comment" : {
       "en" : "The journal, conference, book series or repository in which a publication appeared."
     },
-    "id" : "34"
+    "id" : "21"
   }, {
     "instances" : 0,
-    "union" : [ "39", "40", "41", "42" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "38"
+    "union" : [ "41", "42", "14", "43", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "57"
   }, {
     "instances" : 0,
-    "union" : [ "36", "44" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "43"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "58"
   }, {
     "instances" : 0,
-    "union" : [ "1", "46", "36" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "45"
+    "union" : [ "60", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "59"
+  }, {
+    "instances" : 0,
+    "union" : [ "60", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "61"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#City",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -822,7 +896,7 @@
     "comment" : {
       "en" : "A populated place, such as a city, town or village, as identified in the GeoNames gazetteer."
     },
-    "id" : "47"
+    "id" : "43"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Forcing",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -848,7 +922,7 @@
     "comment" : {
       "en" : "An external forcing agent or forcing dataset prescribed by an experiment, such as greenhouse gas concentrations, aerosol emissions, land use or solar variability."
     },
-    "id" : "54"
+    "id" : "68"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Frequency",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -874,7 +948,7 @@
     "comment" : {
       "en" : "The temporal sampling frequency at which model output is reported, such as mon, day, 6hr or fx (time-invariant). Corresponds to the ESGF frequency facet."
     },
-    "id" : "68"
+    "id" : "82"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#No_Country_Region",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -900,7 +974,7 @@
     "comment" : {
       "en" : "A named geographic region that is neither a country nor an administrative subdivision, such as a river basin, mountain range, sea, gulf or ocean sector, as identified in the GeoNames gazetteer."
     },
-    "id" : "81"
+    "id" : "42"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SimulationType",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -926,7 +1000,7 @@
     "comment" : {
       "en" : "A characteristic style of simulation a model is run in, such as fully coupled, AMIP-style (prescribed sea surface temperatures), nudged or time-slice."
     },
-    "id" : "90"
+    "id" : "103"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SourceComponent",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -952,7 +1026,7 @@
     "comment" : {
       "en" : "A submodel of a climate model, such as its atmosphere, ocean, sea-ice, land-surface or aerosol component, usually together with the component's own version label."
     },
-    "id" : "97"
+    "id" : "60"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#ObservationalDataset",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -978,7 +1052,7 @@
     "comment" : {
       "en" : "An observational, reanalysis or reference dataset used to evaluate or drive a model, such as ERA5, GPCP or HadCRUT."
     },
-    "id" : "98"
+    "id" : "112"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Author",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1004,7 +1078,7 @@
     "comment" : {
       "en" : "A person credited as an author of a publication."
     },
-    "id" : "99"
+    "id" : "22"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Field",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1030,7 +1104,7 @@
     "comment" : {
       "en" : "The research field or discipline a publication belongs to, such as regional climate modelling or detection and attribution."
     },
-    "id" : "21"
+    "id" : "27"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Natural_Hazard",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1056,7 +1130,7 @@
     "comment" : {
       "en" : "A natural hazard studied in the corpus, such as a named flood, drought, wildfire or tropical cyclone."
     },
-    "id" : "113"
+    "id" : "49"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#EvaluationMetric",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1082,7 +1156,7 @@
     "comment" : {
       "en" : "A measure used to evaluate a model, method, task or result, such as root-mean-square error, bias, correlation or skill score."
     },
-    "id" : "61"
+    "id" : "75"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#ExperimentFamily",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1108,7 +1182,7 @@
     "comment" : {
       "en" : "A grouping of experiments that share a common protocol or scientific purpose, such as the DECK, historical or ScenarioMIP families."
     },
-    "id" : "118"
+    "id" : "130"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1134,7 +1208,7 @@
     "comment" : {
       "en" : "An ocean current or circulation feature, such as the Atlantic Meridional Overturning Circulation, the Gulf Stream or the Antarctic Circumpolar Current. Aligned with the NASA GCMD science keywords."
     },
-    "id" : "41"
+    "id" : "34"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Water_Bodies",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1160,7 +1234,7 @@
     "comment" : {
       "en" : "A named body of water, such as a sea, lake or gulf. Retained for backwards compatibility; water bodies are currently represented as No_Country_Region instances."
     },
-    "id" : "125"
+    "id" : "137"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PhysicalScheme",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1186,7 +1260,7 @@
     "comment" : {
       "en" : "A parameterisation or numerical scheme implemented in a model, such as a convection, radiation, cloud microphysics or boundary-layer scheme."
     },
-    "id" : "131"
+    "id" : "146"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Continent",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1212,7 +1286,7 @@
     "comment" : {
       "en" : "A continent, as identified in the GeoNames gazetteer."
     },
-    "id" : "134"
+    "id" : "41"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Metric",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1238,33 +1312,7 @@
     "comment" : {
       "en" : "A characteristic quantity reported for a model, such as its equilibrium climate sensitivity, transient climate response or effective radiative forcing."
     },
-    "id" : "135"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#ClimateZone",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ClimateZone",
-      "undefined" : "ClimateZone"
-    },
-    "comment" : {
-      "en" : "A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification."
-    },
-    "id" : "136"
+    "id" : "147"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PhysicalFeature",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1290,32 +1338,58 @@
     "comment" : {
       "en" : "A physical process or property represented in a model, such as interactive aerosols, dynamic vegetation, an interactive carbon cycle or a prognostic ice sheet."
     },
-    "id" : "137"
+    "id" : "148"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#ClimateZone",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ClimateZone",
+      "undefined" : "ClimateZone"
+    },
+    "comment" : {
+      "en" : "A broad climate zone (tropical, arid, temperate, cold or polar) following the top level of the Koppen-Geiger climate classification."
+    },
+    "id" : "149"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "86",
+    "id" : "99",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "151",
+    "id" : "163",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "96",
+    "id" : "111",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "14",
+    "id" : "12",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1329,21 +1403,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "133",
+    "id" : "145",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "33",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "140",
+    "id" : "54",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1357,14 +1424,21 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "153",
+    "id" : "164",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "154",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "166",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1393,7 +1467,7 @@
     "comment" : {
       "en" : "A weather or climate event discussed in the literature, such as a particular heatwave, storm, cold spell or extreme rainfall episode."
     },
-    "id" : "163"
+    "id" : "175"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Ensemble",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1419,46 +1493,25 @@
     "comment" : {
       "en" : "A set of simulations of the same experiment that differ only in their realisation, initialisation, physics or forcing settings, used to sample uncertainty."
     },
-    "id" : "112"
+    "id" : "125"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "174",
+    "id" : "186",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "175",
+    "id" : "187",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "102",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "156",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "23",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "64",
+    "id" : "114",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1472,7 +1525,28 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "176",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "180",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "188",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1501,39 +1575,39 @@
     "comment" : {
       "en" : "A named spatial domain over which a project or regional climate model is run, such as the CORDEX domains EUR-11 or AFR-44."
     },
-    "id" : "76"
+    "id" : "90"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "178",
+    "id" : "190",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "142",
+    "id" : "154",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "130",
+    "id" : "46",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "179",
+    "id" : "121",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "108",
+    "id" : "141",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1566,56 +1640,56 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "78",
+    "id" : "92",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "31",
+    "id" : "52",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "29",
+    "id" : "200",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "189",
+    "id" : "143",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
+    "id" : "64",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "190",
+    "id" : "201",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "110",
+    "id" : "123",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "59",
+    "id" : "72",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1644,46 +1718,46 @@
     "comment" : {
       "en" : "A large-scale mode of climate variability that links distant regions, such as ENSO, the North Atlantic Oscillation or the Pacific Decadal Oscillation. Aligned with the NASA GCMD science keywords."
     },
-    "id" : "39"
+    "id" : "32"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "93",
+    "id" : "108",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "161",
+    "id" : "173",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "185",
+    "id" : "196",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "203",
+    "id" : "215",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "197",
+    "id" : "208",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "105",
+    "id" : "118",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1712,93 +1786,67 @@
     "comment" : {
       "en" : "Legacy class for a climate model. Superseded by Source and retained only so that older IRIs continue to resolve; new data should use Source."
     },
-    "id" : "204"
+    "id" : "216"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "150",
+    "id" : "162",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "71",
+    "id" : "85",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "200",
+    "id" : "211",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "17",
+    "id" : "15",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "144",
+    "id" : "156",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "46", "171", "36", "44" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "205"
+    "union" : [ "16", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "87"
   }, {
     "instances" : 0,
-    "union" : [ "9", "44" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "75"
+    "union" : [ "148", "149", "38", "14", "43", "218", "49", "8", "42", "185", "17", "16", "32", "130", "1", "33", "36", "39", "175", "34", "29", "219", "103", "220", "146", "41", "9", "60", "35", "82", "147", "30", "90", "221" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "81"
   }, {
     "instances" : 0,
-    "union" : [ "81", "11", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "207"
+    "union" : [ "38", "185", "29", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "222"
   }, {
     "instances" : 0,
-    "union" : [ "97", "36", "44" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "83"
+    "union" : [ "9", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "89"
   }, {
     "instances" : 0,
-    "union" : [ "11", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "73"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#Keyword",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A subject keyword or concept assigned to a publication, taken from the publication's bibliographic record.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Keyword",
-      "undefined" : "Keyword"
-    },
-    "comment" : {
-      "en" : "A subject keyword or concept assigned to a publication, taken from the publication's bibliographic record."
-    },
-    "id" : "208"
+    "union" : [ "41", "14" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "210"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Country",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1824,7 +1872,33 @@
     "comment" : {
       "en" : "A country or dependent territory, as identified in the GeoNames gazetteer, together with its ISO codes and country-level attributes."
     },
-    "id" : "16"
+    "id" : "14"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#Keyword",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A subject keyword or concept assigned to a publication, taken from the publication's bibliographic record.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Keyword",
+      "undefined" : "Keyword"
+    },
+    "comment" : {
+      "en" : "A subject keyword or concept assigned to a publication, taken from the publication's bibliographic record."
+    },
+    "id" : "19"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#NaturalHazardType",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1850,7 +1924,7 @@
     "comment" : {
       "en" : "The category a natural hazard belongs to, such as flood, drought, heatwave, wildfire or tropical cyclone."
     },
-    "id" : "217"
+    "id" : "218"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Activity",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1876,52 +1950,52 @@
     "comment" : {
       "en" : "A Model Intercomparison Project (MIP) activity within a MIP era, such as CMIP, ScenarioMIP or DAMIP, that defines and coordinates a related set of climate model experiments. Corresponds to the ESGF activity_id facet."
     },
-    "id" : "171"
+    "id" : "185"
   }, {
     "instances" : 0,
-    "union" : [ "136", "137", "46", "16", "47", "217", "113", "8", "171", "81", "10", "11", "39", "118", "1", "40", "24", "25", "163", "41", "36", "213", "90", "211", "131", "134", "9", "97", "42", "68", "135", "44", "76", "220" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "67"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "207"
   }, {
     "instances" : 0,
-    "union" : [ "134", "16" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "199"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "198"
   }, {
     "instances" : 0,
-    "union" : [ "81", "16", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "49"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "179"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "167"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "45"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "196"
+    "union" : [ "42", "14", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "63"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "187"
+    "union" : [ "41", "42", "14", "43", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "50"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "13"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "161"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "149"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "158"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "28"
+    "union" : [ "42", "14", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "172"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Platform",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1947,12 +2021,12 @@
     "comment" : {
       "en" : "A platform that carries observing instruments, such as a satellite, aircraft, ship, buoy or ground station. Aligned with the NASA GCMD platforms vocabulary."
     },
-    "id" : "40"
+    "id" : "33"
   }, {
     "instances" : 0,
-    "union" : [ "81", "16", "11" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "160"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "11"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Source",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -1978,7 +2052,7 @@
     "comment" : {
       "en" : "A climate or Earth system model: a named, versioned model configuration that produces simulation output. Corresponds to the ESGF source_id facet."
     },
-    "id" : "36"
+    "id" : "29"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SubExperiment",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2004,7 +2078,7 @@
     "comment" : {
       "en" : "A refinement of an experiment that fixes additional initialisation conditions, for example a particular start year of a decadal prediction. Corresponds to the ESGF sub_experiment_id facet."
     },
-    "id" : "213"
+    "id" : "219"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Project",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2033,19 +2107,21 @@
     "id" : "9"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "247",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "4"
-  }, {
-    "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "139"
-  }, {
-    "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "146"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#RCM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2071,18 +2147,18 @@
     "comment" : {
       "en" : "A regional climate model: a limited-area model run at higher resolution over a specific domain, driven at its boundaries by a global model or a reanalysis."
     },
-    "id" : "44"
+    "id" : "30"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "2",
+    "id" : "249",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "237",
+    "id" : "214",
     "label" : {
       "IRI-based" : "string"
     }
@@ -2111,46 +2187,46 @@
     "comment" : {
       "en" : "The nominal spatial resolution of a model, experiment or variable, expressed as a distance such as 100 km. Corresponds to the ESGF nominal_resolution facet."
     },
-    "id" : "220"
+    "id" : "221"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "238",
+    "id" : "177",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "165",
+    "id" : "2",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "134", "81", "16", "11", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "128"
+    "union" : [ "42", "14", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "253"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "239"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "254"
   }, {
     "instances" : 0,
-    "union" : [ "97", "36" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "240"
+    "union" : [ "149", "148", "19", "14", "6", "218", "185", "42", "17", "16", "25", "36", "33", "39", "47", "175", "29", "219", "103", "9", "60", "125", "112", "21", "30", "90", "221", "22", "38", "67", "43", "27", "49", "8", "68", "75", "256", "32", "130", "1", "34", "56", "220", "146", "41", "35", "20", "82", "147" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "255"
   }, {
     "instances" : 0,
-    "union" : [ "97", "36" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "241"
+    "union" : [ "41", "42", "14", "43", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "257"
   }, {
     "instances" : 0,
-    "union" : [ "81", "16", "11" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "242"
+    "union" : [ "49", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "258"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Experiment",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2176,17 +2252,17 @@
     "comment" : {
       "en" : "A prescribed simulation protocol that models are run under, such as historical, piControl or ssp585. Corresponds to the ESGF experiment_id facet."
     },
-    "id" : "46"
+    "id" : "38"
   }, {
     "instances" : 0,
-    "union" : [ "136", "137", "16", "208", "6", "217", "81", "171", "11", "10", "18", "40", "24", "25", "26", "163", "36", "213", "90", "9", "97", "112", "98", "34", "44", "76", "99", "220", "46", "53", "47", "21", "113", "8", "54", "61", "245", "118", "39", "1", "41", "37", "211", "131", "134", "42", "20", "68", "135" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "244"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "134"
   }, {
     "instances" : 0,
-    "union" : [ "134", "81", "16", "11", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "246"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "260"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Method",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2212,60 +2288,39 @@
     "comment" : {
       "en" : "A method, technique, model configuration or analysis procedure that a publication applies."
     },
-    "id" : "53"
+    "id" : "67"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "123",
+    "id" : "135",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "188",
+    "id" : "199",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "236",
+    "id" : "252",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "247",
+    "id" : "261",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "147",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "173",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "225",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "158",
+    "id" : "159",
     "label" : {
       "IRI-based" : "string"
     }
@@ -2279,25 +2334,46 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "116",
+    "id" : "233",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "170",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "194",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "128",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "122"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "265"
   }, {
     "instances" : 0,
-    "union" : [ "113", "36" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "253"
+    "union" : [ "42", "14", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "263"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "255"
+    "union" : [ "218", "39" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "267"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#GridLabel",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2323,22 +2399,22 @@
     "comment" : {
       "en" : "The label identifying the grid a dataset is reported on, such as gn (the model's native grid) or gr (a regridded product). Corresponds to the ESGF grid_label facet."
     },
-    "id" : "245"
-  }, {
-    "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
     "id" : "256"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "251"
+    "union" : [ "146", "49", "148", "33", "60", "175", "35", "147", "103" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "127"
   }, {
     "instances" : 0,
-    "union" : [ "81", "16", "11" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "249"
+    "union" : [ "32", "33", "34", "35" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "110"
+  }, {
+    "instances" : 0,
+    "union" : [ "27", "25", "6", "47", "67" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "107"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Variable",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2367,24 +2443,24 @@
     "id" : "1"
   }, {
     "instances" : 0,
-    "union" : [ "217", "25" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "254"
+    "union" : [ "148", "149", "19", "14", "6", "218", "42", "185", "17", "16", "25", "33", "36", "39", "47", "175", "29", "219", "103", "9", "125", "60", "112", "21", "30", "90", "221", "22", "38", "67", "43", "27", "49", "8", "68", "75", "256", "32", "130", "1", "34", "56", "220", "146", "41", "35", "20", "82", "147" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "117"
   }, {
     "instances" : 0,
-    "union" : [ "131", "137", "113", "40", "97", "163", "42", "135", "90" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "115"
+    "union" : [ "42", "43" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "251"
   }, {
     "instances" : 0,
-    "union" : [ "136", "137", "208", "16", "217", "6", "171", "81", "11", "10", "18", "24", "40", "25", "26", "163", "36", "213", "90", "9", "97", "112", "98", "34", "44", "76", "99", "220", "46", "53", "47", "21", "113", "8", "54", "61", "245", "39", "118", "1", "41", "37", "211", "131", "134", "42", "20", "68", "135" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "104"
+    "union" : [ "42", "14", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "241"
   }, {
     "instances" : 0,
-    "union" : [ "81", "47" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "235"
+    "union" : [ "41", "42", "14", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "105"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Result",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2410,7 +2486,7 @@
     "comment" : {
       "en" : "A reported finding or quantitative outcome of a publication, model or method."
     },
-    "id" : "37"
+    "id" : "56"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MIPEra",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2436,7 +2512,7 @@
     "comment" : {
       "en" : "A generation of the Model Intercomparison Project, such as CMIP5, CMIP6 or CMIP6Plus."
     },
-    "id" : "211"
+    "id" : "220"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Instrument",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2462,7 +2538,7 @@
     "comment" : {
       "en" : "A measuring instrument or sensor that observes geophysical variables, such as a satellite radiometer, radar or radiosonde. Aligned with the NASA GCMD instruments vocabulary."
     },
-    "id" : "42"
+    "id" : "35"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#Paper",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -2491,29 +2567,29 @@
     "id" : "20"
   }, {
     "instances" : 0,
-    "union" : [ "39", "40", "41", "42" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "95"
+    "union" : [ "60", "38", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "101"
   }, {
     "instances" : 0,
-    "union" : [ "97", "46", "36" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "88"
+    "union" : [ "42", "43", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "232"
   }, {
     "instances" : 0,
-    "union" : [ "97", "36" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "222"
+    "union" : [ "60", "29", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "96"
   }, {
     "instances" : 0,
-    "union" : [ "21", "6", "18", "26", "53" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "92"
+    "union" : [ "41", "42", "14", "43", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "238"
   }, {
     "instances" : 0,
-    "union" : [ "81", "16", "11" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "227"
+    "union" : [ "60", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "236"
   } ],
   "property" : [ {
     "id" : "0",
@@ -2525,58 +2601,34 @@
     "id" : "7",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "12",
+    "id" : "10",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "15",
+    "id" : "13",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "19",
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "22",
+    "id" : "44",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "27",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "30",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "32",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "35",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "48",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "51",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "52",
-    "type" : "owl:objectProperty"
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "55",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "56",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "57",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "58",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "60",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "62",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "63",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "65",
@@ -2589,12 +2641,18 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "72",
+    "id" : "73",
     "type" : "owl:objectProperty"
   }, {
     "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
     "type" : "owl:objectProperty"
   }, {
     "id" : "77",
@@ -2606,91 +2664,109 @@
     "id" : "80",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "82",
+    "id" : "83",
     "type" : "owl:objectProperty"
   }, {
     "id" : "84",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "85",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "87",
+    "id" : "86",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "89",
+    "id" : "88",
     "type" : "owl:objectProperty"
   }, {
     "id" : "91",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "100",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "101",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "103",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "106",
+    "id" : "102",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "107",
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "109",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "111",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "114",
+    "id" : "113",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "117",
+    "id" : "115",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "119",
     "type" : "owl:objectProperty"
   }, {
     "id" : "120",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "121",
+    "id" : "122",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "124",
     "type" : "owl:objectProperty"
   }, {
     "id" : "126",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "127",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "129",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "132",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "138",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "141",
+    "id" : "142",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "143",
+    "id" : "144",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "145",
+    "id" : "150",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "148",
+    "id" : "153",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "155",
@@ -2699,44 +2775,38 @@
     "id" : "157",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "159",
+    "id" : "160",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "162",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "164",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "166",
+    "id" : "167",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "169",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "170",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "172",
+    "id" : "171",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "177",
-    "type" : "owl:objectProperty"
+    "id" : "174",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "180",
-    "type" : "owl:objectProperty"
+    "id" : "176",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "181",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "182",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "184",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "186",
-    "type" : "owl:datatypeProperty"
+    "id" : "189",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "191",
     "type" : "owl:objectProperty"
@@ -2745,61 +2815,55 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "193",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "194",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "195",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "198",
+    "id" : "197",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "201",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "202",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "203",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "205",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "206",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "209",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "210",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "212",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "214",
+    "id" : "213",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "215",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "216",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "218",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "219",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "221",
+    "id" : "217",
     "type" : "owl:objectProperty"
   }, {
     "id" : "223",
     "type" : "owl:objectProperty"
   }, {
     "id" : "224",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "225",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "226",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "227",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "228",
     "type" : "owl:objectProperty"
@@ -2808,63 +2872,93 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "230",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "231",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "232",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "233",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "234",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "235",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "237",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "239",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "240",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "242",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "243",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "248",
+    "id" : "244",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "245",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "246",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "248",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "250",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "252",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "257",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "258",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "259",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "260",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "261",
-    "type" : "owl:datatypeProperty"
   }, {
     "id" : "262",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "263",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "264",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "265",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "266",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "267",
+    "id" : "268",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "269",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "270",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "271",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "272",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "273",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "274",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "275",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "276",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "277",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "278",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "279",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -2954,7 +3048,7 @@
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#feature_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "14",
+    "range" : "12",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2973,16 +3067,16 @@
       "IRI-based" : "feature_code",
       "undefined" : "feature_code"
     },
-    "domain" : "13",
+    "domain" : "11",
     "comment" : {
       "en" : "GeoNames feature code: a fine-grained classification of the kind of place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "12"
+    "id" : "10"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#languages",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "17",
+    "range" : "15",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3001,16 +3095,44 @@
       "IRI-based" : "languages",
       "undefined" : "languages"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Languages spoken in a country, as language tags."
     },
     "attributes" : [ "datatype" ],
-    "id" : "15"
+    "id" : "13"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#continent",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Two-letter GeoNames continent code of a country.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "continent",
+      "undefined" : "continent"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Two-letter GeoNames continent code of a country."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_BELONGS_TO_FIELD",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "21",
+    "range" : "27",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3034,39 +3156,11 @@
       "en" : "Relates a publication to the research field it belongs to."
     },
     "attributes" : [ "object" ],
-    "id" : "19"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#continent",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "23",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Two-letter GeoNames continent code of a country.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "continent",
-      "undefined" : "continent"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Two-letter GeoNames continent code of a country."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "22"
+    "id" : "26"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#timezone",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "29",
+    "range" : "46",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3085,16 +3179,44 @@
       "IRI-based" : "timezone",
       "undefined" : "timezone"
     },
-    "domain" : "28",
+    "domain" : "45",
     "comment" : {
       "en" : "IANA time zone identifier of the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "27"
+    "id" : "44"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#AFFECTED_REGION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a natural hazard to a geographic region it affected.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AFFECTED_REGION",
+      "undefined" : "AFFECTED_REGION"
+    },
+    "domain" : "49",
+    "comment" : {
+      "en" : "Relates a natural hazard to a geographic region it affected."
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#publication_year",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "31",
+    "range" : "52",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3118,11 +3240,11 @@
       "en" : "Year in which a publication appeared."
     },
     "attributes" : [ "datatype" ],
-    "id" : "30"
+    "id" : "51"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#fips",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "33",
+    "range" : "54",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3141,16 +3263,16 @@
       "IRI-based" : "fips",
       "undefined" : "fips"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "FIPS 10-4 code of a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "32"
+    "id" : "53"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MODEL_HAS_RESULT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "37",
+    "range" : "56",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3169,16 +3291,16 @@
       "IRI-based" : "MODEL_HAS_RESULT",
       "undefined" : "MODEL_HAS_RESULT"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to a finding reported about it."
     },
     "attributes" : [ "object" ],
-    "id" : "35"
+    "id" : "55"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#population",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "50",
+    "range" : "64",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3197,16 +3319,16 @@
       "IRI-based" : "population",
       "undefined" : "population"
     },
-    "domain" : "49",
+    "domain" : "63",
     "comment" : {
       "en" : "Population recorded for the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "48"
+    "id" : "62"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_SOLVES_PROBLEM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "26",
+    "range" : "47",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3230,11 +3352,11 @@
       "en" : "Relates a publication to a research problem it addresses."
     },
     "attributes" : [ "object" ],
-    "id" : "51"
+    "id" : "65"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#METHOD_WORKS_ON_TASK",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "18",
+    "range" : "25",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3253,16 +3375,16 @@
       "IRI-based" : "METHOD_WORKS_ON_TASK",
       "undefined" : "METHOD_WORKS_ON_TASK"
     },
-    "domain" : "53",
+    "domain" : "67",
     "comment" : {
       "en" : "Relates a method to a research task it is used for."
     },
     "attributes" : [ "object" ],
-    "id" : "52"
+    "id" : "66"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_USES_MODEL",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "36",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3286,11 +3408,11 @@
       "en" : "Relates a publication to a climate model it uses or evaluates."
     },
     "attributes" : [ "object" ],
-    "id" : "55"
+    "id" : "69"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#METHOD_SOLVES_PROBLEM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "26",
+    "range" : "47",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3309,44 +3431,16 @@
       "IRI-based" : "METHOD_SOLVES_PROBLEM",
       "undefined" : "METHOD_SOLVES_PROBLEM"
     },
-    "domain" : "53",
+    "domain" : "67",
     "comment" : {
       "en" : "Relates a method to a research problem it addresses."
     },
     "attributes" : [ "object" ],
-    "id" : "56"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "10",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a climate model to a variant label (member) under which its output was produced.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ASSOCIATED_WITH_MEMBER",
-      "undefined" : "ASSOCIATED_WITH_MEMBER"
-    },
-    "domain" : "36",
-    "comment" : {
-      "en" : "Relates a climate model to a variant label (member) under which its output was produced."
-    },
-    "attributes" : [ "object" ],
-    "id" : "57"
+    "id" : "70"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#postal_code_format",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "59",
+    "range" : "72",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3365,16 +3459,44 @@
       "IRI-based" : "postal_code_format",
       "undefined" : "postal_code_format"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Template describing the format of a country's postal codes."
     },
     "attributes" : [ "datatype" ],
-    "id" : "58"
+    "id" : "71"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#ASSOCIATED_WITH_MEMBER",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "17",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a climate model to a variant label (member) under which its output was produced.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ASSOCIATED_WITH_MEMBER",
+      "undefined" : "ASSOCIATED_WITH_MEMBER"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "Relates a climate model to a variant label (member) under which its output was produced."
+    },
+    "attributes" : [ "object" ],
+    "id" : "73"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#METHOD_USES_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "61",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3393,16 +3515,16 @@
       "IRI-based" : "METHOD_USES_METRIC",
       "undefined" : "METHOD_USES_METRIC"
     },
-    "domain" : "53",
+    "domain" : "67",
     "comment" : {
       "en" : "Relates a method to an evaluation metric used to assess it."
     },
     "attributes" : [ "object" ],
-    "id" : "60"
+    "id" : "74"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#TASK_USES_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "61",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3421,16 +3543,16 @@
       "IRI-based" : "TASK_USES_METRIC",
       "undefined" : "TASK_USES_METRIC"
     },
-    "domain" : "18",
+    "domain" : "25",
     "comment" : {
       "en" : "Relates a research task to an evaluation metric used to score it."
     },
     "attributes" : [ "object" ],
-    "id" : "62"
+    "id" : "76"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#currencycode",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "64",
+    "range" : "78",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3449,12 +3571,12 @@
       "IRI-based" : "currencycode",
       "undefined" : "currencycode"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "ISO 4217 code of a country's currency."
     },
     "attributes" : [ "datatype" ],
-    "id" : "63"
+    "id" : "77"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PERFORMED_BY_INSTITUTE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -3477,16 +3599,16 @@
       "IRI-based" : "PERFORMED_BY_INSTITUTE",
       "undefined" : "PERFORMED_BY_INSTITUTE"
     },
-    "domain" : "46",
+    "domain" : "38",
     "comment" : {
       "en" : "Relates an experiment to the institution that performed it."
     },
     "attributes" : [ "object" ],
-    "id" : "65"
+    "id" : "79"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_MENTIONS",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "67",
+    "range" : "81",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3510,11 +3632,11 @@
       "en" : "Relates a publication to any entity mentioned in its text. This is the general-purpose provenance bridge between the literature and the rest of the graph, and is asserted whenever entity linking matched a mention to a node."
     },
     "attributes" : [ "object" ],
-    "id" : "66"
+    "id" : "80"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "53",
+    "range" : "67",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3538,11 +3660,11 @@
       "en" : "Relates a publication to a method it applies."
     },
     "attributes" : [ "object" ],
-    "id" : "69"
+    "id" : "83"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#iso3",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "71",
+    "range" : "85",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3561,16 +3683,16 @@
       "IRI-based" : "iso3",
       "undefined" : "iso3"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "ISO 3166-1 alpha-3 code of a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "70"
+    "id" : "84"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#IN_COUNTRY",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "16",
+    "range" : "14",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3589,16 +3711,16 @@
       "IRI-based" : "IN_COUNTRY",
       "undefined" : "IN_COUNTRY"
     },
-    "domain" : "73",
+    "domain" : "87",
     "comment" : {
       "en" : "Relates a city or administrative subdivision to the country that contains it."
     },
     "attributes" : [ "object" ],
-    "id" : "72"
+    "id" : "86"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#COVERS_DOMAIN",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "76",
+    "range" : "90",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3617,16 +3739,16 @@
       "IRI-based" : "COVERS_DOMAIN",
       "undefined" : "COVERS_DOMAIN"
     },
-    "domain" : "75",
+    "domain" : "89",
     "comment" : {
       "en" : "Relates a project or regional climate model to the spatial domain it is run over."
     },
     "attributes" : [ "object" ],
-    "id" : "74"
+    "id" : "88"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#rcm_version",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "78",
+    "range" : "92",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3645,12 +3767,12 @@
       "IRI-based" : "rcm_version",
       "undefined" : "rcm_version"
     },
-    "domain" : "44",
+    "domain" : "30",
     "comment" : {
       "en" : "Version label of a regional climate model."
     },
     "attributes" : [ "datatype" ],
-    "id" : "77"
+    "id" : "91"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#CITED_BY",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -3678,7 +3800,7 @@
       "en" : "Relates a publication to another publication that cites it, as recorded in the bibliographic reference data."
     },
     "attributes" : [ "object" ],
-    "id" : "79"
+    "id" : "93"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MEASURES_VARIABLE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -3701,12 +3823,12 @@
       "IRI-based" : "MEASURES_VARIABLE",
       "undefined" : "MEASURES_VARIABLE"
     },
-    "domain" : "42",
+    "domain" : "35",
     "comment" : {
       "en" : "Relates an observing instrument to a geophysical variable it measures."
     },
     "attributes" : [ "object" ],
-    "id" : "80"
+    "id" : "94"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PRODUCES_VARIABLE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -3729,16 +3851,16 @@
       "IRI-based" : "PRODUCES_VARIABLE",
       "undefined" : "PRODUCES_VARIABLE"
     },
-    "domain" : "83",
+    "domain" : "96",
     "comment" : {
       "en" : "Relates a climate model or model component to a geophysical variable it outputs."
     },
     "attributes" : [ "object" ],
-    "id" : "82"
+    "id" : "95"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#RESULT_HAS_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "61",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3757,16 +3879,16 @@
       "IRI-based" : "RESULT_HAS_METRIC",
       "undefined" : "RESULT_HAS_METRIC"
     },
-    "domain" : "37",
+    "domain" : "56",
     "comment" : {
       "en" : "Relates a reported finding to the evaluation metric it is expressed in."
     },
     "attributes" : [ "object" ],
-    "id" : "84"
+    "id" : "97"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#id",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "86",
+    "range" : "99",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3790,11 +3912,11 @@
       "en" : "OpenAlex work identifier of a publication."
     },
     "attributes" : [ "datatype" ],
-    "id" : "85"
+    "id" : "98"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "24",
+    "range" : "36",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3813,16 +3935,16 @@
       "IRI-based" : "APPLIES_TO_REALM",
       "undefined" : "APPLIES_TO_REALM"
     },
-    "domain" : "88",
+    "domain" : "101",
     "comment" : {
       "en" : "Relates a climate model, model component or experiment to an Earth system realm it addresses."
     },
     "attributes" : [ "object" ],
-    "id" : "87"
+    "id" : "100"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_SIMULATION_TYPE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "90",
+    "range" : "103",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3841,16 +3963,44 @@
       "IRI-based" : "HAS_SIMULATION_TYPE",
       "undefined" : "HAS_SIMULATION_TYPE"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to a style of simulation it is run in."
     },
     "attributes" : [ "object" ],
-    "id" : "89"
+    "id" : "102"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "105",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates an ocean circulation feature to a geographic region it is observed in.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OBSERVED_IN_REGION",
+      "undefined" : "OBSERVED_IN_REGION"
+    },
+    "domain" : "34",
+    "comment" : {
+      "en" : "Relates an ocean circulation feature to a geographic region it is observed in."
+    },
+    "attributes" : [ "object" ],
+    "id" : "104"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#paper_id",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "93",
+    "range" : "108",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3869,16 +4019,16 @@
       "IRI-based" : "paper_id",
       "undefined" : "paper_id"
     },
-    "domain" : "92",
+    "domain" : "107",
     "comment" : {
       "en" : "OpenAlex identifier of the publication this entity was extracted from (single-valued)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "91"
+    "id" : "106"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#gcmd_uuid",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "96",
+    "range" : "111",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3897,44 +4047,16 @@
       "IRI-based" : "gcmd_uuid",
       "undefined" : "gcmd_uuid"
     },
-    "domain" : "95",
+    "domain" : "110",
     "comment" : {
       "en" : "UUID of the matching concept in the NASA GCMD keyword vocabularies."
     },
     "attributes" : [ "datatype" ],
-    "id" : "94"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "37",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a method to a finding obtained with it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "METHOD_HAS_RESULT",
-      "undefined" : "METHOD_HAS_RESULT"
-    },
-    "domain" : "53",
-    "comment" : {
-      "en" : "Relates a method to a finding obtained with it."
-    },
-    "attributes" : [ "object" ],
-    "id" : "100"
+    "id" : "109"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#doi",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "102",
+    "range" : "114",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3958,11 +4080,39 @@
       "en" : "Digital Object Identifier of a publication."
     },
     "attributes" : [ "datatype" ],
-    "id" : "101"
+    "id" : "113"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_RESULT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "56",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a method to a finding obtained with it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "METHOD_HAS_RESULT",
+      "undefined" : "METHOD_HAS_RESULT"
+    },
+    "domain" : "67",
+    "comment" : {
+      "en" : "Relates a method to a finding obtained with it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "115"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#name",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "105",
+    "range" : "118",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3981,12 +4131,12 @@
       "IRI-based" : "name",
       "undefined" : "name"
     },
-    "domain" : "104",
+    "domain" : "117",
     "comment" : {
       "en" : "The primary human-readable name of an entity. For ESGF classes the name is also the identifier used to mint the entity's IRI."
     },
     "attributes" : [ "datatype" ],
-    "id" : "103"
+    "id" : "116"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PRODUCED_BY_INSTITUTE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -4009,16 +4159,16 @@
       "IRI-based" : "PRODUCED_BY_INSTITUTE",
       "undefined" : "PRODUCED_BY_INSTITUTE"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to the institution that developed it."
     },
     "attributes" : [ "object" ],
-    "id" : "106"
+    "id" : "119"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#tld",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "108",
+    "range" : "121",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4037,16 +4187,16 @@
       "IRI-based" : "tld",
       "undefined" : "tld"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Country-code top-level Internet domain of a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "107"
+    "id" : "120"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#postal_code_regex",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "110",
+    "range" : "123",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4065,16 +4215,16 @@
       "IRI-based" : "postal_code_regex",
       "undefined" : "postal_code_regex"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Regular expression validating a country's postal codes."
     },
     "attributes" : [ "datatype" ],
-    "id" : "109"
+    "id" : "122"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PART_OF_ENSEMBLE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "112",
+    "range" : "125",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4093,16 +4243,16 @@
       "IRI-based" : "PART_OF_ENSEMBLE",
       "undefined" : "PART_OF_ENSEMBLE"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model or sub-experiment to an ensemble it contributes to."
     },
     "attributes" : [ "object" ],
-    "id" : "111"
+    "id" : "124"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#added_from_paper_id",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "116",
+    "range" : "128",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4121,16 +4271,16 @@
       "IRI-based" : "added_from_paper_id",
       "undefined" : "added_from_paper_id"
     },
-    "domain" : "115",
+    "domain" : "127",
     "comment" : {
       "en" : "OpenAlex identifiers of the publications from which this entity or relationship was extracted."
     },
     "attributes" : [ "datatype" ],
-    "id" : "114"
+    "id" : "126"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "46",
+    "range" : "38",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4149,16 +4299,16 @@
       "IRI-based" : "INCLUDES_EXPERIMENT",
       "undefined" : "INCLUDES_EXPERIMENT"
     },
-    "domain" : "118",
+    "domain" : "130",
     "comment" : {
       "en" : "Relates an experiment family to one of its member experiments."
     },
     "attributes" : [ "object" ],
-    "id" : "117"
+    "id" : "129"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "98",
+    "range" : "112",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4177,16 +4327,16 @@
       "IRI-based" : "MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
       "undefined" : "MODEL_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to an observational or reanalysis dataset it is compared against."
     },
     "attributes" : [ "object" ],
-    "id" : "119"
+    "id" : "131"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_WORKS_ON_TASK",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "18",
+    "range" : "25",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4210,11 +4360,11 @@
       "en" : "Relates a publication to a research task it works on."
     },
     "attributes" : [ "object" ],
-    "id" : "120"
+    "id" : "132"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#admin1_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "123",
+    "range" : "135",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4233,16 +4383,16 @@
       "IRI-based" : "admin1_code",
       "undefined" : "admin1_code"
     },
-    "domain" : "122",
+    "domain" : "134",
     "comment" : {
       "en" : "Code of the first-level administrative division containing the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "121"
+    "id" : "133"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "98",
+    "range" : "112",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4266,11 +4416,11 @@
       "en" : "Relates a publication to an observational or reanalysis dataset it experiments on."
     },
     "attributes" : [ "object" ],
-    "id" : "124"
+    "id" : "136"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "98",
+    "range" : "112",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4289,16 +4439,16 @@
       "IRI-based" : "TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
       "undefined" : "TASK_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
     },
-    "domain" : "18",
+    "domain" : "25",
     "comment" : {
       "en" : "Relates a research task to an observational or reanalysis dataset it is carried out on."
     },
     "attributes" : [ "object" ],
-    "id" : "126"
+    "id" : "138"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#COVERS_REGION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "128",
+    "range" : "57",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4317,16 +4467,16 @@
       "IRI-based" : "COVERS_REGION",
       "undefined" : "COVERS_REGION"
     },
-    "domain" : "44",
+    "domain" : "30",
     "comment" : {
       "en" : "Relates a regional climate model to a geographic region that falls within its domain."
     },
     "attributes" : [ "object" ],
-    "id" : "127"
+    "id" : "139"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#title",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "130",
+    "range" : "141",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4350,11 +4500,22 @@
       "en" : "Title of a publication."
     },
     "attributes" : [ "datatype" ],
-    "id" : "129"
+    "id" : "140"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#source_uri",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "143",
+    "label" : {
+      "IRI-based" : "source_uri",
+      "undefined" : "source_uri"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "142"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#gcmd_uri",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "133",
+    "range" : "145",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4373,16 +4534,16 @@
       "IRI-based" : "gcmd_uri",
       "undefined" : "gcmd_uri"
     },
-    "domain" : "38",
+    "domain" : "31",
     "comment" : {
       "en" : "IRI of the matching concept in the NASA GCMD keyword vocabularies."
     },
     "attributes" : [ "datatype" ],
-    "id" : "132"
+    "id" : "144"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#elevation",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "140",
+    "range" : "152",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4401,16 +4562,16 @@
       "IRI-based" : "elevation",
       "undefined" : "elevation"
     },
-    "domain" : "139",
+    "domain" : "151",
     "comment" : {
       "en" : "Elevation of the place in metres, where recorded."
     },
     "attributes" : [ "datatype" ],
-    "id" : "138"
+    "id" : "150"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#cf_standard_name",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "142",
+    "range" : "154",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4434,11 +4595,11 @@
       "en" : "CF standard name of a variable."
     },
     "attributes" : [ "datatype" ],
-    "id" : "141"
+    "id" : "153"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#isonumeric",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "144",
+    "range" : "156",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4457,16 +4618,16 @@
       "IRI-based" : "isonumeric",
       "undefined" : "isonumeric"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "ISO 3166-1 numeric code of a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "143"
+    "id" : "155"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#alternatenames",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "147",
+    "range" : "159",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4485,16 +4646,16 @@
       "IRI-based" : "alternatenames",
       "undefined" : "alternatenames"
     },
-    "domain" : "146",
+    "domain" : "158",
     "comment" : {
       "en" : "Alternative and localised names of a place, as recorded by GeoNames."
     },
     "attributes" : [ "datatype" ],
-    "id" : "145"
+    "id" : "157"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#modification_date",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "150",
+    "range" : "162",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4513,16 +4674,16 @@
       "IRI-based" : "modification_date",
       "undefined" : "modification_date"
     },
-    "domain" : "149",
+    "domain" : "161",
     "comment" : {
       "en" : "Date on which the GeoNames record was last modified."
     },
     "attributes" : [ "datatype" ],
-    "id" : "148"
+    "id" : "160"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#country",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "156",
+    "range" : "168",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4541,16 +4702,16 @@
       "IRI-based" : "country",
       "undefined" : "country"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Country name as recorded in the GeoNames country table."
     },
     "attributes" : [ "datatype" ],
-    "id" : "155"
+    "id" : "167"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#capital",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "158",
+    "range" : "170",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4569,16 +4730,16 @@
       "IRI-based" : "capital",
       "undefined" : "capital"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Capital city of a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "157"
+    "id" : "169"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#north",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "161",
+    "range" : "173",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4597,16 +4758,16 @@
       "IRI-based" : "north",
       "undefined" : "north"
     },
-    "domain" : "160",
+    "domain" : "172",
     "comment" : {
       "en" : "Northern edge of the entity's bounding box, in decimal degrees."
     },
     "attributes" : [ "datatype" ],
-    "id" : "159"
+    "id" : "171"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#experiment_title",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "153",
+    "range" : "165",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4625,16 +4786,16 @@
       "IRI-based" : "experiment_title",
       "undefined" : "experiment_title"
     },
-    "domain" : "46",
+    "domain" : "38",
     "comment" : {
       "en" : "Full descriptive title of a CMIP experiment."
     },
     "attributes" : [ "datatype" ],
-    "id" : "162"
+    "id" : "174"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#variable_units",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "165",
+    "range" : "177",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4658,11 +4819,11 @@
       "en" : "Physical units in which a variable is reported."
     },
     "attributes" : [ "datatype" ],
-    "id" : "164"
+    "id" : "176"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#country_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "168",
+    "range" : "180",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4681,16 +4842,16 @@
       "IRI-based" : "country_code",
       "undefined" : "country_code"
     },
-    "domain" : "167",
+    "domain" : "179",
     "comment" : {
       "en" : "ISO 3166-1 alpha-2 code of the country containing the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "166"
+    "id" : "178"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#equivalent_fips_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "154",
+    "range" : "166",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4709,44 +4870,16 @@
       "IRI-based" : "equivalent_fips_code",
       "undefined" : "equivalent_fips_code"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Equivalent FIPS code recorded for a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "169"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "24",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a MIP activity to the Earth system realm its experiments focus on.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "FOCUSES_ON_REALM",
-      "undefined" : "FOCUSES_ON_REALM"
-    },
-    "domain" : "171",
-    "comment" : {
-      "en" : "Relates a MIP activity to the Earth system realm its experiments focus on."
-    },
-    "attributes" : [ "object" ],
-    "id" : "170"
+    "id" : "181"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#area_sqkm",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "173",
+    "range" : "183",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4765,16 +4898,44 @@
       "IRI-based" : "area_sqkm",
       "undefined" : "area_sqkm"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Area of a country in square kilometres."
     },
     "attributes" : [ "datatype" ],
-    "id" : "172"
+    "id" : "182"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#FOCUSES_ON_REALM",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "36",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a MIP activity to the Earth system realm its experiments focus on.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FOCUSES_ON_REALM",
+      "undefined" : "FOCUSES_ON_REALM"
+    },
+    "domain" : "185",
+    "comment" : {
+      "en" : "Relates a MIP activity to the Earth system realm its experiments focus on."
+    },
+    "attributes" : [ "object" ],
+    "id" : "184"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#USES_PHYSICAL_SCHEME",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "131",
+    "range" : "146",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4793,16 +4954,16 @@
       "IRI-based" : "USES_PHYSICAL_SCHEME",
       "undefined" : "USES_PHYSICAL_SCHEME"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to a parameterisation or numerical scheme it implements."
     },
     "attributes" : [ "object" ],
-    "id" : "177"
+    "id" : "189"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "98",
+    "range" : "112",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4821,16 +4982,16 @@
       "IRI-based" : "METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET",
       "undefined" : "METHOD_EXPERIMENTS_ON_OBSERVATIONAL_DATASET"
     },
-    "domain" : "53",
+    "domain" : "67",
     "comment" : {
       "en" : "Relates a method to an observational or reanalysis dataset it is applied to."
     },
     "attributes" : [ "object" ],
-    "id" : "180"
+    "id" : "191"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_USES_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "61",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4854,11 +5015,11 @@
       "en" : "Relates a publication to an evaluation metric it uses."
     },
     "attributes" : [ "object" ],
-    "id" : "181"
+    "id" : "192"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#abstract",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "183",
+    "range" : "194",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4882,11 +5043,11 @@
       "en" : "Abstract of a publication."
     },
     "attributes" : [ "datatype" ],
-    "id" : "182"
+    "id" : "193"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#neighbours",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "185",
+    "range" : "196",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4905,16 +5066,16 @@
       "IRI-based" : "neighbours",
       "undefined" : "neighbours"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "ISO country codes of a country's land neighbours."
     },
     "attributes" : [ "datatype" ],
-    "id" : "184"
+    "id" : "195"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#admin2_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "188",
+    "range" : "199",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4933,16 +5094,16 @@
       "IRI-based" : "admin2_code",
       "undefined" : "admin2_code"
     },
-    "domain" : "187",
+    "domain" : "198",
     "comment" : {
       "en" : "Code of the second-level administrative division containing the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "186"
+    "id" : "197"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#IN_CONTINENT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "134",
+    "range" : "41",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4961,16 +5122,16 @@
       "IRI-based" : "IN_CONTINENT",
       "undefined" : "IN_CONTINENT"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Relates a country to the continent it lies in."
     },
     "attributes" : [ "object" ],
-    "id" : "191"
+    "id" : "202"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MOUNTED_ON",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "40",
+    "range" : "33",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4989,44 +5150,16 @@
       "IRI-based" : "MOUNTED_ON",
       "undefined" : "MOUNTED_ON"
     },
-    "domain" : "42",
+    "domain" : "35",
     "comment" : {
       "en" : "Relates an observing instrument to the platform that carries it."
     },
     "attributes" : [ "object" ],
-    "id" : "192"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#USES_FORCING",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "54",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates an experiment to an external forcing it prescribes.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "USES_FORCING",
-      "undefined" : "USES_FORCING"
-    },
-    "domain" : "46",
-    "comment" : {
-      "en" : "Relates an experiment to an external forcing it prescribes."
-    },
-    "attributes" : [ "object" ],
-    "id" : "193"
+    "id" : "203"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_AUTHORED_BY",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "99",
+    "range" : "22",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5050,11 +5183,39 @@
       "en" : "Relates a publication to one of its authors."
     },
     "attributes" : [ "object" ],
-    "id" : "194"
+    "id" : "204"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#USES_FORCING",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "68",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates an experiment to an external forcing it prescribes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "USES_FORCING",
+      "undefined" : "USES_FORCING"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relates an experiment to an external forcing it prescribes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "205"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#latitude",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "197",
+    "range" : "208",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5073,16 +5234,16 @@
       "IRI-based" : "latitude",
       "undefined" : "latitude"
     },
-    "domain" : "196",
+    "domain" : "207",
     "comment" : {
       "en" : "Latitude of a place in decimal degrees (WGS 84)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "195"
+    "id" : "206"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#iso",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "200",
+    "range" : "211",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5101,16 +5262,16 @@
       "IRI-based" : "iso",
       "undefined" : "iso"
     },
-    "domain" : "199",
+    "domain" : "210",
     "comment" : {
       "en" : "ISO 3166-1 alpha-2 code of a country, or the two-letter GeoNames continent code."
     },
     "attributes" : [ "datatype" ],
-    "id" : "198"
+    "id" : "209"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#SAMPLED_AT_FREQUENCY",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "68",
+    "range" : "82",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5129,16 +5290,16 @@
       "IRI-based" : "SAMPLED_AT_FREQUENCY",
       "undefined" : "SAMPLED_AT_FREQUENCY"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to a temporal frequency at which its output is reported."
     },
     "attributes" : [ "object" ],
-    "id" : "201"
+    "id" : "212"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#type",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "179",
+    "range" : "214",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5157,16 +5318,16 @@
       "IRI-based" : "type",
       "undefined" : "type"
     },
-    "domain" : "34",
+    "domain" : "21",
     "comment" : {
       "en" : "Kind of publication venue, such as journal, conference, book series or repository."
     },
     "attributes" : [ "datatype" ],
-    "id" : "202"
+    "id" : "213"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_PHYSICAL_FEATURE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "137",
+    "range" : "148",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5185,16 +5346,16 @@
       "IRI-based" : "HAS_PHYSICAL_FEATURE",
       "undefined" : "HAS_PHYSICAL_FEATURE"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to a physical process or property it represents."
     },
     "attributes" : [ "object" ],
-    "id" : "206"
+    "id" : "217"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "171",
+    "range" : "185",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5213,16 +5374,16 @@
       "IRI-based" : "GENERATED_BY_ACTIVITY",
       "undefined" : "GENERATED_BY_ACTIVITY"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to the MIP activity whose experiments produced its output."
     },
     "attributes" : [ "object" ],
-    "id" : "209"
+    "id" : "223"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#BELONGS_TO_MIP_ERA",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "211",
+    "range" : "220",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5241,44 +5402,16 @@
       "IRI-based" : "BELONGS_TO_MIP_ERA",
       "undefined" : "BELONGS_TO_MIP_ERA"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model or experiment family to the MIP generation it belongs to."
     },
     "attributes" : [ "object" ],
-    "id" : "210"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "213",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates an experiment to one of its sub-experiments.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "HAS_SUB_EXPERIMENT",
-      "undefined" : "HAS_SUB_EXPERIMENT"
-    },
-    "domain" : "46",
-    "comment" : {
-      "en" : "Relates an experiment to one of its sub-experiments."
-    },
-    "attributes" : [ "object" ],
-    "id" : "212"
+    "id" : "224"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#currencyname",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "175",
+    "range" : "187",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5297,16 +5430,44 @@
       "IRI-based" : "currencyname",
       "undefined" : "currencyname"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "Name of a country's currency."
     },
     "attributes" : [ "datatype" ],
-    "id" : "214"
+    "id" : "225"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "219",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates an experiment to one of its sub-experiments.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HAS_SUB_EXPERIMENT",
+      "undefined" : "HAS_SUB_EXPERIMENT"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relates an experiment to one of its sub-experiments."
+    },
+    "attributes" : [ "object" ],
+    "id" : "226"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#TASK_FACES_PROBLEM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "26",
+    "range" : "47",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5325,12 +5486,12 @@
       "IRI-based" : "TASK_FACES_PROBLEM",
       "undefined" : "TASK_FACES_PROBLEM"
     },
-    "domain" : "18",
+    "domain" : "25",
     "comment" : {
       "en" : "Relates a research task to a problem that makes it difficult."
     },
     "attributes" : [ "object" ],
-    "id" : "215"
+    "id" : "227"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PART_OF_PROJECT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -5353,16 +5514,16 @@
       "IRI-based" : "PART_OF_PROJECT",
       "undefined" : "PART_OF_PROJECT"
     },
-    "domain" : "205",
+    "domain" : "222",
     "comment" : {
       "en" : "Relates a climate model, regional model, experiment or activity to a project it belongs to."
     },
     "attributes" : [ "object" ],
-    "id" : "216"
+    "id" : "228"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "112",
+    "range" : "125",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5381,12 +5542,12 @@
       "IRI-based" : "INCLUDES_ENSEMBLE_MEMBER",
       "undefined" : "INCLUDES_ENSEMBLE_MEMBER"
     },
-    "domain" : "46",
+    "domain" : "38",
     "comment" : {
       "en" : "Relates an experiment to an ensemble of simulations carried out for it."
     },
     "attributes" : [ "object" ],
-    "id" : "218"
+    "id" : "229"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_INNOVATION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -5414,11 +5575,11 @@
       "en" : "Relates a publication to a novel contribution it claims."
     },
     "attributes" : [ "object" ],
-    "id" : "219"
+    "id" : "230"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT",
+    "iri" : "https://climatepub4kg.github.io/ontology#asciiname",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "97",
+    "range" : "233",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5429,20 +5590,20 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relates a climate model, or one of its components, to a constituent submodel.",
+        "value" : "ASCII transliteration of a geographic name, as recorded by GeoNames.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "HAS_SOURCE_COMPONENT",
-      "undefined" : "HAS_SOURCE_COMPONENT"
+      "IRI-based" : "asciiname",
+      "undefined" : "asciiname"
     },
-    "domain" : "222",
+    "domain" : "232",
     "comment" : {
-      "en" : "Relates a climate model, or one of its components, to a constituent submodel."
+      "en" : "ASCII transliteration of a geographic name, as recorded by GeoNames."
     },
-    "attributes" : [ "object" ],
-    "id" : "221"
+    "attributes" : [ "datatype" ],
+    "id" : "231"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#METHOD_HAS_INNOVATION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
@@ -5465,16 +5626,16 @@
       "IRI-based" : "METHOD_HAS_INNOVATION",
       "undefined" : "METHOD_HAS_INNOVATION"
     },
-    "domain" : "53",
+    "domain" : "67",
     "comment" : {
       "en" : "Relates a method to a novel contribution it introduces."
     },
     "attributes" : [ "object" ],
-    "id" : "223"
+    "id" : "234"
   }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#asciiname",
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_SOURCE_COMPONENT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "225",
+    "range" : "60",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5485,24 +5646,80 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "ASCII transliteration of a geographic name, as recorded by GeoNames.",
+        "value" : "Relates a climate model, or one of its components, to a constituent submodel.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "asciiname",
-      "undefined" : "asciiname"
+      "IRI-based" : "HAS_SOURCE_COMPONENT",
+      "undefined" : "HAS_SOURCE_COMPONENT"
     },
-    "domain" : "207",
+    "domain" : "236",
     "comment" : {
-      "en" : "ASCII transliteration of a geographic name, as recorded by GeoNames."
+      "en" : "Relates a climate model, or one of its components, to a constituent submodel."
     },
-    "attributes" : [ "datatype" ],
-    "id" : "224"
+    "attributes" : [ "object" ],
+    "id" : "235"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#IMPACTED_REGION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "238",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a weather or climate event to a geographic region it impacted.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IMPACTED_REGION",
+      "undefined" : "IMPACTED_REGION"
+    },
+    "domain" : "175",
+    "comment" : {
+      "en" : "Relates a weather or climate event to a geographic region it impacted."
+    },
+    "attributes" : [ "object" ],
+    "id" : "237"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "149",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a geographic region to a climate zone it falls in.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HAS_CLIMATE_ZONE",
+      "undefined" : "HAS_CLIMATE_ZONE"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "Relates a geographic region to a climate zone it falls in."
+    },
+    "attributes" : [ "object" ],
+    "id" : "239"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#south",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "189",
+    "range" : "200",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5521,16 +5738,16 @@
       "IRI-based" : "south",
       "undefined" : "south"
     },
-    "domain" : "227",
+    "domain" : "241",
     "comment" : {
       "en" : "Southern edge of the entity's bounding box, in decimal degrees."
     },
     "attributes" : [ "datatype" ],
-    "id" : "226"
+    "id" : "240"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_PUBLISHED_IN_VENUE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "34",
+    "range" : "21",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5554,11 +5771,11 @@
       "en" : "Relates a publication to the venue it appeared in."
     },
     "attributes" : [ "object" ],
-    "id" : "228"
+    "id" : "242"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#DRIVEN_BY_SOURCE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "36",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5577,16 +5794,16 @@
       "IRI-based" : "DRIVEN_BY_SOURCE",
       "undefined" : "DRIVEN_BY_SOURCE"
     },
-    "domain" : "44",
+    "domain" : "30",
     "comment" : {
       "en" : "Relates a regional climate model to the global model that supplies its lateral boundary conditions."
     },
     "attributes" : [ "object" ],
-    "id" : "229"
+    "id" : "243"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#phone",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "190",
+    "range" : "201",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5605,16 +5822,16 @@
       "IRI-based" : "phone",
       "undefined" : "phone"
     },
-    "domain" : "16",
+    "domain" : "14",
     "comment" : {
       "en" : "International dialling prefix of a country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "230"
+    "id" : "244"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#INHERITED_FROM",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "36",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5633,16 +5850,16 @@
       "IRI-based" : "INHERITED_FROM",
       "undefined" : "INHERITED_FROM"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to an earlier model it was derived from."
     },
     "attributes" : [ "object" ],
-    "id" : "231"
+    "id" : "245"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#MODEL_USES_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "61",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5661,16 +5878,16 @@
       "IRI-based" : "MODEL_USES_METRIC",
       "undefined" : "MODEL_USES_METRIC"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to an evaluation metric used to assess it."
     },
     "attributes" : [ "object" ],
-    "id" : "232"
+    "id" : "246"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_RESULT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "37",
+    "range" : "56",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5694,11 +5911,11 @@
       "en" : "Relates a publication to a finding it reports."
     },
     "attributes" : [ "object" ],
-    "id" : "233"
+    "id" : "248"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#admin3_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "236",
+    "range" : "252",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5717,16 +5934,16 @@
       "IRI-based" : "admin3_code",
       "undefined" : "admin3_code"
     },
-    "domain" : "235",
+    "domain" : "251",
     "comment" : {
       "en" : "Code of the third-level administrative division containing the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "234"
+    "id" : "250"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#PAPER_HAS_KEYWORD",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "208",
+    "range" : "19",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5750,11 +5967,11 @@
       "en" : "Relates a publication to a subject keyword assigned to it."
     },
     "attributes" : [ "object" ],
-    "id" : "243"
+    "id" : "259"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#east",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "152",
+    "range" : "164",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5773,16 +5990,16 @@
       "IRI-based" : "east",
       "undefined" : "east"
     },
-    "domain" : "249",
+    "domain" : "263",
     "comment" : {
       "en" : "Eastern edge of the entity's bounding box, in decimal degrees."
     },
     "attributes" : [ "datatype" ],
-    "id" : "248"
+    "id" : "262"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#cc2",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "176",
+    "range" : "188",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5801,16 +6018,16 @@
       "IRI-based" : "cc2",
       "undefined" : "cc2"
     },
-    "domain" : "251",
+    "domain" : "265",
     "comment" : {
       "en" : "Additional country codes for a place that spans more than one country."
     },
     "attributes" : [ "datatype" ],
-    "id" : "250"
+    "id" : "264"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#IS_OF_TYPE",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "254",
+    "range" : "267",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5829,44 +6046,16 @@
       "IRI-based" : "IS_OF_TYPE",
       "undefined" : "IS_OF_TYPE"
     },
-    "domain" : "253",
+    "domain" : "258",
     "comment" : {
       "en" : "Relates an entity to its category: a climate model to its source type, or a natural hazard to its hazard type."
     },
     "attributes" : [ "object" ],
-    "id" : "252"
-  }, {
-    "iri" : "https://climatepub4kg.github.io/ontology#longitude",
-    "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "203",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://climatepub4kg.github.io/ontology",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Longitude of a place in decimal degrees (WGS 84).",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "longitude",
-      "undefined" : "longitude"
-    },
-    "domain" : "256",
-    "comment" : {
-      "en" : "Longitude of a place in decimal degrees (WGS 84)."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "257"
+    "id" : "266"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "178",
+    "range" : "190",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5885,16 +6074,44 @@
       "IRI-based" : "code",
       "undefined" : "code"
     },
-    "domain" : "11",
+    "domain" : "16",
     "comment" : {
       "en" : "Administrative code of a country subdivision, in GeoNames country.admin1 form."
     },
     "attributes" : [ "datatype" ],
-    "id" : "258"
+    "id" : "268"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#longitude",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "215",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Longitude of a place in decimal degrees (WGS 84).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "longitude",
+      "undefined" : "longitude"
+    },
+    "domain" : "260",
+    "comment" : {
+      "en" : "Longitude of a place in decimal degrees (WGS 84)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "269"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#admin4_code",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "247",
+    "range" : "261",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5913,16 +6130,16 @@
       "IRI-based" : "admin4_code",
       "undefined" : "admin4_code"
     },
-    "domain" : "255",
+    "domain" : "254",
     "comment" : {
       "en" : "Code of the fourth-level administrative division containing the place."
     },
     "attributes" : [ "datatype" ],
-    "id" : "259"
+    "id" : "270"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_METRIC",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "135",
+    "range" : "147",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5941,16 +6158,16 @@
       "IRI-based" : "HAS_METRIC",
       "undefined" : "HAS_METRIC"
     },
-    "domain" : "36",
+    "domain" : "29",
     "comment" : {
       "en" : "Relates a climate model to a characteristic quantity reported for it, such as its climate sensitivity."
     },
     "attributes" : [ "object" ],
-    "id" : "260"
+    "id" : "271"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#west",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "238",
+    "range" : "247",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5969,16 +6186,16 @@
       "IRI-based" : "west",
       "undefined" : "west"
     },
-    "domain" : "242",
+    "domain" : "253",
     "comment" : {
       "en" : "Western edge of the entity's bounding box, in decimal degrees."
     },
     "attributes" : [ "datatype" ],
-    "id" : "261"
+    "id" : "272"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#geonameid",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "151",
+    "range" : "163",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5997,16 +6214,16 @@
       "IRI-based" : "geonameid",
       "undefined" : "geonameid"
     },
-    "domain" : "246",
+    "domain" : "257",
     "comment" : {
       "en" : "GeoNames identifier of a geographic entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "262"
+    "id" : "273"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#uuid",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "237",
+    "range" : "249",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6025,16 +6242,16 @@
       "IRI-based" : "uuid",
       "undefined" : "uuid"
     },
-    "domain" : "244",
+    "domain" : "255",
     "comment" : {
       "en" : "Stable internal identifier of the entity within the knowledge graph."
     },
     "attributes" : [ "datatype" ],
-    "id" : "263"
+    "id" : "274"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#dem",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "174",
+    "range" : "186",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6053,16 +6270,16 @@
       "IRI-based" : "dem",
       "undefined" : "dem"
     },
-    "domain" : "239",
+    "domain" : "58",
     "comment" : {
       "en" : "Digital elevation model value in metres at the place's coordinates (SRTM3 or GTOPO30)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "264"
+    "id" : "275"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_SUBSEQUENT_VERSION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "241",
+    "range" : "59",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6081,16 +6298,16 @@
       "IRI-based" : "HAS_SUBSEQUENT_VERSION",
       "undefined" : "HAS_SUBSEQUENT_VERSION"
     },
-    "domain" : "240",
+    "domain" : "61",
     "comment" : {
       "en" : "Relates a climate model or model component to a later version of itself."
     },
     "attributes" : [ "object" ],
-    "id" : "265"
+    "id" : "276"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#USED_IN_EXPERIMENT",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "46",
+    "range" : "38",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6109,16 +6326,16 @@
       "IRI-based" : "USED_IN_EXPERIMENT",
       "undefined" : "USED_IN_EXPERIMENT"
     },
-    "domain" : "43",
+    "domain" : "28",
     "comment" : {
       "en" : "Relates a climate model or regional climate model to an experiment it was run for."
     },
     "attributes" : [ "object" ],
-    "id" : "266"
+    "id" : "277"
   }, {
     "iri" : "https://climatepub4kg.github.io/ontology#HAS_SPATIAL_RESOLUTION",
     "baseIri" : "https://climatepub4kg.github.io/ontology",
-    "range" : "220",
+    "range" : "221",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6137,11 +6354,39 @@
       "IRI-based" : "HAS_SPATIAL_RESOLUTION",
       "undefined" : "HAS_SPATIAL_RESOLUTION"
     },
-    "domain" : "45",
+    "domain" : "37",
     "comment" : {
       "en" : "Relates a climate model, regional model, experiment or variable to its nominal spatial resolution."
     },
     "attributes" : [ "object" ],
-    "id" : "267"
+    "id" : "278"
+  }, {
+    "iri" : "https://climatepub4kg.github.io/ontology#INFLUENCES_REGION",
+    "baseIri" : "https://climatepub4kg.github.io/ontology",
+    "range" : "40",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://climatepub4kg.github.io/ontology",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a teleconnection pattern to a geographic region whose climate it influences.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "INFLUENCES_REGION",
+      "undefined" : "INFLUENCES_REGION"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relates a teleconnection pattern to a geographic region whose climate it influences."
+    },
+    "attributes" : [ "object" ],
+    "id" : "279"
   } ]
 }

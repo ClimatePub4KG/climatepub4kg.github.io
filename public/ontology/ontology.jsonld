@@ -2,6 +2,9 @@
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -47,6 +50,22 @@
     "@language" : "en",
     "@value" : "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."
   } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Aayush Acharya"
+  }, {
+    "@language" : "en",
+    "@value" : "Adamu Mustapha"
+  }, {
+    "@language" : "en",
+    "@value" : "Eduard Dragut"
+  }, {
+    "@language" : "en",
+    "@value" : "Huitong Pan"
+  }, {
+    "@language" : "en",
+    "@value" : "Longin Jan Latecki"
+  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@language" : "en",
     "@value" : "ClimatePub4KG project"
@@ -56,13 +75,13 @@
     "@value" : "ClimatePub4KG connects two bodies of climate-science knowledge that are normally kept apart: the structured metadata that describes climate-model simulations, and the scientific literature that analyses them.\n\nThe ontology is organised around four groups of terms.\n\nESGF and CMIP model metadata. Classes such as Source (a climate model), SourceComponent, Experiment, SubExperiment, ExperimentFamily, Activity, Project, MIPEra, Institute, Variable, Realm, Frequency, Resolution, GridLabel, Member, Ensemble, Forcing and Domain follow the CMIP6 controlled vocabularies and the facets used by ESGF search. Model-description classes (SourceType, SimulationType, PhysicalScheme, PhysicalFeature, Metric) capture how a model is built and how it behaves.\n\nScientific publications. A Paper is an OpenAlex-identified work, connected to its Author, Venue and Keyword records, and to the research content extracted from its full text: Field, Problem, Task, Method, Innovation, Result, EvaluationMetric and ObservationalDataset. The same content classes attach to models and methods as well as papers, so a finding can be traced from the claim to the model that produced it.\n\nGeography. Continent, Country, Country_Subdivision, City and No_Country_Region are grounded in the GeoNames gazetteer and keep their GeoNames identifiers, bounding boxes and administrative codes. ClimateZone gives a coarse Koppen-Geiger style classification.\n\nObservations and phenomena. Instrument and Platform align with the NASA GCMD keyword vocabularies; Teleconnection, Ocean_Circulation, Weather_Event, Natural_Hazard and NaturalHazardType name the large-scale patterns and events discussed in the corpus.\n\nInstance IRIs live in a separate namespace, https://climatepub4kg.github.io/id/, and follow the pattern {id-namespace}{ClassName}/{identifier}. For ESGF classes the identifier is the URL-encoded entity name, so a model IRI reads .../id/Source/CESM2; a short disambiguating suffix is appended in the rare case where one name is used by more than one entity of the same class. Everything else is minted from the node's internal uuid.\n\nProvenance is carried on the terms themselves: paper_id and added_from_paper_id record which publication an extracted entity or relationship came from, supporting_paragraphs keeps the sentences that justified it, and dataset_count records how many ESGF datasets support a metadata relationship. PAPER_MENTIONS is the general-purpose bridge from a publication to any entity mentioned in its text.\n\nThe graph is built by an LLM extraction pipeline over open-access climate papers followed by entity linking against the ESGF, GeoNames and GCMD vocabularies, so instance data should be treated as machine-generated and evidence-linked rather than hand-curated."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2026-07-25"
+    "@value" : "2026-07-26"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2026-07-25"
+    "@value" : "2026-07-26"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@language" : "en",
@@ -101,13 +120,44 @@
     "@value" : "ClimatePub4KG Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://climatepub4kg.github.io/ontology/2026-07-25"
+    "@id" : "https://climatepub4kg.github.io/ontology/2026-07-26"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "2026-07-25"
+    "@value" : "2026-07-26"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://climatepub4kg.github.io/ontology/"
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#AFFECTED_REGION",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a natural hazard to a geographic region it affected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Natural_Hazard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AFFECTED_REGION"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#City"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Continent"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a natural hazard to a geographic region it affected."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM",
@@ -603,6 +653,29 @@
     "@value" : "The label identifying the grid a dataset is reported on, such as gn (the model's native grid) or gr (a regridded product). Corresponds to the ESGF grid_label facet."
   } ]
 }, {
+  "@id" : "https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a geographic region to a climate zone it falls in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HAS_CLIMATE_ZONE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#ClimateZone"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a geographic region to a climate zone it falls in."
+  } ]
+}, {
   "@id" : "https://climatepub4kg.github.io/ontology#HAS_METRIC",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -774,6 +847,37 @@
     "@value" : "Relates an experiment to one of its sub-experiments."
   } ]
 }, {
+  "@id" : "https://climatepub4kg.github.io/ontology#IMPACTED_REGION",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a weather or climate event to a geographic region it impacted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Weather_Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IMPACTED_REGION"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#City"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Continent"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a weather or climate event to a geographic region it impacted."
+  } ]
+}, {
   "@id" : "https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -818,6 +922,37 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Relates an experiment family to one of its member experiments."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#INFLUENCES_REGION",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a teleconnection pattern to a geographic region whose climate it influences."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Teleconnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "INFLUENCES_REGION"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#City"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Continent"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a teleconnection pattern to a geographic region whose climate it influences."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#INHERITED_FROM",
@@ -1373,6 +1508,35 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "A named geographic region that is neither a country nor an administrative subdivision, such as a river basin, mountain range, sea, gulf or ocean sector, as identified in the GeoNames gazetteer."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an ocean circulation feature to a geographic region it is observed in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Ocean_Circulation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OBSERVED_IN_REGION"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Continent"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Country_Subdivision"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#No_Country_Region"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an ocean circulation feature to a geographic region it is observed in."
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#ObservationalDataset",
@@ -3753,6 +3917,24 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Version label of a regional climate model."
+  } ]
+}, {
+  "@id" : "https://climatepub4kg.github.io/ontology#source_uri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://climatepub4kg.github.io/ontology#Author"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Keyword"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Paper"
+  }, {
+    "@id" : "https://climatepub4kg.github.io/ontology#Venue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "source_uri"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://climatepub4kg.github.io/ontology#south",

@@ -1,11 +1,16 @@
 <https://climatepub4kg.github.io/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://climatepub4kg.github.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://climatepub4kg.github.io/ontology/2026-07-25> .
+<https://climatepub4kg.github.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://climatepub4kg.github.io/ontology/2026-07-26> .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/abstract> "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."@en .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/contributor> "Aayush Acharya"@en .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/contributor> "Adamu Mustapha"@en .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/contributor> "Eduard Dragut"@en .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/contributor> "Huitong Pan"@en .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/contributor> "Longin Jan Latecki"@en .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/creator> "ClimatePub4KG project"@en .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/description> "ClimatePub4KG connects two bodies of climate-science knowledge that are normally kept apart: the structured metadata that describes climate-model simulations, and the scientific literature that analyses them.\n\nThe ontology is organised around four groups of terms.\n\nESGF and CMIP model metadata. Classes such as Source (a climate model), SourceComponent, Experiment, SubExperiment, ExperimentFamily, Activity, Project, MIPEra, Institute, Variable, Realm, Frequency, Resolution, GridLabel, Member, Ensemble, Forcing and Domain follow the CMIP6 controlled vocabularies and the facets used by ESGF search. Model-description classes (SourceType, SimulationType, PhysicalScheme, PhysicalFeature, Metric) capture how a model is built and how it behaves.\n\nScientific publications. A Paper is an OpenAlex-identified work, connected to its Author, Venue and Keyword records, and to the research content extracted from its full text: Field, Problem, Task, Method, Innovation, Result, EvaluationMetric and ObservationalDataset. The same content classes attach to models and methods as well as papers, so a finding can be traced from the claim to the model that produced it.\n\nGeography. Continent, Country, Country_Subdivision, City and No_Country_Region are grounded in the GeoNames gazetteer and keep their GeoNames identifiers, bounding boxes and administrative codes. ClimateZone gives a coarse Koppen-Geiger style classification.\n\nObservations and phenomena. Instrument and Platform align with the NASA GCMD keyword vocabularies; Teleconnection, Ocean_Circulation, Weather_Event, Natural_Hazard and NaturalHazardType name the large-scale patterns and events discussed in the corpus.\n\nInstance IRIs live in a separate namespace, https://climatepub4kg.github.io/id/, and follow the pattern {id-namespace}{ClassName}/{identifier}. For ESGF classes the identifier is the URL-encoded entity name, so a model IRI reads .../id/Source/CESM2; a short disambiguating suffix is appended in the rare case where one name is used by more than one entity of the same class. Everything else is minted from the node's internal uuid.\n\nProvenance is carried on the terms themselves: paper_id and added_from_paper_id record which publication an extracted entity or relationship came from, supporting_paragraphs keeps the sentences that justified it, and dataset_count records how many ESGF datasets support a metadata relationship. PAPER_MENTIONS is the general-purpose bridge from a publication to any entity mentioned in its text.\n\nThe graph is built by an LLM extraction pipeline over open-access climate papers followed by entity linking against the ESGF, GeoNames and GCMD vocabularies, so instance data should be treated as machine-generated and evidence-linked rather than hand-curated."@en .
-<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/issued> "2026-07-25" .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/issued> "2026-07-26" .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/modified> "2026-07-25" .
+<https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/modified> "2026-07-26" .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/publisher> "ClimatePub4KG project"@en .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/source> <https://esgf.llnl.gov/> .
 <https://climatepub4kg.github.io/ontology> <http://purl.org/dc/terms/source> <https://gcmd.earthdata.nasa.gov/KeywordViewer/> .
@@ -18,7 +23,7 @@
 <https://climatepub4kg.github.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://climatepub4kg.github.io/ontology#" .
 <https://climatepub4kg.github.io/ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."@en .
 <https://climatepub4kg.github.io/ontology> <http://www.w3.org/2000/01/rdf-schema#label> "ClimatePub4KG Ontology"@en .
-<https://climatepub4kg.github.io/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "2026-07-25" .
+<https://climatepub4kg.github.io/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "2026-07-26" .
 <https://climatepub4kg.github.io/ontology> <http://xmlns.com/foaf/0.1/homepage> <https://climatepub4kg.github.io/ontology/> .
 # 
 # 
@@ -31,6 +36,9 @@
 # 
 # http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -79,6 +87,19 @@
 # #
 # #################################################################
 # 
+# 
+# https://climatepub4kg.github.io/ontology#AFFECTED_REGION
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Natural_Hazard> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#City> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Continent> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country_Subdivision> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#No_Country_Region> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a natural hazard to a geographic region it affected."@en .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2000/01/rdf-schema#label> "AFFECTED_REGION" .
+<https://climatepub4kg.github.io/ontology#AFFECTED_REGION> <http://www.w3.org/2004/02/skos/core#definition> "Relates a natural hazard to a geographic region it affected."@en .
 # 
 # https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM
 <https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -168,6 +189,15 @@
 <https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY> <http://www.w3.org/2000/01/rdf-schema#label> "GENERATED_BY_ACTIVITY" .
 <https://climatepub4kg.github.io/ontology#GENERATED_BY_ACTIVITY> <http://www.w3.org/2004/02/skos/core#definition> "Relates a climate model to the MIP activity whose experiments produced its output."@en .
 # 
+# https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#No_Country_Region> .
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#ClimateZone> .
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a geographic region to a climate zone it falls in."@en .
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/2000/01/rdf-schema#label> "HAS_CLIMATE_ZONE" .
+<https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE> <http://www.w3.org/2004/02/skos/core#definition> "Relates a geographic region to a climate zone it falls in."@en .
+# 
 # https://climatepub4kg.github.io/ontology#HAS_METRIC
 <https://climatepub4kg.github.io/ontology#HAS_METRIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://climatepub4kg.github.io/ontology#HAS_METRIC> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Source> .
@@ -236,6 +266,19 @@
 <https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT> <http://www.w3.org/2000/01/rdf-schema#label> "HAS_SUB_EXPERIMENT" .
 <https://climatepub4kg.github.io/ontology#HAS_SUB_EXPERIMENT> <http://www.w3.org/2004/02/skos/core#definition> "Relates an experiment to one of its sub-experiments."@en .
 # 
+# https://climatepub4kg.github.io/ontology#IMPACTED_REGION
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Weather_Event> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#City> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Continent> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country_Subdivision> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#No_Country_Region> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a weather or climate event to a geographic region it impacted."@en .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2000/01/rdf-schema#label> "IMPACTED_REGION" .
+<https://climatepub4kg.github.io/ontology#IMPACTED_REGION> <http://www.w3.org/2004/02/skos/core#definition> "Relates a weather or climate event to a geographic region it impacted."@en .
+# 
 # https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER
 <https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Experiment> .
@@ -253,6 +296,19 @@
 <https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
 <https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT> <http://www.w3.org/2000/01/rdf-schema#label> "INCLUDES_EXPERIMENT" .
 <https://climatepub4kg.github.io/ontology#INCLUDES_EXPERIMENT> <http://www.w3.org/2004/02/skos/core#definition> "Relates an experiment family to one of its member experiments."@en .
+# 
+# https://climatepub4kg.github.io/ontology#INFLUENCES_REGION
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Teleconnection> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#City> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Continent> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country_Subdivision> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#No_Country_Region> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a teleconnection pattern to a geographic region whose climate it influences."@en .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2000/01/rdf-schema#label> "INFLUENCES_REGION" .
+<https://climatepub4kg.github.io/ontology#INFLUENCES_REGION> <http://www.w3.org/2004/02/skos/core#definition> "Relates a teleconnection pattern to a geographic region whose climate it influences."@en .
 # 
 # https://climatepub4kg.github.io/ontology#INHERITED_FROM
 <https://climatepub4kg.github.io/ontology#INHERITED_FROM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -391,6 +447,18 @@
 <https://climatepub4kg.github.io/ontology#MOUNTED_ON> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
 <https://climatepub4kg.github.io/ontology#MOUNTED_ON> <http://www.w3.org/2000/01/rdf-schema#label> "MOUNTED_ON" .
 <https://climatepub4kg.github.io/ontology#MOUNTED_ON> <http://www.w3.org/2004/02/skos/core#definition> "Relates an observing instrument to the platform that carries it."@en .
+# 
+# https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Ocean_Circulation> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Continent> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#Country_Subdivision> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#range> <https://climatepub4kg.github.io/ontology#No_Country_Region> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an ocean circulation feature to a geographic region it is observed in."@en .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2000/01/rdf-schema#label> "OBSERVED_IN_REGION" .
+<https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION> <http://www.w3.org/2004/02/skos/core#definition> "Relates an ocean circulation feature to a geographic region it is observed in."@en .
 # 
 # https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD
 <https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1207,6 +1275,15 @@
 <https://climatepub4kg.github.io/ontology#rcm_version> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://climatepub4kg.github.io/ontology> .
 <https://climatepub4kg.github.io/ontology#rcm_version> <http://www.w3.org/2000/01/rdf-schema#label> "rcm_version" .
 <https://climatepub4kg.github.io/ontology#rcm_version> <http://www.w3.org/2004/02/skos/core#definition> "Version label of a regional climate model."@en .
+# 
+# https://climatepub4kg.github.io/ontology#source_uri
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Author> .
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Keyword> .
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Paper> .
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://climatepub4kg.github.io/ontology#Venue> .
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://climatepub4kg.github.io/ontology#source_uri> <http://www.w3.org/2000/01/rdf-schema#label> "source_uri" .
 # 
 # https://climatepub4kg.github.io/ontology#south
 <https://climatepub4kg.github.io/ontology#south> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
