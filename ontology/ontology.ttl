@@ -7,8 +7,13 @@
 @base <https://climatepub4kg.github.io/ontology#> .
 
 <https://climatepub4kg.github.io/ontology> rdf:type owl:Ontology ;
-                                            owl:versionIRI <https://climatepub4kg.github.io/ontology/2026-07-25> ;
+                                            owl:versionIRI <https://climatepub4kg.github.io/ontology/2026-07-26> ;
                                             <http://purl.org/dc/terms/abstract> "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."@en ;
+                                            <http://purl.org/dc/terms/contributor> "Aayush Acharya"@en ,
+                                                                                   "Adamu Mustapha"@en ,
+                                                                                   "Eduard Dragut"@en ,
+                                                                                   "Huitong Pan"@en ,
+                                                                                   "Longin Jan Latecki"@en ;
                                             <http://purl.org/dc/terms/creator> "ClimatePub4KG project"@en ;
                                             <http://purl.org/dc/terms/description> """ClimatePub4KG connects two bodies of climate-science knowledge that are normally kept apart: the structured metadata that describes climate-model simulations, and the scientific literature that analyses them.
 
@@ -27,9 +32,9 @@ Instance IRIs live in a separate namespace, https://climatepub4kg.github.io/id/,
 Provenance is carried on the terms themselves: paper_id and added_from_paper_id record which publication an extracted entity or relationship came from, supporting_paragraphs keeps the sentences that justified it, and dataset_count records how many ESGF datasets support a metadata relationship. PAPER_MENTIONS is the general-purpose bridge from a publication to any entity mentioned in its text.
 
 The graph is built by an LLM extraction pipeline over open-access climate papers followed by entity linking against the ESGF, GeoNames and GCMD vocabularies, so instance data should be treated as machine-generated and evidence-linked rather than hand-curated."""@en ;
-                                            <http://purl.org/dc/terms/issued> "2026-07-25" ;
+                                            <http://purl.org/dc/terms/issued> "2026-07-26" ;
                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                            <http://purl.org/dc/terms/modified> "2026-07-25" ;
+                                            <http://purl.org/dc/terms/modified> "2026-07-26" ;
                                             <http://purl.org/dc/terms/publisher> "ClimatePub4KG project"@en ;
                                             <http://purl.org/dc/terms/source> <https://esgf.llnl.gov/> ,
                                                                               <https://gcmd.earthdata.nasa.gov/KeywordViewer/> ,
@@ -42,7 +47,7 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://climatepub4kg.github.io/ontology#" ;
                                             rdfs:comment "ClimatePub4KG is a knowledge graph that links Earth System Grid Federation (ESGF) climate-model metadata to the peer-reviewed literature that uses it. This ontology defines the classes, object properties and datatype properties used by the graph: CMIP models, experiments, variables and the rest of the ESGF controlled vocabularies; publications and the fields, methods, tasks, problems, results and evaluation metrics extracted from them; and the geographic, instrument and phenomenon vocabularies that ground both sides in shared reference terms."@en ;
                                             rdfs:label "ClimatePub4KG Ontology"@en ;
-                                            owl:versionInfo "2026-07-25" ;
+                                            owl:versionInfo "2026-07-26" ;
                                             <http://xmlns.com/foaf/0.1/homepage> <https://climatepub4kg.github.io/ontology/> .
 
 #################################################################
@@ -51,6 +56,10 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
 
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
@@ -108,6 +117,20 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
 #################################################################
 #    Object Properties
 #################################################################
+
+###  https://climatepub4kg.github.io/ontology#AFFECTED_REGION
+:AFFECTED_REGION rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Natural_Hazard ;
+                 rdfs:range :City ,
+                            :Continent ,
+                            :Country ,
+                            :Country_Subdivision ,
+                            :No_Country_Region ;
+                 rdfs:comment "Relates a natural hazard to a geographic region it affected."@en ;
+                 rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
+                 rdfs:label "AFFECTED_REGION" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates a natural hazard to a geographic region it affected."@en .
+
 
 ###  https://climatepub4kg.github.io/ontology#APPLIES_TO_REALM
 :APPLIES_TO_REALM rdf:type owl:ObjectProperty ;
@@ -206,6 +229,16 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a climate model to the MIP activity whose experiments produced its output."@en .
 
 
+###  https://climatepub4kg.github.io/ontology#HAS_CLIMATE_ZONE
+:HAS_CLIMATE_ZONE rdf:type owl:ObjectProperty ;
+                  rdfs:domain :No_Country_Region ;
+                  rdfs:range :ClimateZone ;
+                  rdfs:comment "Relates a geographic region to a climate zone it falls in."@en ;
+                  rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
+                  rdfs:label "HAS_CLIMATE_ZONE" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Relates a geographic region to a climate zone it falls in."@en .
+
+
 ###  https://climatepub4kg.github.io/ontology#HAS_METRIC
 :HAS_METRIC rdf:type owl:ObjectProperty ;
             rdfs:domain :Source ;
@@ -281,6 +314,20 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
                     <http://www.w3.org/2004/02/skos/core#definition> "Relates an experiment to one of its sub-experiments."@en .
 
 
+###  https://climatepub4kg.github.io/ontology#IMPACTED_REGION
+:IMPACTED_REGION rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Weather_Event ;
+                 rdfs:range :City ,
+                            :Continent ,
+                            :Country ,
+                            :Country_Subdivision ,
+                            :No_Country_Region ;
+                 rdfs:comment "Relates a weather or climate event to a geographic region it impacted."@en ;
+                 rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
+                 rdfs:label "IMPACTED_REGION" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates a weather or climate event to a geographic region it impacted."@en .
+
+
 ###  https://climatepub4kg.github.io/ontology#INCLUDES_ENSEMBLE_MEMBER
 :INCLUDES_ENSEMBLE_MEMBER rdf:type owl:ObjectProperty ;
                           rdfs:domain :Experiment ;
@@ -299,6 +346,20 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
                      rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
                      rdfs:label "INCLUDES_EXPERIMENT" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates an experiment family to one of its member experiments."@en .
+
+
+###  https://climatepub4kg.github.io/ontology#INFLUENCES_REGION
+:INFLUENCES_REGION rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Teleconnection ;
+                   rdfs:range :City ,
+                              :Continent ,
+                              :Country ,
+                              :Country_Subdivision ,
+                              :No_Country_Region ;
+                   rdfs:comment "Relates a teleconnection pattern to a geographic region whose climate it influences."@en ;
+                   rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
+                   rdfs:label "INFLUENCES_REGION" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Relates a teleconnection pattern to a geographic region whose climate it influences."@en .
 
 
 ###  https://climatepub4kg.github.io/ontology#INHERITED_FROM
@@ -452,6 +513,19 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
             rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
             rdfs:label "MOUNTED_ON" ;
             <http://www.w3.org/2004/02/skos/core#definition> "Relates an observing instrument to the platform that carries it."@en .
+
+
+###  https://climatepub4kg.github.io/ontology#OBSERVED_IN_REGION
+:OBSERVED_IN_REGION rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Ocean_Circulation ;
+                    rdfs:range :Continent ,
+                               :Country ,
+                               :Country_Subdivision ,
+                               :No_Country_Region ;
+                    rdfs:comment "Relates an ocean circulation feature to a geographic region it is observed in."@en ;
+                    rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
+                    rdfs:label "OBSERVED_IN_REGION" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "Relates an ocean circulation feature to a geographic region it is observed in."@en .
 
 
 ###  https://climatepub4kg.github.io/ontology#PAPER_APPLIES_METHOD
@@ -1338,6 +1412,16 @@ The graph is built by an LLM extraction pipeline over open-access climate papers
              rdfs:isDefinedBy <https://climatepub4kg.github.io/ontology> ;
              rdfs:label "rcm_version" ;
              <http://www.w3.org/2004/02/skos/core#definition> "Version label of a regional climate model."@en .
+
+
+###  https://climatepub4kg.github.io/ontology#source_uri
+:source_uri rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Author ,
+                        :Keyword ,
+                        :Paper ,
+                        :Venue ;
+            rdfs:range xsd:string ;
+            rdfs:label "source_uri" .
 
 
 ###  https://climatepub4kg.github.io/ontology#south
